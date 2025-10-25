@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FIZIS — Ecolink HCI Project Blog</title>
+  <meta name="description" content="FIZIS team site for the Ecolink HCI project. Proposal, progress, artifacts, and weekly updates." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { mint:"#10B981", charcoal:"#111827", slate:"#6B7280" },
+          boxShadow: { soft:"0 10px 30px rgba(0,0,0,.08)" }
+        }
+      },
+      darkMode:'class'
+    }
+  </script>
+</head>
+<body class="bg-white text-charcoal dark:bg-charcoal dark:text-white transition">
+  <!-- Top bar -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/70 dark:bg-charcoal/60 border-b border-black/5 dark:border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 font-semibold tracking-tight text-lg">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-mint"></span> FIZIS
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a class="hover:text-mint" href="#proposal">Proposal</a>
+        <a class="hover:text-mint" href="#blog">Blog</a>
+        <a class="hover:text-mint" href="#project">Project</a>
+        <a class="hover:text-mint" href="#gallery">Gallery</a>
+        <a class="hover:text-mint" href="#team">Team</a>
+        <a class="hover:text-mint" href="#contact">Contact</a>
+      </nav>
+      <button id="themeToggle" class="text-sm px-3 py-1.5 rounded-lg border border-black/10 dark:border-white/20 hover:border-mint">
+        Toggle theme
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-4 py-16 md:py-24">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+          FIZIS × Ecolink. Community waste and micro jobs made simple.
+        </h1>
+        <p class="mt-4 text-slate">
+          We are in the Proposal phase. Uploads go live here, and weekly updates track decisions and artifacts.
+        </p>
+        <div class="mt-6 flex gap-3">
+          <a href="#proposal" class="px-5 py-3 rounded-xl bg-mint text-white shadow-soft hover:opacity-90">Open proposal</a>
+          <a href="#blog" class="px-5 py-3 rounded-xl border border-black/10 dark:border-white/20 hover:border-mint">Read updates</a>
+        </div>
+        <div class="mt-6 text-xs uppercase tracking-wider text-slate">
+          Current phase:
+          <span class="ml-2 px-2 py-1 rounded bg-mint/10 text-mint">Proposal</span>
+        </div>
+      </div>
+
+      <!-- Phase timeline -->
+      <div class="rounded-2xl p-1 bg-gradient-to-br from-mint/20 to-transparent">
+        <div class="rounded-2xl bg-white dark:bg-[#0f1620] p-6 shadow-soft">
+          <div class="text-sm text-slate mb-3">Plan</div>
+          <ol class="space-y-3 text-sm">
+            <li class="flex items-center gap-3">
+              <span class="w-2 h-2 rounded-full bg-mint"></span>
+              Proposal and scope definition  Now
+            </li>
+            <li class="flex items-center gap-3 opacity-80">
+              <span class="w-2 h-2 rounded-full bg-mint/60"></span>
+              User research  interviews and task analysis
+            </li>
+            <li class="flex items-center gap-3 opacity-70">
+              <span class="w-2 h-2 rounded-full bg-mint/40"></span>
+              Prototype v1  wireframes and flows
+            </li>
+            <li class="flex items-center gap-3 opacity-60">
+              <span class="w-2 h-2 rounded-full bg-mint/30"></span>
+              Usability testing and iteration
+            </li>
+            <li class="flex items-center gap-3 opacity-50">
+              <span class="w-2 h-2 rounded-full bg-mint/20"></span>
+              Final demo and report
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proposal section -->
+  <section id="proposal" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-semibold mb-6">Proposal kit</h2>
+
+    <!-- Live PDF viewer -->
+    <div class="rounded-2xl border border-black/10 dark:border-white/10 overflow-hidden">
+      <div class="flex items-center justify-between px-4 py-3 bg-black/5 dark:bg-white/10">
+        <div class="text-sm">
+          <strong>Proposal PDF</strong> <span class="text-slate">(files/proposal.pdf)</span>
+        </div>
+        <div class="flex gap-2">
+          <a href="files/proposal.pdf" download class="text-sm px-3 py-1.5 rounded-lg border border-black/10 dark:border-white/20 hover:border-mint">Download</a>
+          <button onclick="window.print()" class="text-sm px-3 py-1.5 rounded-lg border border-black/10 dark:border-white/20 hover:border-mint">Print</button>
+        </div>
+      </div>
+      <div class="aspect-[16/10] bg-black/5 dark:bg-white/10">
+        <!-- Embed tries to load if file exists. If not, it just shows a blank panel until you add it. -->
+        <iframe src="files/proposal.pdf#view=FitH" class="w-full h-full" title="FIZIS Proposal PDF"></iframe>
+      </div>
+    </div>
+
+    <!-- Summary cards -->
+    <div class="grid md:grid-cols-3 gap-6 mt-6">
+      <div class="rounded-2xl p-6 border border-black/10 dark:border-white/10">
+        <h3 class="font-semibold">Problem and value</h3>
+        <ul class="mt-3 text-slate text-sm space-y-2">
+          <li>Residents struggle to dispose bulky waste and schedule pickups</li>
+          <li>Info is scattered which leads to confusion and illegal dumping</li>
+          <li>Ecolink provides a hub for disposal info and micro jobs like yard cleanup and branch cutting</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl p-6 border border-black/10 dark:border-white/10">
+        <h3 class="font-semibold">Scope and stakeholders</h3>
+        <ul class="mt-3 text-slate text-sm space-y-2">
+          <li>Phase 1  info hub and request posting</li>
+          <li>Phase 1  simple job board for residents and helpers</li>
+          <li>Stakeholders  residents  local council  private haulers  community helpers</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl p-6 border border-black/10 dark:border-white/10">
+        <h3 class="font-semibold">Success metrics</h3>
+        <ul class="mt-3 text-slate text-sm space-y-2">
+          <li>Task completion rate per week</li>
+          <li>Average time to first bid</li>
+          <li>Reported illegal dumping near zero in pilot area</li>
+          <li>SUS at least 80 in pilot</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Checklist -->
+    <div class="mt-6 rounded-2xl p-6 border border-black/10 dark:border-white/10">
+      <h3 class="font-semibold">Submission checklist</h3>
+      <ul class="mt-3 text-slate text-sm grid md:grid-cols-2 gap-2">
+        <li>Clear problem statement</li>
+        <li>Personas  two or more  with tasks and pain points</li>
+        <li>Scope and out of scope</li>
+        <li>User stories and key flows</li>
+        <li>Metrics and validation plan</li>
+        <li>Team roles and responsibilities</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Blog preview -->
+  <section id="blog" class="max-w-6xl mx-auto px-4 py-12">
+    <div class="flex items-end justify-between mb-6">
+      <h2 class="text-2xl font-semibold">Latest updates</h2>
+      <a href="#" class="text-mint hover:underline">View all →</a>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 hover:border-mint transition">
+        <div class="text-xs uppercase tracking-wide text-slate">Proposal • Week 1</div>
+        <h3 class="mt-2 font-semibold text-lg">Problem statement and initial scope</h3>
+        <p class="mt-2 text-sm text-slate">We framed waste and micro jobs pain points and wrote the first user stories.</p>
+        <a href="#" class="mt-4 inline-block text-mint text-sm">Read post →</a>
+      </article>
+      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 hover:border-mint transition">
+        <div class="text-xs uppercase tracking-wide text-slate">Proposal • Week 1</div>
+        <h3 class="mt-2 font-semibold text-lg">Stakeholder map and early risks</h3>
+        <p class="mt-2 text-sm text-slate">We mapped residents  council  haulers  helpers and listed key constraints.</p>
+        <a href="#" class="mt-4 inline-block text-mint text-sm">Read post →</a>
+      </article>
+      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 hover:border-mint transition">
+        <div class="text-xs uppercase tracking-wide text-slate">Proposal • Week 1</div>
+        <h3 class="mt-2 font-semibold text-lg">Metrics and validation plan</h3>
+        <p class="mt-2 text-sm text-slate">What we will measure and how we will prove value in the pilot.</p>
+        <a href="#" class="mt-4 inline-block text-mint text-sm">Read post →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Project snapshot -->
+  <section id="project" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-semibold mb-4">Project snapshot</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="rounded-2xl p-6 border border-black/10 dark:border-white/10">
+        <h3 class="font-semibold">Problem</h3>
+        <p class="text-slate mt-2">Residents need a simple way to handle bulky waste and find help for small cleanup jobs.</p>
+      </div>
+      <div class="rounded-2xl p-6 border border-black/10 dark:border-white/10">
+        <h3 class="font-semibold">Concept</h3>
+        <p class="text-slate mt-2">A web and mobile friendly hub for info and task posting with clear guidance and safe matching.</p>
+      </div>
+      <div class="rounded-2xl p-6 border border-black/10 dark:border-white/10">
+        <h3 class="font-semibold">Evidence</h3>
+        <p class="text-slate mt-2">We will gather interviews  tasks  and baseline metrics in the next phase.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-semibold mb-4">Gallery</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div class="aspect-video rounded-xl bg-black/5 dark:bg-white/10"></div>
+      <div class="aspect-video rounded-xl bg-black/5 dark:bg-white/10"></div>
+      <div class="aspect-video rounded-xl bg-black/5 dark:bg-white/10"></div>
+      <div class="aspect-video rounded-xl bg-black/5 dark:bg-white/10"></div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-semibold mb-6">Team</h2>
+    <ul class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-sm">
+      <!-- Iman -->
+      <li class="p-5 rounded-2xl border border-black/10 dark:border-white/10 hover:border-mint transition">
+        <div class="w-full h-40 overflow-hidden rounded-xl">
+          <img src="images/iman.jpg" alt="Iman" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="mt-4">
+          <div class="font-semibold">Iman</div>
+          <div class="text-slate">Research lead</div>
+        </div>
+      </li>
+      <!-- Zaidi -->
+      <li class="p-5 rounded-2xl border border-black/10 dark:border-white/10 hover:border-mint transition">
+        <div class="w-full h-40 overflow-hidden rounded-xl">
+          <img src="images/zaidi.jpg" alt="Zaidi" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="mt-4">
+          <div class="font-semibold">Zaidi</div>
+          <div class="text-slate">IA and progress logs</div>
+        </div>
+      </li>
+      <!-- Fuad -->
+      <li class="p-5 rounded-2xl border border-black/10 dark:border-white/10 hover:border-mint transition">
+        <div class="w-full h-40 overflow-hidden rounded-xl">
+          <img src="images/fuad.jpg" alt="Fuad" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="mt-4">
+          <div class="font-semibold">Fuad</div>
+          <div class="text-slate">UI design</div>
+        </div>
+      </li>
+      <!-- Izzat -->
+      <li class="p-5 rounded-2xl border border-black/10 dark:border-white/10 hover:border-mint transition">
+        <div class="w-full h-40 overflow-hidden rounded-xl">
+          <img src="images/izzat.jpg" alt="Izzat" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="mt-4">
+          <div class="font-semibold">Izzat</div>
+          <div class="text-slate">Frontend</div>
+        </div>
+      </li>
+      <!-- Shahidah -->
+      <li class="p-5 rounded-2xl border border-black/10 dark:border-white/10 hover:border-mint transition">
+        <div class="w-full h-40 overflow-hidden rounded-xl">
+          <img src="images/shahidah.jpg" alt="Shahidah" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="mt-4">
+          <div class="font-semibold">Shahidah</div>
+          <div class="text-slate">Testing and insights</div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="border-t border-black/5 dark:border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate flex flex-col md:flex-row items-center justify-between gap-3">
+      <div>© <span id="year"></span> FIZIS — Ecolink HCI Team</div>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-mint">Email</a>
+        <a href="#" class="hover:text-mint">GitHub</a>
+        <a href="#" class="hover:text-mint">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const btn = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      root.classList.add('dark');
+    }
+    btn.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      localStorage.theme = root.classList.contains('dark') ? 'dark' : 'light';
+    });
+  </script>
+</body>
+</html>
