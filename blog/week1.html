@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Week 1 — Brainstorming & Proposal Prep | FIZIS × Ecolink</title>
+  <meta name="description" content="Week 1 blog post: brainstorming ideas for our HCI project before deciding on Ecolink." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { mint:"#10B981", charcoal:"#111827", slate:"#6B7280" },
+          boxShadow: { soft:"0 10px 30px rgba(0,0,0,.08)" }
+        }
+      },
+      darkMode:'class'
+    }
+  </script>
+</head>
+<body class="bg-white text-charcoal dark:bg-charcoal dark:text-white transition">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/70 dark:bg-charcoal/60 border-b border-black/5 dark:border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2 font-semibold tracking-tight text-lg">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-mint"></span> FIZIS
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a class="hover:text-mint" href="../index.html#proposal">Proposal</a>
+        <a class="hover:text-mint" href="../index.html#project">Project</a>
+        <a class="hover:text-mint" href="../index.html#team">Team</a>
+      </nav>
+      <button id="themeToggle" class="text-sm px-3 py-1.5 rounded-lg border border-black/10 dark:border-white/20 hover:border-mint">
+        Toggle theme
+      </button>
+    </div>
+  </header>
+
+  <!-- Main article -->
+  <main class="max-w-3xl mx-auto px-4 py-16">
+    <article class="prose dark:prose-invert prose-headings:scroll-mt-20">
+      <p class="text-sm text-slate mb-4 uppercase tracking-wide">Week 1 • Proposal Phase</p>
+      <h1 class="text-4xl font-bold mb-2">Brainstorming & Deciding Our HCI Project</h1>
+      <p class="text-slate text-sm mb-8">by Team FIZIS • October 2025</p>
+
+      <h2>How It Started</h2>
+      <p>
+        Week 1 was all about ideas. Our FIZIS team kicked off by listing every possible community problem we could think of — from digital health apps to 
+        campus navigation tools, waste management, pet adoption, and even a mental-wellness journaling site. The goal was to explore, not to judge. 
+        We wanted something practical, people-oriented, and relevant to our surroundings.
+      </p>
+
+      <h2>Our Brainstorming Session</h2>
+      <p>
+        We started with a <strong>mind-map session</strong> using Google Jamboard, dumping raw ideas under themes like 
+        “environment,” “education,” “campus life,” and “community services.” Then we used a 
+        <em>“dot-voting”</em> activity to identify which topics felt most meaningful and achievable within a semester.
+      </p>
+
+      <ul>
+        <li>• Each member pitched at least two ideas with a quick rationale and possible users.</li>
+        <li>• We looked at problems we personally face — like poor waste info in our neighbourhoods, or lost-and-found items on campus.</li>
+        <li>• We compared ideas using an <strong>impact vs. effort matrix</strong> to stay realistic.</li>
+      </ul>
+
+      <h2>Shortlisted Ideas</h2>
+      <p>
+        Our top three were:
+      </p>
+      <ol>
+        <li><strong>Pet Hotel Booking System</strong> – for busy owners needing short-term pet care.</li>
+        <li><strong>Vehicle Rental Management</strong> – tracking bookings and availability for student vehicles.</li>
+        <li><strong>Community Waste & Cleanup Platform</strong> – helping residents manage bulky waste and create small paid clean-up tasks.</li>
+      </ol>
+      <p>
+        After some discussion, we realized the third idea, <strong>Ecolink</strong>, aligned best with 
+        HCI principles — a real social impact problem where human behavior and usability play a big role.
+      </p>
+
+      <h2>Choosing “Ecolink”</h2>
+      <p>
+        We spent another session sketching how Ecolink could work. We imagined residents posting waste 
+        pickup requests, others volunteering or offering cleanup help, and councils monitoring disposal 
+        patterns. We planned to integrate simple features like notifications, local maps, and a friendly 
+        UI — all grounded in HCI principles of accessibility and feedback.
+      </p>
+
+      <h2>Proposal Writing</h2>
+      <p>
+        Once we agreed on Ecolink, we divided roles: Iman drafted the <em>problem statement</em>, 
+        Zaidi refined the <em>scope and objectives</em>, Fuad handled the <em>concept visuals</em>, 
+        Izzat prepared the <em>timeline</em>, and Shahidah reviewed the final wording. We also started 
+        referencing sample HCI proposals to match the required structure — introduction, background, 
+        objectives, scope, and expected output.
+      </p>
+
+      <h2>Reflections</h2>
+      <p>
+        This week taught us that a good HCI project doesn’t start with code — it starts with questions. 
+        We learned to balance creativity with feasibility and to listen when someone said, 
+        “Cool idea, but can people actually use it easily?”
+      </p>
+
+      <blockquote>
+        “Design is a team sport — and brainstorming is our first match.”
+      </blockquote>
+
+      <div class="mt-10">
+        <a href="../index.html#blog" class="text-mint text-sm hover:underline">&larr; Back to blog overview</a>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-black/5 dark:border-white/10 mt-16">
+    <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate flex flex-col md:flex-row items-center justify-between gap-3">
+      <div>© <span id="year"></span> FIZIS — Ecolink HCI Team</div>
+      <div class="flex gap-4">
+        <a href="../index.html#contact" class="hover:text-mint">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const btn=document.getElementById('themeToggle'),root=document.documentElement;
+    if(localStorage.theme==='dark'||(!('theme'in localStorage)&&window.matchMedia('(prefers-color-scheme: dark)').matches)){root.classList.add('dark');}
+    btn.addEventListener('click',()=>{root.classList.toggle('dark');localStorage.theme=root.classList.contains('dark')?'dark':'light';});
+  </script>
+</body>
+</html>
