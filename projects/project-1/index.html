@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Project 1 — EcoLink Proposal | FIZIS</title>
+  <meta name="description" content="EcoLink proposal kit: problem, solution, objectives, scope, personas, IA, timeline, evidence."/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config={theme:{extend:{colors:{mint:"#10B981",charcoal:"#111827",slate:"#6B7280"},boxShadow:{soft:"0 10px 30px rgba(0,0,0,.08)"}}},darkMode:'class'};
+  </script>
+</head>
+<body class="bg-white text-charcoal dark:bg-charcoal dark:text-white transition">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/70 dark:bg-charcoal/60 border-b border-black/5 dark:border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="../../index.html" class="flex items-center gap-2 font-semibold tracking-tight text-lg">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-mint"></span> FIZIS
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a class="hover:text-mint" href="../../index.html#proposal">Proposal</a>
+        <a class="hover:text-mint" href="../../blog/index.html">Blog</a>
+        <a class="hover:text-mint" href="../index.html">Projects</a>
+        <a class="hover:text-mint" href="../../index.html#gallery">Gallery</a>
+        <a class="hover:text-mint" href="../../index.html#team">Team</a>
+        <a class="hover:text-mint" href="../../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-4 py-10">
+    <nav class="text-sm text-slate mb-4"><a class="hover:text-mint" href="../index.html">Projects</a> <span class="opacity-50">/</span> Project 1</nav>
+    <h1 class="text-3xl md:text-4xl font-bold leading-tight" id="title">EcoLink — Smart Waste Management</h1>
+    <div class="mt-2 text-xs uppercase tracking-wider text-slate">
+      Phase: <span id="status" class="ml-2 px-2 py-1 rounded bg-mint/10 text-mint">Proposal</span>
+    </div>
+    <p id="summary" class="mt-4 text-slate max-w-3xl"></p>
+    <div class="mt-6 flex gap-3">
+      <a href="../../files/proposal.pdf" class="px-5 py-3 rounded-xl bg-mint text-white shadow-soft hover:opacity-90" target="_blank">Open proposal PDF</a>
+      <a href="../../blog/index.html" class="px-5 py-3 rounded-xl border border-black/10 dark:border-white/20 hover:border-mint">Read updates</a>
+    </div>
+  </section>
+
+  <!-- Sticky subnav -->
+  <div class="sticky top-[60px] z-30 bg-white/80 dark:bg-charcoal/80 backdrop-blur border-y border-black/5 dark:border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-2 overflow-x-auto">
+      <div class="flex gap-4 text-sm">
+        <a class="hover:text-mint whitespace-nowrap" href="#problem">Problem</a>
+        <a class="hover:text-mint whitespace-nowrap" href="#solution">Proposed Solution</a>
+        <a class="hover:text-mint whitespace-nowrap" href="#objectives">Objectives & Scope</a>
+        <a class="hover:text-mint whitespace-nowrap" href="#personas">Stakeholders & Personas</a>
+        <a class="hover:text-mint whitespace-nowrap" href="#timeline">Timeline</a>
+        <a class="hover:text-mint whitespace-nowrap" href="#evidence">Evidence</a>
+        <a class="hover:text-mint whitespace-nowrap" href="#gallery">Auto Gallery</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sections -->
+  <main class="max-w-6xl mx-auto px-4 py-10 space-y-10">
+    <section id="problem">
+      <h2 class="text-2xl font-semibold">Problem statement</h2>
+      <p id="problemText" class="mt-3 text-slate"></p>
+    </section>
+
+    <section id="solution">
+      <h2 class="text-2xl font-semibold">Proposed solution</h2>
+      <p id="solutionText" class="mt-3 text-slate"></p>
+    </section>
+
+    <section id="objectives">
+      <h2 class="text-2xl font-semibold">Objectives & Scope</h2>
+      <div class="grid md:grid-cols-2 gap-6 mt-4">
+        <div>
+          <h3 class="font-semibold">Objectives</h3>
+          <ul id="objectivesList" class="mt-2 list-disc list-inside text-slate"></ul>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-semibold">In scope</h3>
+            <ul id="scopeIn" class="mt-2 list-disc list-inside text-slate"></ul>
+          </div>
+          <div>
+            <h3 class="font-semibold">Out of scope</h3>
+            <ul id="scopeOut" class="mt-2 list-disc list-inside text-slate"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="personas">
+      <h2 class="text-2xl font-semibold">Stakeholders & Personas</h2>
+      <div id="personasWrap" class="grid sm:grid-cols-2 gap-6 mt-4"></div>
+    </section>
+
+    <section id="timeline">
+      <h2 class="text-2xl font-semibold">Timeline</h2>
+      <ol id="timelineList" class="mt-3 space-y-2 text-sm text-slate"></ol>
+    </section>
+
+    <section id="evidence">
+      <h2 class="text-2xl font-semibold">Evidence</h2>
+      <div class="rounded-2xl border border-black/10 dark:border-white/10 overflow-hidden mt-4">
+        <div class="flex items-center justify-between px-4 py-3 bg-black/5 dark:bg-white/10">
+          <div class="text-sm"><strong>Proposal PDF</strong> <span class="text-slate">(files/proposal.pdf)</span></div>
+          <div class="flex gap-2">
+            <a href="../../files/proposal.pdf" download class="text-sm px-3 py-1.5 rounded-lg border border-black/10 dark:border-white/20 hover:border-mint">Download</a>
+            <button onclick="window.print()" class="text-sm px-3 py-1.5 rounded-lg border border-black/10 dark:border-white/20 hover:border-mint">Print</button>
+          </div>
+        </div>
+        <div class="aspect-[16/10] bg-black/5 dark:bg-white/10">
+          <iframe src="../../files/proposal.pdf#view=FitH" class="w-full h-full" title="FIZIS Proposal PDF"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2 class="text-2xl font-semibold">Auto Gallery</h2>
+      <p class="text-slate mt-2">Images fetched from Wikimedia Commons using your project keywords. Captions include attribution.</p>
+      <div id="galleryGrid" class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4"></div>
+    </section>
+  </main>
+
+  <footer class="border-t border-black/5 dark:border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate">
+      © <span id="year"></span> FIZIS
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+
+    // Load data for Project 1 from JSON
+    fetch('../../data/projects.json')
+      .then(r=>r.json())
+      .then(all=>{
+        const p = all.find(x=>x.id==='project-1');
+        if(!p) return;
+
+        // Hero
+        document.getElementById('title').textContent = p.title;
+        document.getElementById('summary').textContent = p.summary;
+        document.getElementById('status').textContent = p.status;
+
+        // Problem / solution
+        document.getElementById('problemText').textContent = p.sections.problem;
+        document.getElementById('solutionText').textContent = p.sections.solution;
+
+        // Objectives & scope
+        (p.sections.objectives||[]).forEach(t=>{
+          const li=document.createElement('li'); li.textContent=t;
+          document.getElementById('objectivesList').appendChild(li);
+        });
+        (p.sections.scopeIn||[]).forEach(t=>{
+          const li=document.createElement('li'); li.textContent=t;
+          document.getElementById('scopeIn').appendChild(li);
+        });
+        (p.sections.scopeOut||[]).forEach(t=>{
+          const li=document.createElement('li'); li.textContent=t;
+          document.getElementById('scopeOut').appendChild(li);
+        });
+
+        // Personas
+        (p.sections.personas||[]).forEach(ps=>{
+          const card=document.createElement('div');
+          card.className='rounded-2xl p-6 border border-black/10 dark:border-white/10';
+          card.innerHTML = `
+            <div class="font-semibold">${ps.name}</div>
+            <div class="mt-3 grid grid-cols-2 gap-4 text-sm">
+              <div>
+                <div class="font-medium">Goals</div>
+                <ul class="mt-1 list-disc list-inside text-slate">${(ps.goals||[]).map(g=>`<li>${g}</li>`).join('')}</ul>
+              </div>
+              <div>
+                <div class="font-medium">Pain points</div>
+                <ul class="mt-1 list-disc list-inside text-slate">${(ps.painPoints||[]).map(g=>`<li>${g}</li>`).join('')}</ul>
+              </div>
+            </div>
+          `;
+          document.getElementById('personasWrap').appendChild(card);
+        });
+
+        // Timeline
+        (p.sections.timeline||[]).forEach(step=>{
+          const li=document.createElement('li');
+          const tone = step.status==='now' ? 'text-mint' : (step.status==='next'?'text-white':'text-slate');
+          const dot  = step.status==='now' ? 'bg-mint' : 'bg-mint/40';
+          li.innerHTML = `<span class="inline-block w-2 h-2 rounded-full ${dot} mr-2"></span><span class="${tone}">${step.label}</span>`;
+          document.getElementById('timelineList').appendChild(li);
+        });
+
+        // Auto Gallery from Wikimedia Commons
+        const keywords = p.galleryKeywords || [];
+        buildWikimediaGallery(keywords);
+      })
+      .catch(err=>{ console.error(err); });
+
+    function buildWikimediaGallery(keywords){
+      const grid = document.getElementById('galleryGrid');
+      if(!keywords.length){ grid.innerHTML='<div class="text-slate">No keywords configured.</div>'; return; }
+
+      // Pull 2 images per keyword (cap 9)
+      const tasks = [];
+      keywords.slice(0,5).forEach(kw=>{
+        tasks.push(fetchCommons(kw,2));
+      });
+
+      Promise.allSettled(tasks).then(results=>{
+        const images = results.flatMap(r=>r.value||[]).slice(0,9);
+        if(!images.length){
+          grid.innerHTML='<div class="text-slate">No images found. Add galleryImageUrls or tweak keywords in projects.json.</div>';
+          return;
+        }
+        images.forEach(img=>{
+          const fig=document.createElement('figure');
+          fig.className='rounded-2xl overflow-hidden border border-black/10 dark:border-white/10';
+          fig.innerHTML = `
+            <img src="${img.url}" alt="${escapeHtml(img.title)}" class="w-full h-auto object-cover" loading="lazy"/>
+            <figcaption class="p-3 text-xs text-slate">
+              ${escapeHtml(img.title)} · <a class="text-mint hover:underline" href="${img.page}" target="_blank" rel="noopener">Wikimedia</a>${img.license?` · ${escapeHtml(img.license)}`:''}
+            </figcaption>
+          `;
+          grid.appendChild(fig);
+        });
+      });
+    }
+
+    // Query Wikimedia Commons (CORS-friendly) for images by keyword
+    function fetchCommons(keyword, limit=2){
+      const params = new URLSearchParams({
+        action:'query',
+        format:'json',
+        origin:'*',
+        generator:'search',
+        gsrlimit:String(limit),
+        gsrsearch: keyword + ' filetype:bitmap',
+        prop:'imageinfo|info',
+        inprop:'url',
+        iiprop:'url|extmetadata',
+        iiurlwidth:'1200'
+      });
+      const url = 'https://commons.wikimedia.org/w/api.php?'+params.toString();
+      return fetch(url).then(r=>r.json()).then(d=>{
+        const pages = d.query && d.query.pages ? Object.values(d.query.pages) : [];
+        return pages
+          .filter(p=>p.imageinfo && p.imageinfo[0] && p.imageinfo[0].thumburl)
+          .map(p=>{
+            const ii = p.imageinfo[0];
+            const meta = ii.extmetadata || {};
+            return {
+              title: p.title.replace('File:',''),
+              url: ii.thumburl || ii.url,
+              page: 'https://commons.wikimedia.org/?curid='+p.pageid,
+              license: (meta.LicenseShortName && meta.LicenseShortName.value) ? meta.LicenseShortName.value : ''
+            };
+          });
+      }).catch(()=>[]);
+    }
+
+    function escapeHtml(s){ return (s||'').replace(/[&<>"']/g,m=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m])); }
+  </script>
+</body>
+</html>

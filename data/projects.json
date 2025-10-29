@@ -1,0 +1,77 @@
+[
+  {
+    "id": "project-1",
+    "title": "EcoLink — Smart Waste Management",
+    "status": "Proposal",
+    "summary": "Centralized platform for disposal info, bulky pickups, RoRo booking, e-waste, and community micro-jobs.",
+    "galleryKeywords": [
+      "recycling Malaysia",
+      "e-waste drop-off",
+      "urban waste management",
+      "community cleanup"
+    ],
+    "sections": {
+      "problem": "Many residents lack a single, easy channel to manage bulky waste, e-waste, and recycling. Information is scattered across multiple platforms which makes people miss collection days and struggle during urgent or out-of-schedule disposal. Booking RoRo bins and paying permits often requires separate systems which slows everything down. Unclear e-waste guidance leads to unsafe disposal.",
+      "solution": "EcoLink unifies disposal info, booking, payments, reporting, and community micro-jobs. Users can locate recycling and e-waste points, schedule bulky pickups, book RoRo bins with permits, submit reports on missed collections or illegal dumping, and discover/offer cleanup gigs. Councils can post announcements and manage responses in one place.",
+      "objectives": [
+        "Increase correct disposal and recycling participation",
+        "Reduce missed collection incidents and complaints",
+        "Shorten booking time for bulky waste and RoRo bins",
+        "Enable community-powered cleanup via micro-jobs"
+      ],
+      "scopeIn": [
+        "Locator for recycling/e-waste",
+        "Bulky pickup scheduling",
+        "RoRo booking with permits",
+        "Issue reporting with photo and GPS",
+        "Community gig board",
+        "Council announcements"
+      ],
+      "scopeOut": [
+        "Payment gateway integration beyond sandbox demo",
+        "Cross-border disposal regulations",
+        "Full contractor workforce management"
+      ],
+      "personas": [
+        {
+          "name": "Aina (Resident)",
+          "goals": ["Find nearest e-waste point", "Schedule bulky pickup fast"],
+          "painPoints": ["Scattered info", "Unclear fees"]
+        },
+        {
+          "name": "Azri (Council Ops)",
+          "goals": ["Reduce complaints", "Coordinate RoRo bins"],
+          "painPoints": ["Manual triage", "Missed schedules"]
+        }
+      ],
+      "timeline": [
+        {"label": "Proposal", "status": "now"},
+        {"label": "User research", "status": "next"},
+        {"label": "Prototype v1", "status": "todo"},
+        {"label": "Usability testing", "status": "todo"},
+        {"label": "Final demo", "status": "todo"}
+      ]
+    }
+  },
+  {
+    "id": "project-2",
+    "title": "Project Two",
+    "status": "Discovery",
+    "summary": "Exploration and early scoping.",
+    "uc": true
+  },
+  {
+    "id": "project-3",
+    "title": "Project Three",
+    "status": "Planning",
+    "summary": "Structure, roles, and milestones.",
+    "uc": true
+  },
+  {
+    "id": "project-4",
+    "title": "Project Four",
+    "status": "Planning",
+    "summary": "Reserved for upcoming brief.",
+    "uc": true
+  }
+]
