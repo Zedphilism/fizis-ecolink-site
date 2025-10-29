@@ -7,12 +7,12 @@
     "galleryLocal": {
       "basePath": "./gallery/",
       "files": [
-        "ecolink-01.jpg",
-        "ecolink-02.jpg",
-        "ecolink-03.jpg",
-        "ecolink-04.jpg",
-        "ecolink-05.jpg",
-        "ecolink-06.jpg"
+        "ecolink-01.jpeg",
+        "ecolink-02.jpeg",
+        "ecolink-03.jpeg",
+        "ecolink-04.jpeg",
+        "ecolink-05.jpeg",
+        "ecolink-06.jpeg"
       ]
     },
     "sections": {
@@ -80,3 +80,4 @@
     "uc": true
   }
 ]
+
