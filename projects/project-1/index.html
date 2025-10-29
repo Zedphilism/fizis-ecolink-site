@@ -145,11 +145,11 @@
     });
 
     // Load Project 1 data
-    fetch('../../data/projects.json')
-      .then(r=>r.json())
-      .then(all=>{
-        const p = all.find(x=>x.id==='project-1');
-        if(!p) return;
+  fetch('../../data/projects.json')
+    .then(r=>r.json())
+    .then(all=>{
+      const p = all.find(x=>x.id==='project-1');
+      if(!p) return;
 
         // Hero
         document.getElementById('title').textContent = p.title;
@@ -204,30 +204,71 @@
         });
 
         // Local Gallery (100% GitHub-safe)
-        const local = p.galleryLocal;
-        if (local && local.basePath && Array.isArray(local.files) && local.files.length) {
-          buildLocalGallery(local.basePath, local.files);
-        } else {
-          document.getElementById('galleryGrid').innerHTML='<div class="text-slate">No local images configured. Add them in <code>data/projects.json</code>.</div>';
-        }
-      })
-      .catch(err=>{ console.error(err); });
+         // Local Gallery (robust)
+      const local = p.galleryLocal;
+      if (local && local.basePath && Array.isArray(local.files) && local.files.length) {
+        buildLocalGallery(local.basePath, local.files);
+      } else {
+        document.getElementById('galleryGrid').innerHTML =
+          '<div class="text-slate">No local images configured. Update <code>data/projects.json</code>.</div>';
+      }
+    })
+    .catch(err=>{ console.error(err); });
 
-    function buildLocalGallery(basePath, files){
-      const grid = document.getElementById('galleryGrid');
-      files.forEach(name=>{
-        const src = basePath + name;
-        const fig = document.createElement('figure');
-        fig.className = 'rounded-2xl overflow-hidden border border-black/10 dark:border-white/10';
+  async function buildLocalGallery(basePath, files){
+    const grid = document.getElementById('galleryGrid');
+    for (const nameRaw of files){
+      // allow names with or without extension
+      const hasExt = /\.\w+$/.test(nameRaw);
+      const candidates = [];
+      if (hasExt) {
+        candidates.push(basePath + nameRaw);
+      } else {
+        candidates.push(basePath + nameRaw + '.jpg');
+        candidates.push(basePath + nameRaw + '.jpeg');
+        candidates.push(basePath + nameRaw + '.png');
+        candidates.push(basePath + nameRaw + '.webp');
+      }
+      // also try without leading ./ and with absolute-from-project path
+      const more = [];
+      for (const c of candidates){ more.push(c.replace('./','')); }
+      for (const c of candidates){ more.push('/projects/project-1/' + c.replace('./','')); }
+      const allCandidates = [...new Set([...candidates, ...more])];
+
+      const src = await firstReachable(allCandidates);
+      const fig = document.createElement('figure');
+      fig.className = 'rounded-2xl overflow-hidden border border-black/10 dark:border-white/10';
+      if (src){
         fig.innerHTML = `
           <div class="aspect-[4/3] bg-black/5 dark:bg-white/10 overflow-hidden">
-            <img src="${src}" alt="${name}" class="w-full h-full object-cover" loading="lazy">
+            <img src="${src}" alt="${escapeHtml(nameRaw)}" class="w-full h-full object-cover" loading="lazy">
           </div>
-          <figcaption class="p-3 text-xs text-slate">${name}</figcaption>
+          <figcaption class="p-3 text-xs text-slate">${escapeHtml(nameRaw)}</figcaption>
         `;
-        grid.appendChild(fig);
-      });
+      } else {
+        fig.innerHTML = `
+          <div class="aspect-[4/3] bg-black/5 dark:bg-white/10 flex items-center justify-center">
+            <span class="text-xs text-slate">Missing: ${escapeHtml(nameRaw)}</span>
+          </div>
+          <figcaption class="p-3 text-xs text-slate">Could not find this file. Check path/extension.</figcaption>
+        `;
+      }
+      grid.appendChild(fig);
     }
-  </script>
+  }
+
+  async function firstReachable(urls){
+    for (const u of urls){
+      try {
+        const res = await fetch(u, { method:'HEAD', cache:'no-store' });
+        if (res.ok) return u;
+      } catch(_) {}
+    }
+    return null;
+  }
+
+  function escapeHtml(s){ return (s||'').replace(/[&<>"']/g,m=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m])); }
+</script>
 </body>
 </html>
+
