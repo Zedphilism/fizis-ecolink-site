@@ -90,10 +90,268 @@
       </div>
     </section>
 
+    <!-- ===== personas + scenarios (static, detailed) ===== -->
     <section id="personas">
       <h2 class="text-2xl font-semibold">Stakeholders & Personas</h2>
-      <div id="personasWrap" class="grid sm:grid-cols-2 gap-6 mt-4"></div>
+
+      <!-- Personas grid -->
+      <div class="grid sm:grid-cols-2 gap-6 mt-4">
+
+        <!-- Persona 1 -->
+        <article class="rounded-2xl p-6 border border-black/10 dark:border-white/10">
+          <header class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="font-semibold text-lg">Aina binti Rahman (Resident)</h3>
+              <p class="text-slate text-sm mt-1">Age 29 · Subang Jaya · Retail supervisor · Android (4G) · Night mode user</p>
+            </div>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-mint/15 text-mint font-semibold">AR</span>
+          </header>
+
+          <p class="mt-3 text-slate text-sm">
+            Works rotating shifts and renovates her apartment in stages. Wants a “one-hand, no-drama” mobile flow
+            to locate e-waste points and book bulky pickups without calling multiple offices.
+          </p>
+
+          <!-- Personality bars -->
+          <div class="mt-4 grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <div class="flex items-center justify-between"><span>Tech-savviness</span><span>65</span></div>
+              <div class="h-2 rounded bg-black/10 dark:bg-white/10 mt-1"><div class="h-2 bg-mint rounded" style="width:65%"></div></div>
+            </div>
+            <div>
+              <div class="flex items-center justify-between"><span>Risk aversion</span><span>40</span></div>
+              <div class="h-2 rounded bg-black/10 dark:bg-white/10 mt-1"><div class="h-2 bg-mint rounded" style="width:40%"></div></div>
+            </div>
+            <div>
+              <div class="flex items-center justify-between"><span>Community orientation</span><span>70</span></div>
+              <div class="h-2 rounded bg-black/10 dark:bg-white/10 mt-1"><div class="h-2 bg-mint rounded" style="width:70%"></div></div>
+            </div>
+            <div>
+              <div class="flex items-center justify-between"><span>Time pressure</span><span>80</span></div>
+              <div class="h-2 rounded bg-black/10 dark:bg-white/10 mt-1"><div class="h-2 bg-mint rounded" style="width:80%"></div></div>
+            </div>
+            <div class="col-span-2">
+              <div class="flex items-center justify-between"><span>Eco-motivation</span><span>60</span></div>
+              <div class="h-2 rounded bg-black/10 dark:bg-white/10 mt-1"><div class="h-2 bg-mint rounded" style="width:60%"></div></div>
+            </div>
+          </div>
+
+          <div class="mt-5 grid md:grid-cols-3 gap-4 text-sm">
+            <div>
+              <div class="font-medium">Goals</div>
+              <ul class="mt-1 list-disc list-inside text-slate">
+                <li>Find nearest e-waste/bulk option fast</li>
+                <li>Book pickup/RoRo with clear fees</li>
+                <li>Get reminders and status updates</li>
+              </ul>
+            </div>
+            <div>
+              <div class="font-medium">Pain points</div>
+              <ul class="mt-1 list-disc list-inside text-slate">
+                <li>Scattered info across FB/PDFs</li>
+                <li>Unclear permits &amp; fees</li>
+                <li>Missed collection days</li>
+              </ul>
+            </div>
+            <div>
+              <div class="font-medium">Context &amp; access</div>
+              <ul class="mt-1 list-disc list-inside text-slate">
+                <li>One-hand mobile use on 4G</li>
+                <li>Weak lobby signal; offline receipt</li>
+                <li>Malay/English toggle</li>
+              </ul>
+            </div>
+          </div>
+
+          <blockquote class="mt-4 text-sm text-slate italic">“Kalau satu app boleh settle—cari tempat, book slot, bayar—aku guna selalu.”</blockquote>
+        </article>
+
+        <!-- Persona 2 -->
+        <article class="rounded-2xl p-6 border border-black/10 dark:border-white/10">
+          <header class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="font-semibold text-lg">Azri bin Kamal (Council Ops Supervisor)</h3>
+              <p class="text-slate text-sm mt-1">Age 35 · MBPJ Ops Centre · Desktop dual-monitor & iPad · Proficient user</p>
+            </div>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-mint/15 text-mint font-semibold">AK</span>
+          </header>
+
+          <p class="mt-3 text-slate text-sm">
+            Manages routes and contractors; KPI is reducing complaint backlog and illegal dumping. Needs clustering,
+            capacity-aware assignment, and airtight audit trails.
+          </p>
+
+          <!-- Personality bars -->
+          <div class="mt-4 grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <div class="flex items-center justify-between"><span>Tech-savviness</span><span>75</span></div>
+              <div class="h-2 rounded bg-black/10 dark:bg-white/10 mt-1"><div class="h-2 bg-mint rounded" style="width:75%"></div></div>
+            </div>
+            <div>
+              <div class="flex items-center justify-between"><span>Risk aversion</span><span>70</span></div>
+              <div class="h-2 rounded bg-black/10 dark:bg-white/10 mt-1"><div class="h-2 bg-mint rounded" style="width:70%"></div></div>
+            </div>
+            <div>
+              <div class="flex items-center justify-between"><span>Community orientation</span><span>55</span></div>
+              <div class="h-2 rounded bg-black/10 dark:bg-white/10 mt-1"><div class="h-2 bg-mint rounded" style="width:55%"></div></div>
+            </div>
+            <div>
+              <div class="flex items-center justify-between"><span>Time pressure</span><span>85</span></div>
+              <div class="h-2 rounded bg-black/10 dark:bg-white/10 mt-1"><div class="h-2 bg-mint rounded" style="width:85%"></div></div>
+            </div>
+            <div class="col-span-2">
+              <div class="flex items-center justify-between"><span>Eco-motivation</span><span>65</span></div>
+              <div class="h-2 rounded bg-black/10 dark:bg-white/10 mt-1"><div class="h-2 bg-mint rounded" style="width:65%"></div></div>
+            </div>
+          </div>
+
+          <div class="mt-5 grid md:grid-cols-3 gap-4 text-sm">
+            <div>
+              <div class="font-medium">Goals</div>
+              <ul class="mt-1 list-disc list-inside text-slate">
+                <li>Prioritize hotspots &amp; SLA risks</li>
+                <li>Assign by zone/capacity</li>
+                <li>Close loop with proof &amp; notices</li>
+              </ul>
+            </div>
+            <div>
+              <div class="font-medium">Pain points</div>
+              <ul class="mt-1 list-disc list-inside text-slate">
+                <li>Spreadsheet/WhatsApp chaos</li>
+                <li>Duplicate reports, bad photos</li>
+                <li>No-show contractors unseen</li>
+              </ul>
+            </div>
+            <div>
+              <div class="font-medium">Context &amp; access</div>
+              <ul class="mt-1 list-disc list-inside text-slate">
+                <li>Needs dense tables, shortcuts</li>
+                <li>SOP, budget, licensing constraints</li>
+                <li>Audit logs for every change</li>
+              </ul>
+            </div>
+          </div>
+
+          <blockquote class="mt-4 text-sm text-slate italic">“Kalau sistem boleh tapis laporan tak cukup bukti, route ikut kapasiti—barulah backlog turun.”</blockquote>
+        </article>
+      </div>
+
+      <!-- Scenarios -->
+      <div class="mt-10">
+        <h3 class="text-xl font-semibold">Scenarios</h3>
+
+        <!-- Scenario A -->
+        <article class="mt-4 rounded-2xl p-6 border border-black/10 dark:border-white/10">
+          <div class="flex flex-wrap items-center gap-2 text-xs">
+            <span class="px-2 py-1 rounded bg-mint/10 text-mint">Resident flow</span>
+            <span class="px-2 py-1 rounded bg-black/5 dark:bg-white/10 text-slate">Visibility</span>
+            <span class="px-2 py-1 rounded bg-black/5 dark:bg-white/10 text-slate">Feedback</span>
+            <span class="px-2 py-1 rounded bg-black/5 dark:bg-white/10 text-slate">Constraints</span>
+          </div>
+          <h4 class="mt-3 font-semibold">A. Aina books bulky pickup + RoRo</h4>
+          <p class="text-slate text-sm mt-1"><strong>Trigger:</strong> Finished minor renovation; 6 bulky items. <strong>Preconditions:</strong> Logged-in, location ON, service area supported.</p>
+
+          <ol class="mt-3 list-decimal ml-5 text-sm text-slate space-y-1">
+            <li>Open <em>Disposal → Bulky / RoRo</em>; app confirms coverage and shows “What you’ll need”.</li>
+            <li>Tap <em>Estimate &amp; Slots</em>, upload 2 photos; system auto-classifies item type/volume.</li>
+            <li>See live price breakdown, earliest slots, and cut-off times.</li>
+            <li>Select Sat 9–11am; add unit &amp; lift access; toggle concierge/lobby pickup.</li>
+            <li>Checkout (FPX/CC); get Job ID, checklist, and “Add to Calendar”.</li>
+            <li>Receive 24h reminder with prep checklist and do/don’t items.</li>
+          </ol>
+
+          <details class="mt-3 text-sm text-slate">
+            <summary class="cursor-pointer font-medium">Alt paths / exceptions</summary>
+            <ul class="mt-2 list-disc list-inside">
+              <li>No slot → suggest nearest hub or RoRo drop-off.</li>
+              <li>Photo unclear → prompt retake or manual item type.</li>
+              <li>Outside coverage → show nearest region + self-haul options.</li>
+            </ul>
+          </details>
+
+          <div class="mt-4 grid md:grid-cols-3 gap-4 text-sm">
+            <div>
+              <div class="font-medium">Usability metrics</div>
+              <ul class="mt-1 list-disc list-inside text-slate">
+                <li>Effectiveness ≥ 95% complete without help</li>
+                <li>Efficiency ≤ 3 mins on 4G</li>
+                <li>Satisfaction ≥ 80% “easy to book”</li>
+              </ul>
+            </div>
+            <div>
+              <div class="font-medium">UX goals</div>
+              <ul class="mt-1 list-disc list-inside text-slate">
+                <li>Trust &amp; clarity</li>
+                <li>Low cognitive load</li>
+                <li>Gentle guidance</li>
+              </ul>
+            </div>
+            <div>
+              <div class="font-medium">Done criteria</div>
+              <ul class="mt-1 list-disc list-inside text-slate">
+                <li>Email/SMS has slot, prep, reschedule link</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Scenario B -->
+        <article class="mt-4 rounded-2xl p-6 border border-black/10 dark:border-white/10">
+          <div class="flex flex-wrap items-center gap-2 text-xs">
+            <span class="px-2 py-1 rounded bg-mint/10 text-mint">Ops flow</span>
+            <span class="px-2 py-1 rounded bg-black/5 dark:bg-white/10 text-slate">Mapping</span>
+            <span class="px-2 py-1 rounded bg-black/5 dark:bg-white/10 text-slate">Auditability</span>
+            <span class="px-2 py-1 rounded bg-black/5 dark:bg-white/10 text-slate">SLA</span>
+          </div>
+          <h4 class="mt-3 font-semibold">B. Azri triages illegal dumping cluster &amp; assigns job</h4>
+          <p class="text-slate text-sm mt-1"><strong>Trigger:</strong> ≥5 reports cluster at same junction in 24h. <strong>Preconditions:</strong> Dashboard authenticated; contractor capacities synced.</p>
+
+          <ol class="mt-3 list-decimal ml-5 text-sm text-slate space-y-1">
+            <li>Open <em>Reports Map</em>; heatmap clusters blink for new spikes.</li>
+            <li>Open cluster → evidence panel (photos, precision, time, duplicates).</li>
+            <li>Mark valid → <em>Create Job → Bulk clean-up</em>; zone/volume pre-filled.</li>
+            <li>System auto-suggests contractor by zone/capacity/proximity; show ETA &amp; route impact.</li>
+            <li>Dispatch with SLA (8h); reporters get status message.</li>
+            <li>Contractor uploads before/after photos; job closes after verification.</li>
+          </ol>
+
+          <details class="mt-3 text-sm text-slate">
+            <summary class="cursor-pointer font-medium">Alt paths / exceptions</summary>
+            <ul class="mt-2 list-disc list-inside">
+              <li>Insufficient evidence → request more photos from top reporters.</li>
+              <li>Capacity full → fallback to nearest available team; recalc ETA.</li>
+              <li>Hazardous waste → escalate to Environmental Unit; change SLA.</li>
+            </ul>
+          </details>
+
+          <div class="mt-4 grid md:grid-cols-3 gap-4 text-sm">
+            <div>
+              <div class="font-medium">Usability metrics</div>
+              <ul class="mt-1 list-disc list-inside text-slate">
+                <li>Effectiveness ≥ 90% clusters → jobs</li>
+                <li>Efficiency ≤ 60s median to assign</li>
+                <li>Satisfaction ≥ 80% prioritization clarity</li>
+              </ul>
+            </div>
+            <div>
+              <div class="font-medium">UX goals</div>
+              <ul class="mt-1 list-disc list-inside text-slate">
+                <li>Control &amp; speed</li>
+                <li>Confidence in decisions</li>
+                <li>Transparent audit trail</li>
+              </ul>
+            </div>
+            <div>
+              <div class="font-medium">Done criteria</div>
+              <ul class="mt-1 list-disc list-inside text-slate">
+                <li>Closed job has geotagged after-photo + SLA met flag + notification sent</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
+    <!-- ===== end personas + scenarios ===== -->
 
     <section id="timeline">
       <h2 class="text-2xl font-semibold">Timeline</h2>
@@ -145,11 +403,11 @@
     });
 
     // Load Project 1 data
-  fetch('../../data/projects.json')
-    .then(r=>r.json())
-    .then(all=>{
-      const p = all.find(x=>x.id==='project-1');
-      if(!p) return;
+    fetch('../../data/projects.json')
+      .then(r=>r.json())
+      .then(all=>{
+        const p = all.find(x=>x.id==='project-1');
+        if(!p) return;
 
         // Hero
         document.getElementById('title').textContent = p.title;
@@ -174,26 +432,6 @@
           document.getElementById('scopeOut').appendChild(li);
         });
 
-        // Personas
-        (p.sections.personas||[]).forEach(ps=>{
-          const card=document.createElement('div');
-          card.className='rounded-2xl p-6 border border-black/10 dark:border-white/10';
-          card.innerHTML = `
-            <div class="font-semibold">${ps.name}</div>
-            <div class="mt-3 grid grid-cols-2 gap-4 text-sm">
-              <div>
-                <div class="font-medium">Goals</div>
-                <ul class="mt-1 list-disc list-inside text-slate">${(ps.goals||[]).map(g=>`<li>${g}</li>`).join('')}</ul>
-              </div>
-              <div>
-                <div class="font-medium">Pain points</div>
-                <ul class="mt-1 list-disc list-inside text-slate">${(ps.painPoints||[]).map(g=>`<li>${g}</li>`).join('')}</ul>
-              </div>
-            </div>
-          `;
-          document.getElementById('personasWrap').appendChild(card);
-        });
-
         // Timeline
         (p.sections.timeline||[]).forEach(step=>{
           const li=document.createElement('li');
@@ -203,72 +441,70 @@
           document.getElementById('timelineList').appendChild(li);
         });
 
-        // Local Gallery (100% GitHub-safe)
-         // Local Gallery (robust)
-      const local = p.galleryLocal;
-      if (local && local.basePath && Array.isArray(local.files) && local.files.length) {
-        buildLocalGallery(local.basePath, local.files);
-      } else {
-        document.getElementById('galleryGrid').innerHTML =
-          '<div class="text-slate">No local images configured. Update <code>data/projects.json</code>.</div>';
-      }
-    })
-    .catch(err=>{ console.error(err); });
+        // Local Gallery (robust)
+        const local = p.galleryLocal;
+        if (local && local.basePath && Array.isArray(local.files) && local.files.length) {
+          buildLocalGallery(local.basePath, local.files);
+        } else {
+          document.getElementById('galleryGrid').innerHTML =
+            '<div class="text-slate">No local images configured. Update <code>data/projects.json</code>.</div>';
+        }
+      })
+      .catch(err=>{ console.error(err); });
 
-  async function buildLocalGallery(basePath, files){
-    const grid = document.getElementById('galleryGrid');
-    for (const nameRaw of files){
-      // allow names with or without extension
-      const hasExt = /\.\w+$/.test(nameRaw);
-      const candidates = [];
-      if (hasExt) {
-        candidates.push(basePath + nameRaw);
-      } else {
-        candidates.push(basePath + nameRaw + '.jpg');
-        candidates.push(basePath + nameRaw + '.jpeg');
-        candidates.push(basePath + nameRaw + '.png');
-        candidates.push(basePath + nameRaw + '.webp');
-      }
-      // also try without leading ./ and with absolute-from-project path
-      const more = [];
-      for (const c of candidates){ more.push(c.replace('./','')); }
-      for (const c of candidates){ more.push('/projects/project-1/' + c.replace('./','')); }
-      const allCandidates = [...new Set([...candidates, ...more])];
+    async function buildLocalGallery(basePath, files){
+      const grid = document.getElementById('galleryGrid');
+      for (const nameRaw of files){
+        // allow names with or without extension
+        const hasExt = /\.\w+$/.test(nameRaw);
+        const candidates = [];
+        if (hasExt) {
+          candidates.push(basePath + nameRaw);
+        } else {
+          candidates.push(basePath + nameRaw + '.jpg');
+          candidates.push(basePath + nameRaw + '.jpeg');
+          candidates.push(basePath + nameRaw + '.png');
+          candidates.push(basePath + nameRaw + '.webp');
+        }
+        // also try without leading ./ and with absolute-from-project path
+        const more = [];
+        for (const c of candidates){ more.push(c.replace('./','')); }
+        for (const c of candidates){ more.push('/projects/project-1/' + c.replace('./','')); }
+        const allCandidates = [...new Set([...candidates, ...more])];
 
-      const src = await firstReachable(allCandidates);
-      const fig = document.createElement('figure');
-      fig.className = 'rounded-2xl overflow-hidden border border-black/10 dark:border-white/10';
-      if (src){
-        fig.innerHTML = `
-          <div class="aspect-[4/3] bg-black/5 dark:bg-white/10 overflow-hidden">
-            <img src="${src}" alt="${escapeHtml(nameRaw)}" class="w-full h-full object-cover" loading="lazy">
-          </div>
-          <figcaption class="p-3 text-xs text-slate">${escapeHtml(nameRaw)}</figcaption>
-        `;
-      } else {
-        fig.innerHTML = `
-          <div class="aspect-[4/3] bg-black/5 dark:bg-white/10 flex items-center justify-center">
-            <span class="text-xs text-slate">Missing: ${escapeHtml(nameRaw)}</span>
-          </div>
-          <figcaption class="p-3 text-xs text-slate">Could not find this file. Check path/extension.</figcaption>
-        `;
+        const src = await firstReachable(allCandidates);
+        const fig = document.createElement('figure');
+        fig.className = 'rounded-2xl overflow-hidden border border-black/10 dark:border-white/10';
+        if (src){
+          fig.innerHTML = `
+            <div class="aspect-[4/3] bg-black/5 dark:bg-white/10 overflow-hidden">
+              <img src="${src}" alt="${escapeHtml(nameRaw)}" class="w-full h-full object-cover" loading="lazy">
+            </div>
+            <figcaption class="p-3 text-xs text-slate">${escapeHtml(nameRaw)}</figcaption>
+          `;
+        } else {
+          fig.innerHTML = `
+            <div class="aspect-[4/3] bg-black/5 dark:bg-white/10 flex items-center justify-center">
+              <span class="text-xs text-slate">Missing: ${escapeHtml(nameRaw)}</span>
+            </div>
+            <figcaption class="p-3 text-xs text-slate">Could not find this file. Check path/extension.</figcaption>
+          `;
+        }
+        grid.appendChild(fig);
       }
-      grid.appendChild(fig);
     }
-  }
 
-  async function firstReachable(urls){
-    for (const u of urls){
-      try {
-        const res = await fetch(u, { method:'HEAD', cache:'no-store' });
-        if (res.ok) return u;
-      } catch(_) {}
+    async function firstReachable(urls){
+      for (const u of urls){
+        try {
+          const res = await fetch(u, { method:'HEAD', cache:'no-store' });
+          if (res.ok) return u;
+        } catch(_) {}
+      }
+      return null;
     }
-    return null;
-  }
 
-  function escapeHtml(s){ return (s||'').replace(/[&<>"']/g,m=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m])); }
-</script>
+    function escapeHtml(s){ return (s||'').replace(/[&<>"']/g,m=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m])); }
+  </script>
 </body>
 </html>
-
