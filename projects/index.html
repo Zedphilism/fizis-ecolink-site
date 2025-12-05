@@ -4,13 +4,23 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>FIZIS — Projects</title>
-  <meta name="description" content="FIZIS projects overview."/>
+  <meta name="description" content="Overview of FIZIS projects for the EcoLink HCI coursework: proposal, user analysis, and upcoming design work."/>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config={theme:{extend:{colors:{mint:"#10B981",charcoal:"#111827",slate:"#6B7280"},boxShadow:{soft:"0 10px 30px rgba(0,0,0,.08)"}}},darkMode:'class'};
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { mint:"#10B981", charcoal:"#111827", slate:"#6B7280" },
+          boxShadow: { soft:"0 10px 30px rgba(0,0,0,.08)" }
+        }
+      },
+      darkMode:'class'
+    };
   </script>
 </head>
 <body class="bg-white text-charcoal dark:bg-charcoal dark:text-white transition">
+
+  <!-- Header -->
   <header class="sticky top-0 z-40 backdrop-blur bg-white/70 dark:bg-charcoal/60 border-b border-black/5 dark:border-white/10">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="../index.html" class="flex items-center gap-2 font-semibold tracking-tight text-lg">
@@ -19,22 +29,86 @@
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a class="hover:text-mint" href="../index.html#proposal">Proposal</a>
         <a class="hover:text-mint" href="../blog/index.html">Blog</a>
-        <a class="hover:text-mint text-mint" href="./index.html">Projects</a>
+        <a class="hover:text-mint text-mint" href="index.html">Projects</a>
         <a class="hover:text-mint" href="../index.html#gallery">Gallery</a>
         <a class="hover:text-mint" href="../index.html#team">Team</a>
         <a class="hover:text-mint" href="../index.html#contact">Contact</a>
       </nav>
-      <button id="themeToggle" class="text-sm px-3 py-1.5 rounded-lg border border-black/10 dark:border-white/20 hover:border-mint">Toggle theme</button>
+      <button id="themeToggle" class="text-sm px-3 py-1.5 rounded-lg border border-black/10 dark:border-white/20 hover:border-mint">
+        Toggle theme
+      </button>
     </div>
   </header>
 
+  <!-- Main -->
   <main class="max-w-6xl mx-auto px-4 py-10">
-    <h1 class="text-3xl font-bold">Projects</h1>
-    <p class="text-slate mt-2">Browse ongoing and planned work. Click a card to view details.</p>
-    <div id="grid" class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    <h1 class="text-3xl md:text-4xl font-bold">Projects</h1>
+    <p class="mt-3 text-slate max-w-3xl text-sm md:text-base">
+      Browse ongoing and planned work for EcoLink. Each project corresponds to a course deliverable:
+      from proposal, to user analysis, to later design and evaluation phases.
+      Click a card to view details.
+    </p>
+
+    <div class="mt-8 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+      <!-- Project 1 -->
+      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 hover:border-mint transition">
+        <div class="text-xs inline-flex px-2 py-1 rounded-full bg-mint/10 text-mint mb-3">Proposal</div>
+        <h2 class="font-semibold text-lg">EcoLink — Smart Waste Management</h2>
+        <p class="mt-2 text-sm text-slate">
+          Centralised platform for disposal info, bulky pickups, RoRo booking, e-waste, and community micro-jobs.
+          This project focuses on the initial proposal, problem statement, solution concept, and scope.
+        </p>
+        <a href="project-1/index.html"
+           class="mt-4 inline-flex items-center gap-1 text-sm text-mint hover:underline">
+          Open →
+        </a>
+      </article>
+
+      <!-- Project 2 (UPDATED) -->
+      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 hover:border-mint transition">
+        <div class="text-xs inline-flex px-2 py-1 rounded-full bg-mint/10 text-mint mb-3">User analysis</div>
+        <h2 class="font-semibold text-lg">Project 2 — Establishing Requirements &amp; User & Scenario Analysis</h2>
+        <p class="mt-2 text-sm text-slate">
+          Detailed personas and usage scenarios for EcoLink, covering resident complaints, RORO bin booking,
+          and locating disposal sites. Includes goals, pains, gains, and design considerations for each persona.
+        </p>
+        <a href="project-2/index.html"
+           class="mt-4 inline-flex items-center gap-1 text-sm text-mint hover:underline">
+          Open →
+        </a>
+      </article>
+
+      <!-- Project 3 (placeholder) -->
+      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 hover:border-mint/80 transition opacity-80">
+        <div class="text-xs inline-flex px-2 py-1 rounded-full bg-mint/10 text-mint mb-3">Planning</div>
+        <h2 class="font-semibold text-lg">Project 3 — Concept &amp; Design</h2>
+        <p class="mt-2 text-sm text-slate">
+          Reserved for upcoming conceptual and physical design work: information architecture, task flows,
+          wireframes, and early prototypes for EcoLink.
+        </p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm text-slate">
+          Coming soon
+        </span>
+      </article>
+
+      <!-- Project 4 (placeholder) -->
+      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 hover:border-mint/80 transition opacity-80">
+        <div class="text-xs inline-flex px-2 py-1 rounded-full bg-mint/10 text-mint mb-3">Planning</div>
+        <h2 class="font-semibold text-lg">Project 4 — Evaluation &amp; Refinement</h2>
+        <p class="mt-2 text-sm text-slate">
+          Placeholder for later usability testing, heuristic evaluations, feedback cycles, and final design refinements.
+        </p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm text-slate">
+          Coming soon
+        </span>
+      </article>
+
+    </div>
   </main>
 
-  <footer class="border-t border-black/5 dark:border-white/10">
+  <!-- Footer -->
+  <footer class="border-t border-black/5 dark:border-white/10 mt-8">
     <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate">
       © <span id="year"></span> FIZIS
     </div>
@@ -42,42 +116,21 @@
 
   <script>
     // year
-    document.getElementById('year').textContent=new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
 
     // dark / light toggle
-    const btn = document.getElementById('themeToggle');
+    const btn  = document.getElementById('themeToggle');
     const root = document.documentElement;
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
       root.classList.add('dark');
     }
     btn.addEventListener('click', () => {
       root.classList.toggle('dark');
       localStorage.theme = root.classList.contains('dark') ? 'dark' : 'light';
     });
-
-    // load projects
-    const grid=document.getElementById('grid');
-    fetch('../data/projects.json')
-      .then(r=>r.json())
-      .then(items=>{
-        items.forEach(p=>{
-          const slug = p.id;
-          const href = `./${slug}/`;
-          const chip = `<span class="text-xs px-2 py-1 rounded bg-mint/10 text-mint">${p.status||'—'}</span>`;
-          const teaser = p.summary||'';
-          const card = document.createElement('a');
-          card.href = href;
-          card.className = 'block rounded-2xl p-6 border border-black/10 dark:border-white/10 hover:border-mint transition';
-          card.innerHTML = `
-            <div class="text-sm text-slate">${chip}</div>
-            <h2 class="mt-2 font-semibold text-lg">${p.title}</h2>
-            <p class="mt-2 text-sm text-slate">${teaser}</p>
-            <span class="mt-4 inline-block text-mint text-sm">Open →</span>
-          `;
-          grid.appendChild(card);
-        });
-      })
-      .catch(()=>{ grid.innerHTML='<div class="text-slate">Failed to load projects.</div>'; });
   </script>
 </body>
 </html>
