@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Project 2 — User Analysis | FIZIS</title>
-  <meta name="description" content="User analysis for EcoLink: personas and usage scenarios for key stakeholders."/>
+  <title>Project 02 – Establishing Requirements | FIZIS</title>
+  <meta name="description" content="Project 02 user and task analysis for EcoLink: personas, scenarios, task analysis, refined HTA, and established requirements."/>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -45,17 +45,18 @@
     <nav class="text-sm text-slate mb-4">
       <a class="hover:text-mint" href="../index.html">Projects</a>
       <span class="opacity-50">/</span>
-      Project 2
+      Project 02
     </nav>
-    <h1 class="text-3xl md:text-4xl font-bold leading-tight">Project 2 — User Analysis</h1>
+    <h1 class="text-3xl md:text-4xl font-bold leading-tight">Project 02 – Establishing Requirements</h1>
     <div class="mt-2 text-xs uppercase tracking-wider text-slate">
       Phase:
-      <span class="ml-2 px-2 py-1 rounded bg-mint/10 text-mint">User research &amp; analysis</span>
+      <span class="ml-2 px-2 py-1 rounded bg-mint/10 text-mint">User &amp; task analysis</span>
     </div>
     <p class="mt-4 text-slate max-w-3xl text-sm md:text-base">
-      This page documents the user analysis for EcoLink. It focuses on three core personas and their
-      key scenarios when interacting with the proposed waste management system, covering both resident
-      and professional use cases.
+      This page documents the user and task analysis for EcoLink, a smart waste management concept inspired by
+      existing local council complaint portals such as MBIP/MBPJ. We focus on three core tasks – locating recycling
+      bins, filing complaints, and booking RoRo bins – to understand real user needs and translate them into design
+      requirements.
     </p>
   </section>
 
@@ -63,413 +64,874 @@
   <div class="sticky top-[60px] z-30 bg-white/80 dark:bg-charcoal/80 backdrop-blur border-y border-black/5 dark:border-white/10">
     <div class="max-w-6xl mx-auto px-4 py-2 overflow-x-auto">
       <div class="flex gap-4 text-sm">
-        <a class="hover:text-mint whitespace-nowrap" href="#personas">Personas</a>
-        <a class="hover:text-mint whitespace-nowrap" href="#scenarios">Scenarios</a>
+        <a class="hover:text-mint whitespace-nowrap" href="#intro">1. Introduction</a>
+        <a class="hover:text-mint whitespace-nowrap" href="#user-analysis">2. User analysis</a>
+        <a class="hover:text-mint whitespace-nowrap" href="#task-analysis">3. Task analysis</a>
+        <a class="hover:text-mint whitespace-nowrap" href="#refined-hta">4. Refined HTA</a>
+        <a class="hover:text-mint whitespace-nowrap" href="#final-reqs">5. Final requirements</a>
       </div>
     </div>
   </div>
 
   <main class="space-y-12 pb-12">
 
-    <!-- PERSONAS -->
-    <section id="personas" class="max-w-6xl mx-auto px-4 pt-10 space-y-6">
-      <h2 class="text-2xl font-semibold">User Personas</h2>
-      <p class="text-slate text-sm max-w-3xl">
-        These personas represent the key user groups for the waste management system:
-        a residential housewife, a professional construction project manager, and an elderly gardening enthusiast.
-        They guide design decisions for both the mobile app and web portal.
+    <!-- 1. INTRODUCTION -->
+    <section id="intro" class="max-w-6xl mx-auto px-4 pt-10 space-y-4">
+      <h2 class="text-2xl font-semibold">1. Introduction</h2>
+      <p class="text-slate text-sm md:text-base">
+        For this stage, we analyse how users would interact with EcoLink while performing day-to-day waste-related tasks.
+        EcoLink is evaluated as a future replacement / improvement of existing local authority systems
+        (for example MBIP/MBPJ complaint and waste portals). The goal is to discover usability issues,
+        capture user expectations, and shape clear design requirements.
       </p>
+      <div class="text-sm">
+        <h3 class="font-semibold">Chosen tasks</h3>
+        <ul class="mt-2 list-disc list-inside text-slate">
+          <li><strong>Task 1:</strong> Locate recycling bin / disposal site.</li>
+          <li><strong>Task 2:</strong> File a waste-related complaint.</li>
+          <li><strong>Task 3:</strong> Book a RoRo bin for bulky or construction waste.</li>
+        </ul>
+      </div>
+    </section>
 
-      <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+    <!-- 2. USER ANALYSIS -->
+    <section id="user-analysis" class="max-w-6xl mx-auto px-4 pt-4 space-y-8">
+      <header>
+        <h2 class="text-2xl font-semibold">2. User analysis</h2>
+        <p class="mt-2 text-slate text-sm md:text-base max-w-3xl">
+          Three personas were developed to represent key user groups: a residential housewife, a construction project
+          manager, and an elderly gardening enthusiast. Each persona is paired with a realistic scenario that reflects
+          how they interact with EcoLink.
+        </p>
+      </header>
 
-        <!-- Persona 1: Aina Rahman -->
-        <article class="rounded-2xl p-6 border border-black/10 dark:border-white/10 bg-black/0 dark:bg-white/0">
-          <div class="flex gap-4">
-            <div class="w-24 h-24 rounded-xl overflow-hidden bg-black/5 dark:bg-white/10 flex-shrink-0">
-              <!-- image path: projects/project-2/images/persona-aina.png -->
-              <img src="images/persona-aina.png" alt="Persona 1: Aina Rahman"
-                   class="w-full h-full object-cover" loading="lazy"
-                   onerror="this.style.display='none'; this.parentElement.classList.add('flex','items-center','justify-center'); this.parentElement.innerHTML='<span class=&quot;text-xs text-slate text-center&quot;>Aina<br>photo</span>';">
-            </div>
-            <div class="flex-1">
-              <h3 class="font-semibold text-lg">Aina Rahman</h3>
-              <p class="text-sm text-slate">
-                <span class="font-medium">Age:</span> 28<br>
-                <span class="font-medium">Occupation:</span> Full-time housewife<br>
-                <span class="font-medium">Technology experience:</span> Moderate mobile application user
-              </p>
-            </div>
-          </div>
+      <!-- 2.1 Personas -->
+      <section id="personas">
+        <h3 class="text-xl font-semibold">2.1 Personas</h3>
+        <div class="mt-4 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
 
-          <p class="mt-3 text-sm text-slate">
-            Aina lives at Taman Budi, KL. Her mornings are filled with housework and caring for her children.
-            When the communal bins near her home overflow, she worries about smells, pests, and her family’s health.
-            She dislikes calling council offices and dealing with confusing instructions, and prefers simple mobile apps
-            where she can solve problems in a few taps.
-          </p>
-
-          <p class="mt-2 text-sm text-slate">
-            She expects the smart waste app to let her report issues quickly, attach photos, and see that action will be
-            taken without needing to chase anyone on the phone.
-          </p>
-
-          <!-- Pains / Gains -->
-          <div class="mt-4 grid grid-cols-2 gap-4 text-sm">
-            <div>
-              <div class="font-medium">Pains</div>
-              <ul class="mt-1 list-disc list-inside text-slate">
-                <li>Unsure which complaint category to choose.</li>
-                <li>Feels stressed dealing with hotlines and long menus.</li>
-                <li>Worries her complaints are ignored or “hilang entah ke mana”.</li>
-              </ul>
-            </div>
-            <div>
-              <div class="font-medium">Gains</div>
-              <ul class="mt-1 list-disc list-inside text-slate">
-                <li>Clear confirmation that her report is received.</li>
-                <li>Estimated clean-up time so she can plan around it.</li>
-                <li>Cleaner, safer environment for her children.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Personality bars -->
-          <div class="mt-4 space-y-2 text-xs">
-            <div>
-              <div class="flex justify-between"><span>Tech-savviness</span><span>60</span></div>
-              <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
-                <div class="h-1.5 bg-mint rounded" style="width:60%"></div>
+          <!-- Persona 1: Aina Rahman -->
+          <article class="rounded-2xl p-6 border border-black/10 dark:border-white/10 bg-black/0 dark:bg-white/0">
+            <div class="flex gap-4">
+              <div class="w-24 h-24 rounded-xl overflow-hidden bg-black/5 dark:bg-white/10 flex-shrink-0">
+                <!-- Place persona photo at: projects/project-2/images/persona-aina.png -->
+                <img src="images/persona-aina.png" alt="Persona 1: Aina Rahman"
+                     class="w-full h-full object-cover" loading="lazy"
+                     onerror="this.style.display='none'; this.parentElement.classList.add('flex','items-center','justify-center'); this.parentElement.innerHTML='<span class=&quot;text-xs text-slate text-center&quot;>Aina<br>photo</span>';">
+              </div>
+              <div class="flex-1">
+                <h4 class="font-semibold text-lg">Aina Rahman</h4>
+                <p class="text-sm text-slate">
+                  <span class="font-medium">Age:</span> 28<br>
+                  <span class="font-medium">Occupation:</span> Full-time housewife<br>
+                  <span class="font-medium">Technology experience:</span> Moderate mobile application user
+                </p>
               </div>
             </div>
-            <div>
-              <div class="flex justify-between"><span>Risk aversion</span><span>50</span></div>
-              <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
-                <div class="h-1.5 bg-mint rounded" style="width:50%"></div>
+
+            <p class="mt-3 text-sm text-slate">
+              Aina lives at Taman Budi, KL. Her mornings are filled with housework and caring for her children.
+              When communal bins near her home overflow, she worries about smell, pests, and her family’s health.
+              She dislikes calling council offices, being put on hold, and dealing with confusing menus, and prefers
+              simple mobile apps where problems can be solved with just a few taps.
+            </p>
+
+            <div class="mt-4 grid grid-cols-2 gap-4 text-sm">
+              <div>
+                <div class="font-medium">Primary goals</div>
+                <ul class="mt-1 list-disc list-inside text-slate">
+                  <li>Report waste-related issues quickly from her phone.</li>
+                  <li>Attach photos and location without extra typing.</li>
+                  <li>Get clear confirmation that action will be taken.</li>
+                </ul>
+              </div>
+              <div>
+                <div class="font-medium">Secondary goals</div>
+                <ul class="mt-1 list-disc list-inside text-slate">
+                  <li>Keep her neighbourhood safe and clean for her children.</li>
+                  <li>Avoid stressful calls and long voice menus.</li>
+                  <li>Track complaint status without chasing anyone.</li>
+                </ul>
               </div>
             </div>
-            <div>
-              <div class="flex justify-between"><span>Community orientation</span><span>75</span></div>
-              <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
-                <div class="h-1.5 bg-mint rounded" style="width:75%"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between"><span>Time pressure</span><span>70</span></div>
-              <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
-                <div class="h-1.5 bg-mint rounded" style="width:70%"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between"><span>Eco-motivation</span><span>65</span></div>
-              <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
-                <div class="h-1.5 bg-mint rounded" style="width:65%"></div>
-              </div>
-            </div>
-          </div>
 
-          <blockquote class="mt-3 text-xs text-slate italic">
-            “Saya nak lapor masalah cepat, senang, dan tahu bila orang datang bersihkan.”
-          </blockquote>
-        </article>
-
-        <!-- Persona 2: Amir Fauzi -->
-        <article class="rounded-2xl p-6 border border-black/10 dark:border-white/10 bg-black/0 dark:bg-white/0">
-          <div class="flex gap-4">
-            <div class="w-24 h-24 rounded-xl overflow-hidden bg-black/5 dark:bg-white/10 flex-shrink-0">
-              <!-- image path: projects/project-2/images/persona-amir.png -->
-              <img src="images/persona-amir.png" alt="Persona 2: Amir Fauzi"
-                   class="w-full h-full object-cover" loading="lazy"
-                   onerror="this.style.display='none'; this.parentElement.classList.add('flex','items-center','justify-center'); this.parentElement.innerHTML='<span class=&quot;text-xs text-slate text-center&quot;>Amir<br>photo</span>';">
-            </div>
-            <div class="flex-1">
-              <h3 class="font-semibold text-lg">Amir Fauzi</h3>
-              <p class="text-sm text-slate">
-                <span class="font-medium">Age:</span> 40<br>
-                <span class="font-medium">Occupation:</span> Construction Project Manager<br>
-                <span class="font-medium">Technology experience:</span> High, daily professional digital user
-              </p>
-            </div>
-          </div>
-
-          <p class="mt-3 text-sm text-slate">
-            Amir oversees renovation and construction projects across multiple job sites and is responsible for waste
-            disposal arrangements. Construction work generates large volumes of debris that must be cleared quickly to
-            avoid safety hazards, work delays, and regulatory fines. He is comfortable with digital tools for logistics,
-            scheduling, and finance, and values solutions that prioritise efficiency, clarity, and reliability.
-          </p>
-
-          <!-- Goals / Pains / Gains -->
-          <div class="mt-4 grid grid-cols-1 gap-4 text-sm">
-            <div>
-              <div class="font-medium">Primary goals</div>
-              <ul class="mt-1 list-disc list-inside text-slate">
-                <li>Book RORO bins quickly without phone calls or paperwork.</li>
-                <li>Track bin availability, delivery timing, and pickup status in real time.</li>
-              </ul>
-            </div>
-            <div>
-              <div class="font-medium">Secondary goals</div>
-              <ul class="mt-1 list-disc list-inside text-slate">
-                <li>Access transparent pricing and billing details.</li>
-                <li>Maintain proper documentation for compliance and site audits.</li>
-              </ul>
-            </div>
-            <div class="grid grid-cols-2 gap-4">
+            <div class="mt-4 grid grid-cols-2 gap-4 text-sm">
               <div>
                 <div class="font-medium">Pains</div>
                 <ul class="mt-1 list-disc list-inside text-slate">
-                  <li>Delays caused by slow or unresponsive waste services.</li>
-                  <li>Lack of real-time bin availability and unclear delivery timing.</li>
-                  <li>Manual paperwork that introduces errors and wastes time.</li>
-                  <li>Needing to call suppliers repeatedly for confirmation.</li>
+                  <li>Unsure which complaint category to choose.</li>
+                  <li>Feels stressed dealing with hotlines and long menus.</li>
+                  <li>Worries complaints are ignored or “hilang entah ke mana”.</li>
                 </ul>
               </div>
               <div>
                 <div class="font-medium">Gains</div>
                 <ul class="mt-1 list-disc list-inside text-slate">
-                  <li>System that shows live availability and exact delivery slots.</li>
+                  <li>Clear, written confirmation that her report is received.</li>
+                  <li>Estimated clean-up time so she can plan her day.</li>
+                  <li>Cleaner, safer environment for her family.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Personality bars -->
+            <div class="mt-4 space-y-2 text-xs">
+              <div>
+                <div class="flex justify-between"><span>Tech-savviness</span><span>60</span></div>
+                <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
+                  <div class="h-1.5 bg-mint rounded" style="width:60%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between"><span>Risk aversion</span><span>50</span></div>
+                <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
+                  <div class="h-1.5 bg-mint rounded" style="width:50%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between"><span>Community orientation</span><span>75</span></div>
+                <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
+                  <div class="h-1.5 bg-mint rounded" style="width:75%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between"><span>Time pressure</span><span>70</span></div>
+                <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
+                  <div class="h-1.5 bg-mint rounded" style="width:70%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between"><span>Eco-motivation</span><span>65</span></div>
+                <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
+                  <div class="h-1.5 bg-mint rounded" style="width:65%"></div>
+                </div>
+              </div>
+            </div>
+
+            <blockquote class="mt-3 text-xs text-slate italic">
+              “Saya nak lapor masalah cepat, senang, dan tahu bila orang datang bersihkan.”
+            </blockquote>
+          </article>
+
+          <!-- Persona 2: Amir Fauzi -->
+          <article class="rounded-2xl p-6 border border-black/10 dark:border-white/10 bg-black/0 dark:bg-white/0">
+            <div class="flex gap-4">
+              <div class="w-24 h-24 rounded-xl overflow-hidden bg-black/5 dark:bg-white/10 flex-shrink-0">
+                <!-- Place persona photo at: projects/project-2/images/persona-amir.png -->
+                <img src="images/persona-amir.png" alt="Persona 2: Amir Fauzi"
+                     class="w-full h-full object-cover" loading="lazy"
+                     onerror="this.style.display='none'; this.parentElement.classList.add('flex','items-center','justify-center'); this.parentElement.innerHTML='<span class=&quot;text-xs text-slate text-center&quot;>Amir<br>photo</span>';">
+              </div>
+              <div class="flex-1">
+                <h4 class="font-semibold text-lg">Amir Fauzi</h4>
+                <p class="text-sm text-slate">
+                  <span class="font-medium">Age:</span> 40<br>
+                  <span class="font-medium">Occupation:</span> Construction Project Manager<br>
+                  <span class="font-medium">Technology experience:</span> High, daily professional digital user
+                </p>
+              </div>
+            </div>
+
+            <p class="mt-3 text-sm text-slate">
+              Amir oversees renovation and construction projects across multiple job sites and is responsible for waste
+              disposal arrangements. Construction activities generate large volumes of debris that must be cleared quickly
+              to avoid safety hazards, work delays, or regulatory fines. He is comfortable with digital tools for logistics,
+              scheduling, and finance, and prefers solutions that are efficient, clear, and reliable.
+            </p>
+
+            <div class="mt-4 grid grid-cols-2 gap-4 text-sm">
+              <div>
+                <div class="font-medium">Primary goals</div>
+                <ul class="mt-1 list-disc list-inside text-slate">
+                  <li>Book RoRo bins quickly without phone calls or paperwork.</li>
+                  <li>Track bin availability, delivery timing, and pickup status in real time.</li>
+                </ul>
+              </div>
+              <div>
+                <div class="font-medium">Secondary goals</div>
+                <ul class="mt-1 list-disc list-inside text-slate">
+                  <li>Access transparent pricing and billing details.</li>
+                  <li>Maintain proper documentation for compliance and audits.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mt-4 grid grid-cols-2 gap-4 text-sm">
+              <div>
+                <div class="font-medium">Pains</div>
+                <ul class="mt-1 list-disc list-inside text-slate">
+                  <li>Delays caused by slow or unresponsive waste disposal services.</li>
+                  <li>Lack of real-time bin availability and unclear delivery timing.</li>
+                  <li>Manual paperwork that wastes time and introduces errors.</li>
+                  <li>Repeated calls to suppliers just to confirm status.</li>
+                </ul>
+              </div>
+              <div>
+                <div class="font-medium">Gains</div>
+                <ul class="mt-1 list-disc list-inside text-slate">
+                  <li>Booking system showing live availability and delivery slots.</li>
                   <li>Instant confirmations and digital receipts shareable with site teams.</li>
                   <li>Dependable platform that reduces miscommunication.</li>
                   <li>Faster workflow with less administrative hassle.</li>
                 </ul>
               </div>
             </div>
+
+            <!-- Personality bars -->
+            <div class="mt-4 space-y-2 text-xs">
+              <div>
+                <div class="flex justify-between"><span>Tech-savviness</span><span>85</span></div>
+                <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
+                  <div class="h-1.5 bg-mint rounded" style="width:85%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between"><span>Risk aversion</span><span>65</span></div>
+                <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
+                  <div class="h-1.5 bg-mint rounded" style="width:65%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between"><span>Community orientation</span><span>50</span></div>
+                <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
+                  <div class="h-1.5 bg-mint rounded" style="width:50%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between"><span>Time pressure</span><span>90</span></div>
+                <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
+                  <div class="h-1.5 bg-mint rounded" style="width:90%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between"><span>Eco-motivation</span><span>60</span></div>
+                <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
+                  <div class="h-1.5 bg-mint rounded" style="width:60%"></div>
+                </div>
+              </div>
+            </div>
+
+            <blockquote class="mt-3 text-xs text-slate italic">
+              “If I can see bin availability, price, and delivery status in one portal, I can keep the site running on schedule.”
+            </blockquote>
+          </article>
+
+          <!-- Persona 3: Hassan Omar -->
+          <article class="rounded-2xl p-6 border border-black/10 dark:border-white/10 bg-black/0 dark:bg-white/0">
+            <div class="flex gap-4">
+              <div class="w-24 h-24 rounded-xl overflow-hidden bg-black/5 dark:bg-white/10 flex-shrink-0">
+                <!-- Place persona photo at: projects/project-2/images/persona-hassan.png -->
+                <img src="images/persona-hassan.png" alt="Persona 3: Hassan Omar"
+                     class="w-full h-full object-cover" loading="lazy"
+                     onerror="this.style.display='none'; this.parentElement.classList.add('flex','items-center','justify-center'); this.parentElement.innerHTML='<span class=&quot;text-xs text-slate text-center&quot;>Hassan<br>photo</span>';">
+              </div>
+              <div class="flex-1">
+                <h4 class="font-semibold text-lg">Hassan Omar</h4>
+                <p class="text-sm text-slate">
+                  <span class="font-medium">Age:</span> 62<br>
+                  <span class="font-medium">Occupation:</span> Retired school teacher<br>
+                  <span class="font-medium">Technology experience:</span> Basic smartphone user
+                </p>
+              </div>
+            </div>
+
+            <p class="mt-3 text-sm text-slate">
+              Pak Hassan spends most of his time at home caring for his garden and managing household maintenance.
+              Gardening activities generate waste such as plant cuttings, soil bags, broken tools, and old electronic
+              devices. He wants to dispose of these responsibly but often feels uncertain about where special waste
+              such as e-waste or chemical containers should be taken.
+            </p>
+
+            <div class="mt-4 grid grid-cols-2 gap-4 text-sm">
+              <div>
+                <div class="font-medium">Primary goals</div>
+                <ul class="mt-1 list-disc list-inside text-slate">
+                  <li>Locate appropriate disposal or recycling sites easily.</li>
+                  <li>Understand clearly which items can be dropped at each site.</li>
+                </ul>
+              </div>
+              <div>
+                <div class="font-medium">Secondary goals</div>
+                <ul class="mt-1 list-disc list-inside text-slate">
+                  <li>Use simple, readable maps without feeling overwhelmed.</li>
+                  <li>Avoid making wrong trips or bringing items to the wrong facility.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mt-4 grid grid-cols-2 gap-4 text-sm">
+              <div>
+                <div class="font-medium">Pains</div>
+                <ul class="mt-1 list-disc list-inside text-slate">
+                  <li>Unsure where to bring special waste such as e-waste and chemicals.</li>
+                  <li>Struggles with small text and crowded interfaces.</li>
+                  <li>Feels overwhelmed if there are too many steps or options.</li>
+                </ul>
+              </div>
+              <div>
+                <div class="font-medium">Gains</div>
+                <ul class="mt-1 list-disc list-inside text-slate">
+                  <li>Simple map guidance to the correct disposal site.</li>
+                  <li>Large, clear labels and icons.</li>
+                  <li>Confidence that he is disposing of waste correctly.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Personality bars -->
+            <div class="mt-4 space-y-2 text-xs">
+              <div>
+                <div class="flex justify-between"><span>Tech-savviness</span><span>40</span></div>
+                <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
+                  <div class="h-1.5 bg-mint rounded" style="width:40%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between"><span>Risk aversion</span><span>75</span></div>
+                <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
+                  <div class="h-1.5 bg-mint rounded" style="width:75%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between"><span>Community orientation</span><span>65</span></div>
+                <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
+                  <div class="h-1.5 bg-mint rounded" style="width:65%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between"><span>Time pressure</span><span>40</span></div>
+                <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
+                  <div class="h-1.5 bg-mint rounded" style="width:40%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between"><span>Eco-motivation</span><span>70</span></div>
+                <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
+                  <div class="h-1.5 bg-mint rounded" style="width:70%"></div>
+                </div>
+              </div>
+            </div>
+
+            <blockquote class="mt-3 text-xs text-slate italic">
+              “Saya cuma nak aplikasi yang jelas, tulisan besar, dan tunjuk jalan ke tempat buang yang betul.”
+            </blockquote>
+          </article>
+        </div>
+      </section>
+
+      <!-- 2.2 Scenarios -->
+      <section id="scenarios" class="space-y-4">
+        <h3 class="text-xl font-semibold">2.2 Scenarios</h3>
+        <p class="text-slate text-sm md:text-base max-w-3xl">
+          Each persona is paired with a realistic scenario that illustrates how they would use EcoLink to complete one
+          of the three core tasks.
+        </p>
+
+        <!-- Scenario 1 – Aina -->
+        <article class="rounded-2xl p-6 border border-black/10 dark:border-white/10">
+          <div class="flex flex-wrap items-center gap-2 text-xs">
+            <span class="px-2 py-1 rounded bg-mint/10 text-mint">Persona: Aina Rahman</span>
+            <span class="px-2 py-1 rounded bg-black/5 dark:bg-white/10 text-slate">Resident</span>
+            <span class="px-2 py-1 rounded bg-black/5 dark:bg-white/10 text-slate">Task 2 – File complaint</span>
           </div>
-
-          <!-- Personality bars -->
-          <div class="mt-4 space-y-2 text-xs">
-            <div>
-              <div class="flex justify-between"><span>Tech-savviness</span><span>85</span></div>
-              <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
-                <div class="h-1.5 bg-mint rounded" style="width:85%"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between"><span>Risk aversion</span><span>65</span></div>
-              <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
-                <div class="h-1.5 bg-mint rounded" style="width:65%"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between"><span>Community orientation</span><span>50</span></div>
-              <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
-                <div class="h-1.5 bg-mint rounded" style="width:50%"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between"><span>Time pressure</span><span>90</span></div>
-              <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
-                <div class="h-1.5 bg-mint rounded" style="width:90%"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between"><span>Eco-motivation</span><span>60</span></div>
-              <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
-                <div class="h-1.5 bg-mint rounded" style="width:60%"></div>
-              </div>
-            </div>
-          </div>
-
-          <blockquote class="mt-3 text-xs text-slate italic">
-            “If I can see bin availability, price, and delivery status in one portal, I can keep the site running on schedule.”
-          </blockquote>
-        </article>
-
-        <!-- Persona 3: Hassan Omar -->
-        <article class="rounded-2xl p-6 border border-black/10 dark:border-white/10 bg-black/0 dark:bg-white/0">
-          <div class="flex gap-4">
-            <div class="w-24 h-24 rounded-xl overflow-hidden bg-black/5 dark:bg-white/10 flex-shrink-0">
-              <!-- image path: projects/project-2/images/persona-hassan.png -->
-              <img src="images/persona-hassan.png" alt="Persona 3: Hassan Omar"
-                   class="w-full h-full object-cover" loading="lazy"
-                   onerror="this.style.display='none'; this.parentElement.classList.add('flex','items-center','justify-center'); this.parentElement.innerHTML='<span class=&quot;text-xs text-slate text-center&quot;>Hassan<br>photo</span>';">
-            </div>
-            <div class="flex-1">
-              <h3 class="font-semibold text-lg">Hassan Omar</h3>
-              <p class="text-sm text-slate">
-                <span class="font-medium">Age:</span> 62<br>
-                <span class="font-medium">Occupation:</span> Retired school teacher<br>
-                <span class="font-medium">Technology experience:</span> Basic smartphone user
-              </p>
-            </div>
-          </div>
-
-          <p class="mt-3 text-sm text-slate">
-            Pak Hassan spends most of his time at home caring for his garden and managing household maintenance.
-            Gardening often creates waste such as plant cuttings, soil bags, broken tools, and old electrical devices.
-            He wants to dispose of waste responsibly but is unsure where items like e-waste or chemical containers should
-            be taken. He owns a smartphone but struggles with complicated interfaces and small text.
-          </p>
-
+          <h4 class="mt-3 font-semibold">Scenario 1 – Lodge a Waste Complaint</h4>
           <p class="mt-2 text-sm text-slate">
-            When using the system, his aim is to locate the nearest appropriate disposal or recycling sites easily,
-            with readable text and simple navigation that guides him step by step.
+            Aina notices that rubbish bins near the children's playground have not been collected for two days.
+            The smell is unpleasant and stray animals start to gather. Concerned about hygiene and her children’s
+            safety, she opens the EcoLink mobile app and selects the <em>“Lodge Complaint”</em> feature.
           </p>
-
-          <div class="mt-4 grid grid-cols-2 gap-4 text-sm">
-            <div>
-              <div class="font-medium">Pains</div>
-              <ul class="mt-1 list-disc list-inside text-slate">
-                <li>Uncertain where to bring special waste (e-waste, chemicals).</li>
-                <li>Finds dense interfaces and small fonts difficult to read.</li>
-                <li>Feels overwhelmed if too many options appear at once.</li>
-              </ul>
-            </div>
-            <div>
-              <div class="font-medium">Gains</div>
-              <ul class="mt-1 list-disc list-inside text-slate">
-                <li>Simple map to the correct disposal site.</li>
-                <li>Clear labels and large, readable text.</li>
-                <li>Confidence that he is disposing waste correctly.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Personality bars -->
-          <div class="mt-4 space-y-2 text-xs">
-            <div>
-              <div class="flex justify-between"><span>Tech-savviness</span><span>40</span></div>
-              <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
-                <div class="h-1.5 bg-mint rounded" style="width:40%"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between"><span>Risk aversion</span><span>75</span></div>
-              <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
-                <div class="h-1.5 bg-mint rounded" style="width:75%"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between"><span>Community orientation</span><span>65</span></div>
-              <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
-                <div class="h-1.5 bg-mint rounded" style="width:65%"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between"><span>Time pressure</span><span>40</span></div>
-              <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
-                <div class="h-1.5 bg-mint rounded" style="width:40%"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between"><span>Eco-motivation</span><span>70</span></div>
-              <div class="h-1.5 rounded bg-black/10 dark:bg-white/10 mt-1">
-                <div class="h-1.5 bg-mint rounded" style="width:70%"></div>
-              </div>
-            </div>
-          </div>
-
-          <blockquote class="mt-3 text-xs text-slate italic">
-            “Saya cuma nak aplikasi yang jelas, tulisan besar, dan tunjuk jalan ke tempat buang yang betul.”
-          </blockquote>
+          <ol class="mt-3 list-decimal ml-5 text-sm text-slate space-y-1">
+            <li>She takes a photo of the overflowing bins using the in-app camera.</li>
+            <li>The app automatically tags her location via GPS.</li>
+            <li>She selects the appropriate complaint category and writes a short description.</li>
+            <li>Upon submission, the system generates a reference number and confirmation screen.</li>
+            <li>A notification indicates that the report has been forwarded to the municipal cleaning team.</li>
+          </ol>
         </article>
-      </div>
+
+        <!-- Scenario 2 – Hassan -->
+        <article class="rounded-2xl p-6 border border-black/10 dark:border-white/10">
+          <div class="flex flex-wrap items-center gap-2 text-xs">
+            <span class="px-2 py-1 rounded bg-mint/10 text-mint">Persona: Hassan Omar</span>
+            <span class="px-2 py-1 rounded bg-black/5 dark:bg-white/10 text-slate">Elderly gardening enthusiast</span>
+            <span class="px-2 py-1 rounded bg-black/5 dark:bg-white/10 text-slate">Task 1 – Locate recycling bin</span>
+          </div>
+          <h4 class="mt-3 font-semibold">Scenario 2 – Locate Waste Disposal Site</h4>
+          <p class="mt-2 text-sm text-slate">
+            After clearing old gardening tools and damaged electrical equipment from his shed, Pak Hassan needs to
+            dispose of several items responsibly. Unsure where to bring e-waste, he opens the EcoLink app and taps
+            <em>“Locate Disposal Sites”</em>.
+          </p>
+          <ol class="mt-3 list-decimal ml-5 text-sm text-slate space-y-1">
+            <li>He selects <em>“E-waste”</em> as the waste category.</li>
+            <li>The system shows nearby authorised recycling centres with distance estimates.</li>
+            <li>He chooses the closest site and opens the map view.</li>
+            <li>Large text labels and simple icons guide him step by step.</li>
+            <li>He travels to the centre confident he is disposing of e-waste correctly.</li>
+          </ol>
+        </article>
+
+        <!-- Scenario 3 – Amir -->
+        <article class="rounded-2xl p-6 border border-black/10 dark:border-white/10">
+          <div class="flex flex-wrap items-center gap-2 text-xs">
+            <span class="px-2 py-1 rounded bg-mint/10 text-mint">Persona: Amir Fauzi</span>
+            <span class="px-2 py-1 rounded bg-black/5 dark:bg-white/10 text-slate">Construction project manager</span>
+            <span class="px-2 py-1 rounded bg-black/5 dark:bg-white/10 text-slate">Task 3 – Book RoRo bin</span>
+          </div>
+          <h4 class="mt-3 font-semibold">Scenario 3 – Book a RoRo Bin</h4>
+          <p class="mt-2 text-sm text-slate">
+            Amir is preparing for debris removal at an active renovation site and requires a RoRo bin to clear waste
+            efficiently. He accesses EcoLink via the web portal and chooses the <em>“Book RoRo Bin”</em> service.
+          </p>
+          <ol class="mt-3 list-decimal ml-5 text-sm text-slate space-y-1">
+            <li>He enters the project location and selects the required bin size.</li>
+            <li>The system displays availability and transparent pricing for his selected date.</li>
+            <li>He confirms the preferred delivery window and reviews the summary.</li>
+            <li>After submitting, he receives a digital confirmation with reference ID.</li>
+            <li>Delivery status can be tracked from the portal so he can plan site work safely.</li>
+          </ol>
+        </article>
+      </section>
     </section>
 
-    <!-- SCENARIOS -->
-    <section id="scenarios" class="max-w-6xl mx-auto px-4 pb-10 space-y-6 mt-10">
-      <h2 class="text-2xl font-semibold">Usage Scenarios</h2>
-      <p class="text-slate text-sm max-w-3xl">
-        These scenarios describe how each persona uses the proposed waste management system to complete a key task:
-        lodging a complaint, locating disposal sites, and booking a RORO bin.
+    <!-- 3. TASK ANALYSIS -->
+    <section id="task-analysis" class="max-w-6xl mx-auto px-4 pt-4 space-y-8">
+      <h2 class="text-2xl font-semibold">3. Task analysis</h2>
+      <p class="text-slate text-sm md:text-base max-w-3xl">
+        For each of the three tasks, three users performed the task while thinking aloud.
+        Videos, hierarchical task analyses (HTA), and observations are captured below as the main evidence for
+        establishing requirements.
       </p>
 
-      <!-- Scenario 1 -->
-      <article class="rounded-2xl p-6 border border-black/10 dark:border-white/10">
-        <div class="flex flex-wrap items-center gap-2 text-xs">
-          <span class="px-2 py-1 rounded bg-mint/10 text-mint">Persona: Aina Rahman</span>
-          <span class="px-2 py-1 rounded bg-black/5 dark:bg-white/10 text-slate">Resident</span>
-          <span class="px-2 py-1 rounded bg-black/5 dark:bg-white/10 text-slate">Complaint flow</span>
-        </div>
-        <h3 class="mt-3 font-semibold">Scenario 1 – Lodge a Waste Complaint</h3>
-        <p class="mt-2 text-sm text-slate">
-          One morning, Aina notices that rubbish bins near the children's playground in her neighbourhood have not been
-          collected for two days. The smell is unpleasant and stray animals are starting to gather. Concerned about hygiene
-          and her children's safety, she opens the waste management mobile app and selects the <em>“Lodge Complaint”</em> feature.
+      <!-- Task 1 -->
+      <section class="space-y-4">
+        <h3 class="text-xl font-semibold">3.1 Task 1 – Locate Recycling Bin</h3>
+        <p class="text-slate text-sm md:text-base max-w-3xl">
+          Users attempt to find a nearby recycling bin or authorised disposal point for specific waste types using
+          the EcoLink interface.
         </p>
 
-        <ol class="mt-3 list-decimal ml-5 text-sm text-slate space-y-1">
-          <li>She takes a photo of the overflowing bins using the in-app camera.</li>
-          <li>The app automatically tags her location using GPS.</li>
-          <li>Aina selects the relevant complaint category and adds a short description.</li>
-          <li>She submits the complaint and receives an on-screen confirmation with a reference number.</li>
-          <li>A push notification confirms the report has been sent to the municipal cleaning team.</li>
-          <li>Later that day, she opens the app to check the complaint status and sees that it is “In progress”.</li>
-        </ol>
-
-        <details class="mt-3 text-sm text-slate">
-          <summary class="cursor-pointer font-medium">Design considerations &amp; alt paths</summary>
-          <ul class="mt-2 list-disc list-inside">
-            <li>If GPS is unavailable, Aina can pin the location manually on a map.</li>
-            <li>Categories are simplified with icons and short labels to reduce confusion.</li>
-            <li>Status updates (Received → In progress → Completed) provide visibility and feedback.</li>
-          </ul>
-        </details>
-      </article>
-
-      <!-- Scenario 2 -->
-      <article class="rounded-2xl p-6 border border-black/10 dark:border-white/10">
-        <div class="flex flex-wrap items-center gap-2 text-xs">
-          <span class="px-2 py-1 rounded bg-mint/10 text-mint">Persona: Hassan Omar</span>
-          <span class="px-2 py-1 rounded bg-black/5 dark:bg-white/10 text-slate">Elderly gardening enthusiast</span>
-          <span class="px-2 py-1 rounded bg-black/5 dark:bg-white/10 text-slate">Locator flow</span>
+        <!-- Videos -->
+        <div class="mt-2">
+          <h4 class="font-medium text-sm">User videos</h4>
+          <div class="mt-2 grid sm:grid-cols-3 gap-3 text-sm">
+            <!-- Replace # with actual video URLs when ready -->
+            <a href="#"
+               class="rounded-xl border border-black/10 dark:border-white/10 px-4 py-3 hover:border-mint transition flex flex-col">
+              <span class="font-semibold">User 1</span>
+              <span class="text-slate text-xs mt-1">Click to add video link later.</span>
+            </a>
+            <a href="#"
+               class="rounded-xl border border-black/10 dark:border-white/10 px-4 py-3 hover:border-mint transition flex flex-col">
+              <span class="font-semibold">User 2</span>
+              <span class="text-slate text-xs mt-1">Click to add video link later.</span>
+            </a>
+            <a href="#"
+               class="rounded-xl border border-black/10 dark:border-white/10 px-4 py-3 hover:border-mint transition flex flex-col">
+              <span class="font-semibold">User 3</span>
+              <span class="text-slate text-xs mt-1">Click to add video link later.</span>
+            </a>
+          </div>
         </div>
-        <h3 class="mt-3 font-semibold">Scenario 2 – Locate Waste Disposal Sites</h3>
-        <p class="mt-2 text-sm text-slate">
-          After replacing old gardening tools and clearing damaged electrical equipment from his shed, Pak Hassan needs to
-          dispose of several items responsibly. Unsure where to bring e-waste safely, he opens the waste management
-          application and taps on <em>“Locate Disposal Sites”</em>.
+
+        <!-- HTA per user -->
+        <div class="space-y-2 text-sm">
+          <h4 class="font-medium mt-4">Hierarchical Task Analysis (current system)</h4>
+
+          <details class="rounded-xl border border-black/10 dark:border-white/10 px-4 py-3">
+            <summary class="cursor-pointer font-semibold">Task 1 – HTA for User 1</summary>
+            <ol class="mt-2 list-decimal ml-5 text-slate space-y-1">
+              <li>Open EcoLink / council portal.</li>
+              <li>Navigate to “Locate disposal sites”.</li>
+              <li>Select waste category (e.g., recycling, e-waste).</li>
+              <li>Allow or enter location.</li>
+              <li>Browse list/map of nearby locations.</li>
+              <li>Tap one location to view details (address, opening hours).</li>
+            </ol>
+            <!-- Replace list with your own HTA if needed -->
+          </details>
+
+          <details class="rounded-xl border border-black/10 dark:border-white/10 px-4 py-3">
+            <summary class="cursor-pointer font-semibold">Task 1 – HTA for User 2</summary>
+            <ol class="mt-2 list-decimal ml-5 text-slate space-y-1">
+              <li>Open EcoLink homepage.</li>
+              <li>Use search/filter to choose waste type.</li>
+              <li>Zoom and pan map to area of interest.</li>
+              <li>Compare distance of several sites.</li>
+              <li>Choose preferred site and save it / start navigation.</li>
+            </ol>
+          </details>
+
+          <details class="rounded-xl border border-black/10 dark:border-white/10 px-4 py-3">
+            <summary class="cursor-pointer font-semibold">Task 1 – HTA for User 3</summary>
+            <ol class="mt-2 list-decimal ml-5 text-slate space-y-1">
+              <li>Open EcoLink app on phone.</li>
+              <li>Tap “Nearby bins &amp; centres”.</li>
+              <li>Scroll through a simplified list with distance.</li>
+              <li>Tap a card to open map view.</li>
+              <li>Follow turn-by-turn directions.</li>
+            </ol>
+          </details>
+        </div>
+
+        <!-- Findings -->
+        <div class="space-y-2 text-sm mt-4">
+          <h4 class="font-medium">Findings (discussion)</h4>
+          <ul class="list-disc list-inside text-slate space-y-1">
+            <li>Some users struggled to notice filters for waste type and initially saw irrelevant locations.</li>
+            <li>Older users like Hassan needed larger text and cleaner map labels to feel confident.</li>
+            <li>Think-aloud sessions showed confusion when the system mixed public recycling bins with private recyclers.</li>
+          </ul>
+        </div>
+
+        <!-- Design requirements -->
+        <div class="grid md:grid-cols-2 gap-6 text-sm mt-2">
+          <div>
+            <h5 class="font-medium">Design requirements – Functional</h5>
+            <ul class="mt-2 list-disc list-inside text-slate space-y-1">
+              <li>System must allow filtering by waste category (recycling, e-waste, garden waste, etc.).</li>
+              <li>System must use GPS to suggest nearby sites within a configurable radius.</li>
+              <li>Each site must display key details: address, opening hours, accepted waste types.</li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="font-medium">Design requirements – Non-functional</h5>
+            <ul class="mt-2 list-disc list-inside text-slate space-y-1">
+              <li>Map and list views must remain readable for elderly users (font size, contrast).</li>
+              <li>Search results should appear within a few seconds after filter changes.</li>
+              <li>Information must be accurate and updated regularly to avoid wrong trips.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Task 2 -->
+      <section class="space-y-4">
+        <h3 class="text-xl font-semibold">3.2 Task 2 – File Complaint</h3>
+        <p class="text-slate text-sm md:text-base max-w-3xl">
+          Users report waste-related issues such as missed collection, illegal dumping, or overflowing bins.
         </p>
 
-        <ol class="mt-3 list-decimal ml-5 text-sm text-slate space-y-1">
-          <li>He selects <em>“E-waste”</em> as the waste category and enters his residential area.</li>
-          <li>The system displays a list of nearby authorised recycling centres with distance indicators.</li>
-          <li>He chooses the closest centre and opens the built-in map view.</li>
-          <li>Large text labels and simple icons guide him through the route step by step.</li>
-          <li>He drives to the centre, confident that he is disposing of his e-waste correctly.</li>
-        </ol>
-
-        <details class="mt-3 text-sm text-slate">
-          <summary class="cursor-pointer font-medium">Design considerations &amp; alt paths</summary>
-          <ul class="mt-2 list-disc list-inside">
-            <li>High-contrast colours, bigger fonts, and minimal controls support elderly users.</li>
-            <li>If he prefers, directions can be opened in his default maps app.</li>
-            <li>Filters allow switching between categories (E-waste, Garden waste, Bulky items) without retyping his address.</li>
-          </ul>
-        </details>
-      </article>
-
-      <!-- Scenario 3 -->
-      <article class="rounded-2xl p-6 border border-black/10 dark:border-white/10">
-        <div class="flex flex-wrap items-center gap-2 text-xs">
-          <span class="px-2 py-1 rounded bg-mint/10 text-mint">Persona: Amir Fauzi</span>
-          <span class="px-2 py-1 rounded bg-black/5 dark:bg-white/10 text-slate">Construction project manager</span>
-          <span class="px-2 py-1 rounded bg-black/5 dark:bg-white/10 text-slate">RORO booking flow</span>
+        <!-- Videos -->
+        <div class="mt-2">
+          <h4 class="font-medium text-sm">User videos</h4>
+          <div class="mt-2 grid sm:grid-cols-3 gap-3 text-sm">
+            <!-- Replace # with actual video URLs when ready -->
+            <a href="#"
+               class="rounded-xl border border-black/10 dark:border-white/10 px-4 py-3 hover:border-mint transition flex flex-col">
+              <span class="font-semibold">User 1</span>
+              <span class="text-slate text-xs mt-1">Click to add video link later.</span>
+            </a>
+            <a href="#"
+               class="rounded-xl border border-black/10 dark:border-white/10 px-4 py-3 hover:border-mint transition flex flex-col">
+              <span class="font-semibold">User 2</span>
+              <span class="text-slate text-xs mt-1">Click to add video link later.</span>
+            </a>
+            <a href="#"
+               class="rounded-xl border border-black/10 dark:border-white/10 px-4 py-3 hover:border-mint transition flex flex-col">
+              <span class="font-semibold">User 3</span>
+              <span class="text-slate text-xs mt-1">Click to add video link later.</span>
+            </a>
+          </div>
         </div>
-        <h3 class="mt-3 font-semibold">Scenario 3 – Book a RORO Bin</h3>
-        <p class="mt-2 text-sm text-slate">
-          Amir is preparing for debris removal at an active renovation site and requires a RORO bin to clear waste efficiently.
-          He accesses the waste management web portal and chooses the <em>“Book RORO Bin”</em> service.
+
+        <!-- HTA per user -->
+        <div class="space-y-2 text-sm">
+          <h4 class="font-medium mt-4">Hierarchical Task Analysis (current system)</h4>
+
+          <details class="rounded-xl border border-black/10 dark:border-white/10 px-4 py-3">
+            <summary class="cursor-pointer font-semibold">Task 2 – HTA for User 1</summary>
+            <ol class="mt-2 list-decimal ml-5 text-slate space-y-1">
+              <li>Open complaint portal / app.</li>
+              <li>Choose complaint type (e.g., “Missed collection”).</li>
+              <li>Fill in location details (address / GPS).</li>
+              <li>Type description of the issue.</li>
+              <li>Attach photo as evidence.</li>
+              <li>Submit and receive complaint reference number.</li>
+            </ol>
+          </details>
+
+          <details class="rounded-xl border border-black/10 dark:border-white/10 px-4 py-3">
+            <summary class="cursor-pointer font-semibold">Task 2 – HTA for User 2</summary>
+            <ol class="mt-2 list-decimal ml-5 text-slate space-y-1">
+              <li>Log in to portal with account.</li>
+              <li>Select “New complaint”.</li>
+              <li>Pick category and subcategory.</li>
+              <li>Use map to drop a pin on exact location.</li>
+              <li>Attach multiple images if needed.</li>
+              <li>Submit and check status page.</li>
+            </ol>
+          </details>
+
+          <details class="rounded-xl border border-black/10 dark:border-white/10 px-4 py-3">
+            <summary class="cursor-pointer font-semibold">Task 2 – HTA for User 3</summary>
+            <ol class="mt-2 list-decimal ml-5 text-slate space-y-1">
+              <li>Dial hotline number shown on website.</li>
+              <li>Navigate IVR menu to reach relevant department.</li>
+              <li>Provide complaint details verbally.</li>
+              <li>Write down reference number (if given).</li>
+              <li>Wait for follow-up message or call.</li>
+            </ol>
+          </details>
+        </div>
+
+        <!-- Findings -->
+        <div class="space-y-2 text-sm mt-4">
+          <h4 class="font-medium">Findings (discussion)</h4>
+          <ul class="list-disc list-inside text-slate space-y-1">
+            <li>Users became confused when category labels were too technical or overlapping.</li>
+            <li>Entering location manually slowed down the process and led to mistakes.</li>
+            <li>Think-aloud revealed anxiety about whether complaints would actually be actioned.</li>
+          </ul>
+        </div>
+
+        <!-- Design requirements -->
+        <div class="grid md:grid-cols-2 gap-6 text-sm mt-2">
+          <div>
+            <h5 class="font-medium">Design requirements – Functional</h5>
+            <ul class="mt-2 list-disc list-inside text-slate space-y-1">
+              <li>System must support photo and GPS tagging directly from the app.</li>
+              <li>Complaint categories must be simplified with clear examples.</li>
+              <li>Users must be able to track status (Received, In progress, Completed).</li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="font-medium">Design requirements – Non-functional</h5>
+            <ul class="mt-2 list-disc list-inside text-slate space-y-1">
+              <li>Confirmation screens and notifications must be immediate and unambiguous.</li>
+              <li>Form layout must minimise typing on mobile devices.</li>
+              <li>Language should avoid technical jargon so residents can understand easily.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Task 3 -->
+      <section class="space-y-4">
+        <h3 class="text-xl font-semibold">3.3 Task 3 – Book RoRo Bin</h3>
+        <p class="text-slate text-sm md:text-base max-w-3xl">
+          Users book a RoRo bin for bulky or construction waste, choosing bin size, location, and delivery time.
+          User 2 in this task is the group member (you) performing the think-aloud session.
         </p>
 
-        <ol class="mt-3 list-decimal ml-5 text-sm text-slate space-y-1">
-          <li>He enters the project site location and selects the required bin size based on estimated debris volume.</li>
-          <li>The system instantly shows bin availability for his dates plus transparent pricing.</li>
-          <li>He confirms the preferred delivery date and time window.</li>
-          <li>The portal displays a booking summary with cost breakdown and key terms.</li>
-          <li>Amir submits the booking and receives a digital confirmation with a reference ID.</li>
-          <li>Tracking details allow him to monitor delivery status and plan site activities accordingly.</li>
-        </ol>
+        <!-- Videos -->
+        <div class="mt-2">
+          <h4 class="font-medium text-sm">User videos</h4>
+          <div class="mt-2 grid sm:grid-cols-3 gap-3 text-sm">
+            <!-- Replace # with actual video URLs when ready -->
+            <a href="#"
+               class="rounded-xl border border-black/10 dark:border-white/10 px-4 py-3 hover:border-mint transition flex flex-col">
+              <span class="font-semibold">User 1</span>
+              <span class="text-slate text-xs mt-1">Click to add video link later.</span>
+            </a>
+            <a href="#"
+               class="rounded-xl border border-black/10 dark:border-white/10 px-4 py-3 hover:border-mint transition flex flex-col">
+              <span class="font-semibold">User 2 (group member)</span>
+              <span class="text-slate text-xs mt-1">Replace with your own HTA video link.</span>
+            </a>
+            <a href="#"
+               class="rounded-xl border border-black/10 dark:border-white/10 px-4 py-3 hover:border-mint transition flex flex-col">
+              <span class="font-semibold">User 3</span>
+              <span class="text-slate text-xs mt-1">Click to add video link later.</span>
+            </a>
+          </div>
+        </div>
 
-        <details class="mt-3 text-sm text-slate">
-          <summary class="cursor-pointer font-medium">Design considerations &amp; alt paths</summary>
-          <ul class="mt-2 list-disc list-inside">
-            <li>If no bins are available for the chosen slot, the system suggests the nearest alternatives.</li>
-            <li>Clear, itemised pricing builds trust for professional users handling budgets and audits.</li>
-            <li>Downloadable PDF/receipt supports project documentation and claims.</li>
+        <!-- HTA per user -->
+        <div class="space-y-2 text-sm">
+          <h4 class="font-medium mt-4">Hierarchical Task Analysis (current system)</h4>
+
+          <details class="rounded-xl border border-black/10 dark:border-white/10 px-4 py-3">
+            <summary class="cursor-pointer font-semibold">Task 3 – HTA for User 1</summary>
+            <ol class="mt-2 list-decimal ml-5 text-slate space-y-1">
+              <li>Search online for RoRo bin service provider.</li>
+              <li>Call contact number to request quotation.</li>
+              <li>Discuss bin size, dates, and location by phone.</li>
+              <li>Confirm booking verbally.</li>
+              <li>Wait for invoice or confirmation message.</li>
+            </ol>
+          </details>
+
+          <details class="rounded-xl border border-black/10 dark:border-white/10 px-4 py-3">
+            <summary class="cursor-pointer font-semibold">Task 3 – HTA for User 2 (you)</summary>
+            <ol class="mt-2 list-decimal ml-5 text-slate space-y-1">
+              <li>Open EcoLink portal and log in.</li>
+              <li>Select “Book RoRo Bin”.</li>
+              <li>Enter project site location and choose bin size.</li>
+              <li>Select delivery date and pickup date.</li>
+              <li>Review cost breakdown and terms.</li>
+              <li>Submit booking and receive digital confirmation.</li>
+            </ol>
+            <!-- Replace / extend this list to match your actual HTA steps. -->
+          </details>
+
+          <details class="rounded-xl border border-black/10 dark:border-white/10 px-4 py-3">
+            <summary class="cursor-pointer font-semibold">Task 3 – HTA for User 3</summary>
+            <ol class="mt-2 list-decimal ml-5 text-slate space-y-1">
+              <li>Log in to existing council system.</li>
+              <li>Navigate through several menus to find bulky waste / RoRo service.</li>
+              <li>Download offline form or PDF.</li>
+              <li>Fill in manually and upload / email back.</li>
+              <li>Wait for manual approval via phone or email.</li>
+            </ol>
+          </details>
+        </div>
+
+        <!-- Findings -->
+        <div class="space-y-2 text-sm mt-4">
+          <h4 class="font-medium">Findings (discussion)</h4>
+          <ul class="list-disc list-inside text-slate space-y-1">
+            <li>Existing processes often require phone calls or manual forms, which slow down urgent site work.</li>
+            <li>Users wanted clear pricing and visibility of bin availability before committing.</li>
+            <li>Think-aloud revealed uncertainty about whether bookings included permits or additional fees.</li>
           </ul>
-        </details>
-      </article>
+        </div>
+
+        <!-- Design requirements -->
+        <div class="grid md:grid-cols-2 gap-6 text-sm mt-2">
+          <div>
+            <h5 class="font-medium">Design requirements – Functional</h5>
+            <ul class="mt-2 list-disc list-inside text-slate space-y-1">
+              <li>System must support end-to-end online RoRo booking (size, date, location).</li>
+              <li>Users must see live availability for selected dates.</li>
+              <li>System must generate a clear digital confirmation and reference ID.</li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="font-medium">Design requirements – Non-functional</h5>
+            <ul class="mt-2 list-disc list-inside text-slate space-y-1">
+              <li>Pricing and additional charges must be transparent and itemised.</li>
+              <li>Interface should support frequent use by professionals such as project managers.</li>
+              <li>System should be reliable enough for time-sensitive construction schedules.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- 4. REFINED HTA -->
+    <section id="refined-hta" class="max-w-6xl mx-auto px-4 pt-4 space-y-6">
+      <h2 class="text-2xl font-semibold">4. Refined HTA (improved system)</h2>
+      <p class="text-slate text-sm md:text-base max-w-3xl">
+        Based on the issues discovered in the initial task analyses, the following refined HTAs describe how
+        EcoLink should ideally support each task. These flows remove unnecessary steps, reduce cognitive load,
+        and align with the functional and non-functional requirements.
+      </p>
+
+      <!-- Refined HTA Task 1 -->
+      <details class="rounded-2xl border border-black/10 dark:border-white/10 px-5 py-4 text-sm">
+        <summary class="cursor-pointer font-semibold">Refined HTA – Task 1: Locate Recycling Bin</summary>
+        <ol class="mt-2 list-decimal ml-5 text-slate space-y-1">
+          <li>Open EcoLink app.</li>
+          <li>Tap “Nearby bins &amp; centres”.</li>
+          <li>Select waste category (default: Common recycling).</li>
+          <li>System automatically detects location and displays closest sites on map and list.</li>
+          <li>User taps one site to view details (accepted waste, opening hours, navigation option).</li>
+          <li>User starts navigation or saves site as favourite.</li>
+        </ol>
+        <!-- You can replace this list with a diagram <img src="..." alt="Refined HTA Task 1"> -->
+      </details>
+
+      <!-- Refined HTA Task 2 -->
+      <details class="rounded-2xl border border-black/10 dark:border-white/10 px-5 py-4 text-sm">
+        <summary class="cursor-pointer font-semibold">Refined HTA – Task 2: File Complaint</summary>
+        <ol class="mt-2 list-decimal ml-5 text-slate space-y-1">
+          <li>Open EcoLink and tap “Report an issue”.</li>
+          <li>Take photo (or choose from gallery) of the problem.</li>
+          <li>Confirm auto-detected location; adjust pin if needed.</li>
+          <li>Select simple category with example icons.</li>
+          <li>Optionally add short description.</li>
+          <li>Submit and receive confirmation + reference number + estimated response time.</li>
+          <li>Track status from “My reports” page.</li>
+        </ol>
+      </details>
+
+      <!-- Refined HTA Task 3 -->
+      <details class="rounded-2xl border border-black/10 dark:border-white/10 px-5 py-4 text-sm">
+        <summary class="cursor-pointer font-semibold">Refined HTA – Task 3: Book RoRo Bin</summary>
+        <ol class="mt-2 list-decimal ml-5 text-slate space-y-1">
+          <li>Log in to EcoLink portal as registered user.</li>
+          <li>Go to “RoRo bin booking”.</li>
+          <li>Enter site location or select from saved projects.</li>
+          <li>Choose bin size and preferred delivery / pickup dates.</li>
+          <li>Review automatically calculated price and permit requirements.</li>
+          <li>Confirm booking and receive digital confirmation with reference ID.</li>
+          <li>Monitor delivery status and manage changes from “My bookings”.</li>
+        </ol>
+      </details>
+    </section>
+
+    <!-- 5. FINAL ESTABLISHED REQUIREMENTS -->
+    <section id="final-reqs" class="max-w-6xl mx-auto px-4 pt-4 pb-10 space-y-6">
+      <h2 class="text-2xl font-semibold">5. Final established requirements</h2>
+      <p class="text-slate text-sm md:text-base max-w-3xl">
+        Combining insights from personas, scenarios, task analysis, and refined HTAs, we derived the following core
+        functional and non-functional requirements for EcoLink.
+      </p>
+
+      <!-- Functional -->
+      <section class="space-y-3 text-sm">
+        <h3 class="font-semibold">5.1 Functional requirements</h3>
+
+        <div class="space-y-2">
+          <h4 class="font-medium">Task 1 – Locate recycling bin / disposal site</h4>
+          <ul class="list-disc list-inside text-slate space-y-1">
+            <li>System shall detect user location and display nearby disposal sites on map and list view.</li>
+            <li>System shall allow filtering by waste category (recycling, e-waste, garden waste, bulky waste).</li>
+            <li>System shall show key site information: address, opening hours, accepted materials.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-medium">Task 2 – File complaint</h4>
+          <ul class="list-disc list-inside text-slate space-y-1">
+            <li>System shall let users submit complaints with photo, location, category, and optional description.</li>
+            <li>System shall generate a unique reference ID for every complaint submitted.</li>
+            <li>System shall provide a status tracking screen for all complaints created by the user.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-medium">Task 3 – Book RoRo bin</h4>
+          <ul class="list-disc list-inside text-slate space-y-1">
+            <li>System shall allow users to request RoRo bins by specifying site location, bin size, and dates.</li>
+            <li>System shall display available time slots and pricing before confirmation.</li>
+            <li>System shall send a booking confirmation and store it in the user’s account.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Non-functional -->
+      <section class="space-y-3 text-sm">
+        <h3 class="font-semibold">5.2 Non-functional requirements</h3>
+
+        <div class="space-y-2">
+          <h4 class="font-medium">Usability &amp; accessibility</h4>
+          <ul class="list-disc list-inside text-slate space-y-1">
+            <li>Interface shall use clear language and avoid technical jargon where possible.</li>
+            <li>Text and icons shall be large enough for elderly users such as Hassan to read comfortably.</li>
+            <li>Key actions (Report, Locate, Book) shall be reachable within three taps from the home screen.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-medium">Performance &amp; reliability</h4>
+          <ul class="list-disc list-inside text-slate space-y-1">
+            <li>Search and map results shall load within a few seconds on typical mobile connections.</li>
+            <li>Submitted data (complaints, bookings) shall not be lost if network connection briefly drops.</li>
+            <li>System shall provide clear error messages and recovery options when actions fail.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-medium">Trust &amp; transparency</h4>
+          <ul class="list-disc list-inside text-slate space-y-1">
+            <li>Complaint and booking statuses shall be visible and updated as work progresses.</li>
+            <li>Pricing, fees, and terms shall be displayed before confirmation, especially for RoRo bookings.</li>
+            <li>Notifications shall inform users when complaints are resolved or bins are delivered / collected.</li>
+          </ul>
+        </div>
+      </section>
     </section>
   </main>
 
