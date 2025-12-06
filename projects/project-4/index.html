@@ -3,14 +3,23 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Project 2 — Under Construction | FIZIS</title>
-  <meta name="description" content="Project 2 placeholder."/>
+  <title>Project 4 — EcoLink Usability Testing | FIZIS</title>
+  <meta name="description" content="Usability testing briefing and task cards for the EcoLink prototype."/>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config={theme:{extend:{colors:{mint:"#10B981",charcoal:"#111827",slate:"#6B7280"},boxShadow:{soft:"0 10px 30px rgba(0,0,0,.08)"}}},darkMode:'class'};
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { mint:"#10B981", charcoal:"#111827", slate:"#6B7280" },
+          boxShadow: { soft:"0 10px 30px rgba(0,0,0,.08)" }
+        }
+      },
+      darkMode:'class'
+    };
   </script>
 </head>
 <body class="bg-white text-charcoal dark:bg-charcoal dark:text-white transition">
+  <!-- Header -->
   <header class="sticky top-0 z-40 backdrop-blur bg-white/70 dark:bg-charcoal/60 border-b border-black/5 dark:border-white/10">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="../../index.html" class="flex items-center gap-2 font-semibold tracking-tight text-lg">
@@ -24,37 +33,177 @@
         <a class="hover:text-mint" href="../../index.html#team">Team</a>
         <a class="hover:text-mint" href="../../index.html#contact">Contact</a>
       </nav>
+      <button id="themeToggle" class="text-sm px-3 py-1.5 rounded-lg border border-black/10 dark:border-white/20 hover:border-mint">
+        Toggle theme
+      </button>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 py-16 text-center">
-    <div class="mx-auto w-full max-w-md rounded-2xl p-8 border border-black/10 dark:border-white/10">
-      <!-- Inline SVG so no extra assets needed -->
-      <svg viewBox="0 0 200 100" class="mx-auto w-40 h-20">
-        <g fill="none" stroke="currentColor" stroke-width="2" opacity=".8">
-          <rect x="10" y="60" width="180" height="20" rx="3"></rect>
-          <path d="M20 60 L40 30 L160 30 L180 60"></path>
-          <circle cx="50" cy="80" r="6"></circle>
-          <circle cx="150" cy="80" r="6"></circle>
-          <path d="M100 30 v-10 M100 20 h-5 M100 20 h5" stroke-linecap="round"></path>
-        </g>
-      </svg>
-      <h1 class="mt-4 text-2xl font-bold">Under Construction</h1>
-      <p class="mt-2 text-slate">We’re preparing the brief and assets. Check the blog for progress.</p>
-      <div class="mt-4">
-        <a href="../../blog/index.html" class="text-mint hover:underline">Read updates →</a>
-      </div>
-      <div class="mt-6">
-        <a href="../index.html" class="px-5 py-2 rounded-xl border border-black/10 dark:border-white/20 hover:border-mint text-sm">Back to Projects</a>
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-4 py-10">
+    <nav class="text-sm text-slate mb-4">
+      <a class="hover:text-mint" href="../index.html">Projects</a>
+      <span class="opacity-50"> / </span>
+      Project 4
+    </nav>
+    <h1 class="text-3xl md:text-4xl font-bold leading-tight">EcoLink — Usability Testing</h1>
+    <div class="mt-2 text-xs uppercase tracking-wider text-slate flex items-center gap-3">
+      Phase:
+      <span class="px-2 py-1 rounded bg-mint/10 text-mint">Evaluation</span>
+    </div>
+    <p class="mt-4 text-slate max-w-3xl">
+      This page documents the briefing script and task cards used to run usability testing on the EcoLink prototype
+      for three core flows: booking a RORO bin, locating disposal centres, and lodging complaints.
+    </p>
+  </section>
+
+  <!-- Sticky subnav -->
+  <div class="sticky top-[60px] z-30 bg-white/80 dark:bg-charcoal/80 backdrop-blur border-y border-black/5 dark:border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-2 overflow-x-auto">
+      <div class="flex gap-4 text-sm">
+        <a class="hover:text-mint whitespace-nowrap" href="#briefing">Briefing</a>
+        <a class="hover:text-mint whitespace-nowrap" href="#instructions">Test Instructions</a>
+        <a class="hover:text-mint whitespace-nowrap" href="#tasks">Task Cards</a>
+        <a class="hover:text-mint whitespace-nowrap" href="#recordings">Recordings & Notes</a>
       </div>
     </div>
+  </div>
+
+  <main class="max-w-6xl mx-auto px-4 py-10 space-y-10">
+    <!-- Briefing -->
+    <section id="briefing">
+      <h2 class="text-2xl font-semibold mb-3">Usability Testing Briefing</h2>
+      <div class="rounded-2xl border border-black/10 dark:border-white/10 p-6 text-sm md:text-base space-y-4">
+        <p>
+          Thank you for participating in this usability test. Today, you will be interacting with a prototype of a
+          system designed to help users:
+        </p>
+        <ul class="list-disc list-inside text-slate">
+          <li>Book a RORO bin</li>
+          <li>Locate waste disposal or recycling centres</li>
+          <li>Lodge waste-related complaints</li>
+        </ul>
+        <p class="pt-2">
+          Before we begin, please note that this is a prototype, not the final product. Some functions are not fully
+          optimised yet. For example:
+        </p>
+        <ul class="list-disc list-inside text-slate">
+          <li>Attaching photos may not work as expected or may use placeholder screens.</li>
+          <li>Map accuracy and live location detection are limited and may not reflect real-world data.</li>
+          <li>Some buttons or pages may be non-functional or only partially interactive.</li>
+          <li>The system may not save data because it is not connected to a full backend.</li>
+        </ul>
+        <p>
+          These limitations are normal at this stage of development. We are mainly evaluating the interface design,
+          clarity, task flow, and ease of use, not full functionality.
+        </p>
+      </div>
+    </section>
+
+    <!-- Instructions -->
+    <section id="instructions">
+      <h2 class="text-2xl font-semibold mb-3">Test Instructions</h2>
+      <div class="rounded-2xl border border-black/10 dark:border-white/10 p-6 text-sm md:text-base space-y-4">
+        <p>
+          During the test, you will be given three tasks to complete using the EcoLink prototype.
+        </p>
+        <ol class="list-decimal list-inside text-slate space-y-1">
+          <li>I will read each task to you.</li>
+          <li>You may read the task card in your own time.</li>
+          <li>Please speak your thoughts aloud while using the system.</li>
+          <li>
+            If you feel stuck or unable to proceed, say <strong>“terminate”</strong>, and we will continue to the next task.
+          </li>
+        </ol>
+        <p>
+          Remember, we are testing the system, not you. There are no right or wrong answers — your confusion or
+          hesitation helps us improve the design.
+        </p>
+        <p>
+          Your screen and voice may be recorded for analysis, but your identity will remain confidential. Do you have
+          any questions before we start?
+        </p>
+      </div>
+    </section>
+
+    <!-- Task Cards -->
+    <section id="tasks">
+      <h2 class="text-2xl font-semibold mb-3">Task Cards</h2>
+      <p class="text-slate text-sm md:text-base mb-4">
+        These are the three main tasks used in the usability session. Each participant receives a printed version or
+        on-screen card while performing the task.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Task 1 -->
+        <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 flex flex-col">
+          <h3 class="font-semibold text-lg">Task Card 1 — Book a RORO Bin</h3>
+          <p class="mt-3 text-xs uppercase tracking-wide text-slate">Goal</p>
+          <p class="mt-1 text-sm text-slate flex-1">
+            You want to book a RORO bin for waste disposal at your location. Use the system to check the available bin
+            options, select one, and complete the booking.
+          </p>
+        </article>
+
+        <!-- Task 2 -->
+        <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 flex flex-col">
+          <h3 class="font-semibold text-lg">Task Card 2 — Locate Waste Disposal Centre</h3>
+          <p class="mt-3 text-xs uppercase tracking-wide text-slate">Goal</p>
+          <p class="mt-1 text-sm text-slate flex-1">
+            You want to find the nearest waste disposal or recycling centre. Use the system to search and identify a
+            suitable disposal location.
+          </p>
+        </article>
+
+        <!-- Task 3 -->
+        <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 flex flex-col">
+          <h3 class="font-semibold text-lg">Task Card 3 — Lodge a Complaint</h3>
+          <p class="mt-3 text-xs uppercase tracking-wide text-slate">Goal</p>
+          <p class="mt-1 text-sm text-slate flex-1">
+            You want to report a waste-related issue in your area. Use the system to locate the complaint section,
+            choose the appropriate category, and submit a complaint with details.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Recordings / links placeholder -->
+    <section id="recordings">
+      <h2 class="text-2xl font-semibold mb-3">Recordings & Observation Notes</h2>
+      <div class="rounded-2xl border border-dashed border-black/10 dark:border-white/20 p-6 text-sm md:text-base text-slate space-y-2">
+        <p>
+          This section will store links to participant recordings and observation notes once the usability sessions are completed.
+        </p>
+        <ul class="list-disc list-inside">
+          <li><span class="font-medium">Participant 1:</span> <span class="italic">Video link / notes (to be added)</span></li>
+          <li><span class="font-medium">Participant 2:</span> <span class="italic">Video link / notes (to be added)</span></li>
+          <li><span class="font-medium">Participant 3:</span> <span class="italic">Video link / notes (to be added)</span></li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <footer class="border-t border-black/5 dark:border-white/10">
-    <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-slate">
       © <span id="year"></span> FIZIS
     </div>
   </footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme toggle
+    const btn = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    if (localStorage.theme === 'dark' ||
+       (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      root.classList.add('dark');
+    }
+    btn.addEventListener('click', () => {
+      root.classList.toggle('dark');
+      localStorage.theme = root.classList.contains('dark') ? 'dark' : 'light';
+    });
+  </script>
 </body>
 </html>
