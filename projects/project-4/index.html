@@ -131,39 +131,51 @@
       <h2 class="text-2xl font-semibold mb-3">Task Cards</h2>
       <p class="text-slate text-sm md:text-base mb-4">
         These are the three main tasks used in the usability session. Each participant receives a printed version or
-        on-screen card while performing the task.
+        on-screen card while performing the task. Click a card to view it in a larger format.
       </p>
 
       <div class="grid md:grid-cols-3 gap-6">
         <!-- Task 1 -->
-        <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 flex flex-col">
+        <button
+          type="button"
+          data-task="1"
+          class="rounded-2xl border border-black/10 dark:border-white/10 p-6 flex flex-col text-left hover:border-mint hover:shadow-soft transition focus:outline-none focus:ring-2 focus:ring-mint/60 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-charcoal">
           <h3 class="font-semibold text-lg">Task Card 1 — Book a RORO Bin</h3>
           <p class="mt-3 text-xs uppercase tracking-wide text-slate">Goal</p>
           <p class="mt-1 text-sm text-slate flex-1">
             You want to book a RORO bin for waste disposal at your location. Use the system to check the available bin
             options, select one, and complete the booking.
           </p>
-        </article>
+          <span class="mt-3 text-xs text-mint">Click to enlarge</span>
+        </button>
 
         <!-- Task 2 -->
-        <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 flex flex-col">
+        <button
+          type="button"
+          data-task="2"
+          class="rounded-2xl border border-black/10 dark:border-white/10 p-6 flex flex-col text-left hover:border-mint hover:shadow-soft transition focus:outline-none focus:ring-2 focus:ring-mint/60 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-charcoal">
           <h3 class="font-semibold text-lg">Task Card 2 — Locate Waste Disposal Centre</h3>
           <p class="mt-3 text-xs uppercase tracking-wide text-slate">Goal</p>
           <p class="mt-1 text-sm text-slate flex-1">
             You want to find the nearest waste disposal or recycling centre. Use the system to search and identify a
             suitable disposal location.
           </p>
-        </article>
+          <span class="mt-3 text-xs text-mint">Click to enlarge</span>
+        </button>
 
         <!-- Task 3 -->
-        <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 flex flex-col">
+        <button
+          type="button"
+          data-task="3"
+          class="rounded-2xl border border-black/10 dark:border-white/10 p-6 flex flex-col text-left hover:border-mint hover:shadow-soft transition focus:outline-none focus:ring-2 focus:ring-mint/60 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-charcoal">
           <h3 class="font-semibold text-lg">Task Card 3 — Lodge a Complaint</h3>
           <p class="mt-3 text-xs uppercase tracking-wide text-slate">Goal</p>
           <p class="mt-1 text-sm text-slate flex-1">
             You want to report a waste-related issue in your area. Use the system to locate the complaint section,
             choose the appropriate category, and submit a complaint with details.
           </p>
-        </article>
+          <span class="mt-3 text-xs text-mint">Click to enlarge</span>
+        </button>
       </div>
     </section>
 
@@ -183,6 +195,37 @@
     </section>
   </main>
 
+  <!-- Modal for enlarged task card -->
+  <div id="taskModal" class="fixed inset-0 z-50 hidden">
+    <!-- Backdrop -->
+    <div id="taskModalBackdrop" class="absolute inset-0 bg-black/60 opacity-0 transition-opacity"></div>
+
+    <!-- Centered panel -->
+    <div class="relative h-full flex items-center justify-center pointer-events-none">
+      <div
+        id="taskModalPanel"
+        class="pointer-events-auto max-w-lg w-full mx-4 rounded-2xl bg-white dark:bg-charcoal border border-black/10 dark:border-white/10 shadow-soft p-6 opacity-0 scale-95 transform transition-all">
+        <div class="flex justify-between items-start gap-4">
+          <div>
+            <p class="text-xs uppercase tracking-wide text-slate">Task card</p>
+            <h3 id="taskModalTitle" class="mt-1 font-semibold text-lg"></h3>
+          </div>
+          <button
+            type="button"
+            id="taskModalClose"
+            class="ml-2 text-slate hover:text-mint text-sm px-2 py-1 rounded-full hover:bg-black/5 dark:hover:bg-white/10">
+            ✕
+          </button>
+        </div>
+
+        <div class="mt-4">
+          <p class="text-xs uppercase tracking-wide text-slate">Goal</p>
+          <p id="taskModalGoal" class="mt-1 text-sm text-slate"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer class="border-t border-black/5 dark:border-white/10">
     <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-slate">
       © <span id="year"></span> FIZIS
@@ -196,13 +239,89 @@
     // Theme toggle
     const btn = document.getElementById('themeToggle');
     const root = document.documentElement;
-    if (localStorage.theme === 'dark' ||
-       (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
       root.classList.add('dark');
     }
     btn.addEventListener('click', () => {
       root.classList.toggle('dark');
       localStorage.theme = root.classList.contains('dark') ? 'dark' : 'light';
+    });
+
+    // ----- Modal logic for task cards -----
+    const tasks = {
+      1: {
+        title: 'Task Card 1 — Book a RORO Bin',
+        goal: 'You want to book a RORO bin for waste disposal at your location. Use the system to check the available bin options, select one, and complete the booking.'
+      },
+      2: {
+        title: 'Task Card 2 — Locate Waste Disposal Centre',
+        goal: 'You want to find the nearest waste disposal or recycling centre. Use the system to search and identify a suitable disposal location.'
+      },
+      3: {
+        title: 'Task Card 3 — Lodge a Complaint',
+        goal: 'You want to report a waste-related issue in your area. Use the system to locate the complaint section, choose the appropriate category, and submit a complaint with details.'
+      }
+    };
+
+    const modal       = document.getElementById('taskModal');
+    const backdrop    = document.getElementById('taskModalBackdrop');
+    const panel       = document.getElementById('taskModalPanel');
+    const modalTitle  = document.getElementById('taskModalTitle');
+    const modalGoal   = document.getElementById('taskModalGoal');
+    const modalClose  = document.getElementById('taskModalClose');
+
+    function openTaskModal(id) {
+      const data = tasks[id];
+      if (!data) return;
+
+      modalTitle.textContent = data.title;
+      modalGoal.textContent  = data.goal;
+
+      // Show container
+      modal.classList.remove('hidden');
+
+      // Animate in on next frame
+      requestAnimationFrame(() => {
+        backdrop.classList.add('opacity-100');
+        panel.classList.remove('opacity-0', 'scale-95');
+        panel.classList.add('opacity-100', 'scale-100');
+      });
+    }
+
+    function closeTaskModal() {
+      // Animate out
+      backdrop.classList.remove('opacity-100');
+      panel.classList.remove('opacity-100', 'scale-100');
+      panel.classList.add('opacity-0', 'scale-95');
+
+      // Hide after animation
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 180);
+    }
+
+    // Attach click handlers to task cards
+    document.querySelectorAll('[data-task]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-task');
+        openTaskModal(id);
+      });
+    });
+
+    // Close button
+    modalClose.addEventListener('click', closeTaskModal);
+
+    // Click on backdrop to close
+    backdrop.addEventListener('click', closeTaskModal);
+
+    // Escape key to close
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeTaskModal();
+      }
     });
   </script>
 </body>
