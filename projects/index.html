@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>FIZIS — Projects</title>
-  <meta name="description" content="Overview of FIZIS projects for the EcoLink HCI coursework: proposal, user analysis, and upcoming design work."/>
+  <meta name="description" content="FIZIS project overview for the EcoLink HCI coursework."/>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -14,12 +14,11 @@
           boxShadow: { soft:"0 10px 30px rgba(0,0,0,.08)" }
         }
       },
-      darkMode:'class'
+      darkMode: 'class'
     };
   </script>
 </head>
 <body class="bg-white text-charcoal dark:bg-charcoal dark:text-white transition">
-
   <!-- Header -->
   <header class="sticky top-0 z-40 backdrop-blur bg-white/70 dark:bg-charcoal/60 border-b border-black/5 dark:border-white/10">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
@@ -29,7 +28,7 @@
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a class="hover:text-mint" href="../index.html#proposal">Proposal</a>
         <a class="hover:text-mint" href="../blog/index.html">Blog</a>
-        <a class="hover:text-mint text-mint" href="index.html">Projects</a>
+        <a class="hover:text-mint" href="./index.html">Projects</a>
         <a class="hover:text-mint" href="../index.html#gallery">Gallery</a>
         <a class="hover:text-mint" href="../index.html#team">Team</a>
         <a class="hover:text-mint" href="../index.html#contact">Contact</a>
@@ -40,91 +39,104 @@
     </div>
   </header>
 
-  <!-- Main -->
   <main class="max-w-6xl mx-auto px-4 py-10">
-    <h1 class="text-3xl md:text-4xl font-bold">Projects</h1>
-    <p class="mt-3 text-slate max-w-3xl text-sm md:text-base">
-      Browse ongoing and planned work for EcoLink. Each project corresponds to a course deliverable:
-      from proposal, to user analysis, to later design and evaluation phases.
-      Click a card to view details.
-    </p>
+    <header class="mb-8">
+      <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Projects</h1>
+      <p class="mt-3 text-slate text-sm md:text-base max-w-2xl">
+        Browse ongoing and planned work. Each card links to a dedicated page with details for that submission.
+      </p>
+    </header>
 
-    <div class="mt-8 grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-
+    <section class="grid md:grid-cols-2 gap-6 lg:gap-8">
       <!-- Project 1 -->
-      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 hover:border-mint transition">
-        <div class="text-xs inline-flex px-2 py-1 rounded-full bg-mint/10 text-mint mb-3">Proposal</div>
-        <h2 class="font-semibold text-lg">EcoLink — Smart Waste Management</h2>
-        <p class="mt-2 text-sm text-slate">
-          Centralised platform for disposal info, bulky pickups, RoRo booking, e-waste, and community micro-jobs.
-          This project focuses on the initial proposal, problem statement, solution concept, and scope.
-        </p>
-        <a href="project-1/index.html"
-           class="mt-4 inline-flex items-center gap-1 text-sm text-mint hover:underline">
+      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 hover:border-mint transition flex flex-col justify-between">
+        <div>
+          <div class="text-xs uppercase tracking-wide mb-2">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-mint/10 text-mint">
+              <span class="w-1.5 h-1.5 rounded-full bg-mint"></span> Proposal
+            </span>
+          </div>
+          <h2 class="font-semibold text-lg">EcoLink — Smart Waste Management</h2>
+          <p class="mt-2 text-sm text-slate">
+            Centralised platform for disposal information, bulky pickups, RoRo booking, e-waste, and community micro-jobs.
+          </p>
+        </div>
+        <a href="project-1/index.html" class="mt-4 inline-flex items-center gap-1 text-sm text-mint hover:underline">
           Open →
         </a>
       </article>
 
-      <!-- Project 2 (UPDATED) -->
-      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 hover:border-mint transition">
-        <div class="text-xs inline-flex px-2 py-1 rounded-full bg-mint/10 text-mint mb-3">User analysis</div>
-        <h2 class="font-semibold text-lg">Project 2 — Establishing Requirements &amp; User & Scenario Analysis</h2>
-        <p class="mt-2 text-sm text-slate">
-          Detailed personas and usage scenarios for EcoLink, covering resident complaints, RORO bin booking,
-          and locating disposal sites. Includes goals, pains, gains, and design considerations for each persona.
-        </p>
-        <a href="project-2/index.html"
-           class="mt-4 inline-flex items-center gap-1 text-sm text-mint hover:underline">
+      <!-- Project 2 -->
+      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 hover:border-mint transition flex flex-col justify-between">
+        <div>
+          <div class="text-xs uppercase tracking-wide mb-2">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-mint/10 text-mint">
+              <span class="w-1.5 h-1.5 rounded-full bg-mint"></span> Discovery
+            </span>
+          </div>
+          <h2 class="font-semibold text-lg">Project 2 — Establishing Requirements</h2>
+          <p class="mt-2 text-sm text-slate">
+            User and task analysis for EcoLink using personas, scenarios, HTAs, and requirement derivation.
+          </p>
+        </div>
+        <a href="project-2/index.html" class="mt-4 inline-flex items-center gap-1 text-sm text-mint hover:underline">
           Open →
         </a>
       </article>
 
-      <!-- Project 3 (placeholder) -->
-      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 hover:border-mint/80 transition opacity-80">
-        <div class="text-xs inline-flex px-2 py-1 rounded-full bg-mint/10 text-mint mb-3">Planning</div>
-        <h2 class="font-semibold text-lg">Project 3 — Concept &amp; Design</h2>
-        <p class="mt-2 text-sm text-slate">
-          Reserved for upcoming conceptual and physical design work: information architecture, task flows,
-          wireframes, and early prototypes for EcoLink.
-        </p>
-        <span class="mt-4 inline-flex items-center gap-1 text-sm text-slate">
-          Coming soon
-        </span>
+      <!-- Project 3 -->
+      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 hover:border-mint transition flex flex-col justify-between">
+        <div>
+          <div class="text-xs uppercase tracking-wide mb-2">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-mint/10 text-mint">
+              <span class="w-1.5 h-1.5 rounded-full bg-mint"></span> Planning
+            </span>
+          </div>
+          <h2 class="font-semibold text-lg">Project 3 — Conceptual & Physical Design</h2>
+          <p class="mt-2 text-sm text-slate">
+            Structure, navigation, and interface decisions. Wireframes, interaction flow, and Gestalt-aware layout.
+          </p>
+        </div>
+        <a href="project-3/index.html" class="mt-4 inline-flex items-center gap-1 text-sm text-mint hover:underline">
+          Open →
+        </a>
       </article>
 
-      <!-- Project 4 (placeholder) -->
-      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 hover:border-mint/80 transition opacity-80">
-        <div class="text-xs inline-flex px-2 py-1 rounded-full bg-mint/10 text-mint mb-3">Planning</div>
-        <h2 class="font-semibold text-lg">Project 4 — Evaluation &amp; Refinement</h2>
-        <p class="mt-2 text-sm text-slate">
-          Placeholder for later usability testing, heuristic evaluations, feedback cycles, and final design refinements.
-        </p>
-        <span class="mt-4 inline-flex items-center gap-1 text-sm text-slate">
-          Coming soon
-        </span>
+      <!-- Project 4 (updated) -->
+      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 hover:border-mint transition flex flex-col justify-between">
+        <div>
+          <div class="text-xs uppercase tracking-wide mb-2">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-mint/10 text-mint">
+              <span class="w-1.5 h-1.5 rounded-full bg-mint"></span> Evaluation
+            </span>
+          </div>
+          <h2 class="font-semibold text-lg">Project 4 — Usability Testing</h2>
+          <p class="mt-2 text-sm text-slate">
+            Briefing script and task cards for usability testing the EcoLink prototype (RORO booking, disposal locator, and complaints).
+          </p>
+        </div>
+        <a href="project-4/index.html" class="mt-4 inline-flex items-center gap-1 text-sm text-mint hover:underline">
+          Open →
+        </a>
       </article>
-
-    </div>
+    </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="border-t border-black/5 dark:border-white/10 mt-8">
-    <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate">
+  <footer class="border-t border-black/5 dark:border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-slate">
       © <span id="year"></span> FIZIS
     </div>
   </footer>
 
   <script>
-    // year
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // dark / light toggle
-    const btn  = document.getElementById('themeToggle');
+    // Theme toggle
+    const btn = document.getElementById('themeToggle');
     const root = document.documentElement;
-    if (
-      localStorage.theme === 'dark' ||
-      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
+    if (localStorage.theme === 'dark' ||
+       (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       root.classList.add('dark');
     }
     btn.addEventListener('click', () => {
