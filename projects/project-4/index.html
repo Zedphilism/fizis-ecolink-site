@@ -58,16 +58,44 @@
   </section>
 
   <!-- Sticky subnav -->
-  <div class="sticky top-[60px] z-30 bg-white/80 dark:bg-charcoal/80 backdrop-blur border-y border-black/5 dark:border-white/10">
-    <div class="max-w-6xl mx-auto px-4 py-2 overflow-x-auto">
-      <div class="flex gap-4 text-sm">
-        <a class="hover:text-mint whitespace-nowrap" href="#briefing">Briefing</a>
-        <a class="hover:text-mint whitespace-nowrap" href="#instructions">Test Instructions</a>
-        <a class="hover:text-mint whitespace-nowrap" href="#tasks">Task Cards</a>
-        <a class="hover:text-mint whitespace-nowrap" href="#recordings">Recordings & Notes</a>
-      </div>
+<div class="sticky top-[60px] z-30 bg-white/80 dark:bg-charcoal/80 backdrop-blur border-y border-black/5 dark:border-white/10">
+  <div class="max-w-6xl mx-auto px-4 py-2 overflow-x-auto">
+    <div class="flex gap-4 text-sm">
+
+      <!-- Briefing -->
+      <a class="hover:text-mint whitespace-nowrap" href="#briefing">
+        Briefing
+      </a>
+
+      <!-- Test Instructions (keep or remove depending on your content) -->
+      <a class="hover:text-mint whitespace-nowrap" href="#instructions">
+        Test Instructions
+      </a>
+
+      <!-- Task Cards -->
+      <a class="hover:text-mint whitespace-nowrap" href="#tasks">
+        Task Cards
+      </a>
+
+      <!-- Prototype -->
+      <a class="hover:text-mint whitespace-nowrap" href="#prototype">
+        Prototype
+      </a>
+
+      <!-- Google Form -->
+      <a class="hover:text-mint whitespace-nowrap" href="#feedback-form">
+        Feedback Form
+      </a>
+
+      <!-- Usability Insight -->
+      <a class="hover:text-mint whitespace-nowrap" href="#usability-insights">
+        Usability Result & Insight
+      </a>
+
     </div>
   </div>
+</div>
+
 
   <main class="max-w-6xl mx-auto px-4 py-10 space-y-10">
     <!-- Briefing -->
@@ -237,6 +265,302 @@
     </iframe>
   </div>
 </section>
+    <!-- Usability Results & Insights Section -->
+<section id="usability-insights" class="py-16 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center mb-10">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+        Usability Results & Insights
+      </h2>
+      <p class="text-gray-700 max-w-2xl mx-auto">
+        Summary of user feedback from usability testing sessions on the EcoLink prototype,
+        focusing on task completion, ease of use, and overall experience.
+      </p>
+
+      <!-- Badges -->
+      <div class="mt-6 flex flex-wrap justify-center gap-3">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+          N = 4 participants
+        </span>
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+          Method: Prototype usability testing
+        </span>
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-purple-100 text-purple-800">
+          Date: 7 Dec 2025
+        </span>
+      </div>
+    </div>
+
+    <!-- Key Stats Strip -->
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-12">
+      <!-- Overall Satisfaction -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 flex flex-col items-start">
+        <p class="text-sm text-gray-500 mb-1">Overall satisfaction</p>
+        <p class="text-3xl font-bold text-green-700 leading-tight">4.5<span class="text-lg text-gray-500"> / 5</span></p>
+        <p class="mt-2 text-xs text-gray-600">
+          Average Likert rating across core questions.
+        </p>
+      </div>
+
+      <!-- Task success -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 flex flex-col items-start">
+        <p class="text-sm text-gray-500 mb-1">Task completion</p>
+        <p class="text-3xl font-bold text-green-700 leading-tight">3<span class="text-lg text-gray-500"> / 3</span></p>
+        <p class="mt-2 text-xs text-gray-600">
+          All tasks successfully completed by all participants.
+        </p>
+      </div>
+
+      <!-- Age profile -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 flex flex-col items-start">
+        <p class="text-sm text-gray-500 mb-1">User profile</p>
+        <p class="text-3xl font-bold text-green-700 leading-tight">75<span class="text-lg text-gray-500">%</span></p>
+        <p class="mt-2 text-xs text-gray-600">
+          Participants aged 18 to 29 with good digital familiarity.
+        </p>
+      </div>
+
+      <!-- Prior experience -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 flex flex-col items-start">
+        <p class="text-sm text-gray-500 mb-1">Similar systems</p>
+        <p class="text-3xl font-bold text-green-700 leading-tight">1<span class="text-lg text-gray-500"> / 4</span></p>
+        <p class="mt-2 text-xs text-gray-600">
+          Had used waste management systems before. Most are first timers.
+        </p>
+      </div>
+    </div>
+
+    <!-- Task Performance Overview -->
+    <div class="mb-12">
+      <h3 class="text-xl font-semibold text-gray-900 mb-4">
+        Task Performance Overview
+      </h3>
+      <p class="text-gray-700 mb-6">
+        Participants were asked to complete three core tasks. Scores below are based on Likert scale responses and qualitative feedback.
+      </p>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <!-- Task 1 -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 flex flex-col">
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="font-semibold text-gray-900 text-sm">
+              Task 1
+            </h4>
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+              Book RORO Bin
+            </span>
+          </div>
+          <p class="text-2xl font-bold text-green-700 leading-tight">
+            4.5<span class="text-base text-gray-500"> / 5</span>
+          </p>
+          <!-- Simple bar -->
+          <div class="w-full h-2 mt-3 rounded-full bg-gray-100 overflow-hidden">
+            <div class="h-full bg-green-500 rounded-full" style="width: 90%;"></div>
+          </div>
+          <p class="mt-3 text-sm text-gray-700">
+            Users found the booking flow smooth and easy to follow. The main confusion was around how to extend the bin duration.
+          </p>
+        </div>
+
+        <!-- Task 2 -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 flex flex-col">
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="font-semibold text-gray-900 text-sm">
+              Task 2
+            </h4>
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+              Locate Waste Disposal
+            </span>
+          </div>
+          <p class="text-2xl font-bold text-green-700 leading-tight">
+            4.5<span class="text-base text-gray-500"> / 5</span>
+          </p>
+          <!-- Simple bar -->
+          <div class="w-full h-2 mt-3 rounded-full bg-gray-100 overflow-hidden">
+            <div class="h-full bg-green-500 rounded-full" style="width: 90%;"></div>
+          </div>
+          <p class="mt-3 text-sm text-gray-700">
+            Map and search features are understandable. Users strongly expect auto location to quickly detect nearby disposal centres.
+          </p>
+        </div>
+
+        <!-- Task 3 -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 flex flex-col">
+          <div class="flex items-center justify-between mb-3">
+            <h4 class="font-semibold text-gray-900 text-sm">
+              Task 3
+            </h4>
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+              Lodge Complaint
+            </span>
+          </div>
+          <p class="text-2xl font-bold text-green-700 leading-tight">
+            4.5<span class="text-base text-gray-500"> / 5</span>
+          </p>
+          <!-- Simple bar -->
+          <div class="w-full h-2 mt-3 rounded-full bg-gray-100 overflow-hidden">
+            <div class="h-full bg-green-500 rounded-full" style="width: 90%;"></div>
+          </div>
+          <p class="mt-3 text-sm text-gray-700">
+            Complaint flow is clear and straightforward. Users can select a category, describe the issue, and submit without difficulty.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Strengths vs Improvements -->
+    <div class="mb-12">
+      <h3 class="text-xl font-semibold text-gray-900 mb-4">
+        What Worked Well vs What Needs Improvement
+      </h3>
+      <div class="grid gap-6 md:grid-cols-2">
+        <!-- Strengths -->
+        <div class="bg-white rounded-2xl shadow-sm border border-green-100 p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-700 text-lg">
+              ✓
+            </span>
+            <h4 class="font-semibold text-gray-900">
+              Strengths
+            </h4>
+          </div>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li>Interface is intuitive and aligns with common app behavior.</li>
+            <li>Participants were able to complete all three tasks without major blockers.</li>
+            <li>Users reported feeling confident using the system, even without prior training.</li>
+            <li>The overall flow from booking to complaint is perceived as logical and consistent.</li>
+          </ul>
+        </div>
+
+        <!-- Improvements -->
+        <div class="bg-white rounded-2xl shadow-sm border border-yellow-100 p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-100 text-yellow-700 text-lg">
+              !
+            </span>
+            <h4 class="font-semibold text-gray-900">
+              Improvement Opportunities
+            </h4>
+          </div>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li>Add an auto location option to make it faster to find nearby disposal or recycling centres.</li>
+            <li>Clarify how RORO bin extension works, including duration rules and what happens after extension.</li>
+            <li>Use helper text or tooltips on key actions for first time users, especially around booking and extension.</li>
+            <li>Consider microcopy to reassure users about data accuracy and submission status.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- User Quotes -->
+    <div class="mb-12">
+      <h3 class="text-xl font-semibold text-gray-900 mb-4">
+        Participant Comments
+      </h3>
+      <p class="text-gray-700 mb-4">
+        A few representative quotes that explain the ratings in the users own words.
+      </p>
+
+      <div class="grid gap-4 md:grid-cols-3">
+        <!-- Quote 1 -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 flex flex-col">
+          <p class="text-sm text-gray-800 italic">
+            "need auto location for easier or fast accuracy"
+          </p>
+          <div class="mt-4 flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-xs font-semibold text-green-700">
+              P1
+            </div>
+            <div class="text-xs text-gray-600">
+              <p>Participant 1</p>
+              <p>Age 18 to 29</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quote 2 -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 flex flex-col">
+          <p class="text-sm text-gray-800 italic">
+            "confius extand time for roro bin"
+          </p>
+          <div class="mt-4 flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-xs font-semibold text-blue-700">
+              P2
+            </div>
+            <div class="text-xs text-gray-600">
+              <p>Participant 2</p>
+              <p>Age 30 to 49</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quote 3 -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 flex flex-col">
+          <p class="text-sm text-gray-800 italic">
+            "no. everything perfect"
+          </p>
+          <div class="mt-4 flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-xs font-semibold text-purple-700">
+              P3
+            </div>
+            <div class="text-xs text-gray-600">
+              <p>Participant 3</p>
+              <p>Age 18 to 29</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interpretation & Next Steps -->
+    <div class="grid gap-8 md:grid-cols-2">
+      <!-- Interpretation -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+          Interpretation
+        </h3>
+        <p class="text-sm text-gray-700 mb-3">
+          Overall, the EcoLink prototype is already performing well for core tasks. Participants with different backgrounds and levels of experience were able to complete all three tasks and rated the system highly on ease of use and confidence.
+        </p>
+        <p class="text-sm text-gray-700 mb-3">
+          The ratings and comments show that most friction comes from clarification rather than from broken flows. Users want smarter support for location and clearer messaging for time based actions such as extending the RORO bin booking.
+        </p>
+        <p class="text-sm text-gray-700">
+          This suggests that the next iteration should focus on refining details and adding guidance, rather than redesigning the entire interaction.
+        </p>
+      </div>
+
+      <!-- Next Iteration Plan -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+          Planned Improvements for Next Iteration
+        </h3>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li class="flex items-start gap-2">
+            <span class="mt-1 inline-flex w-4 h-4 rounded border border-gray-300"></span>
+            <span>Add a "Use my location" button and automatic pin placement for nearby disposal and recycling centres.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-1 inline-flex w-4 h-4 rounded border border-gray-300"></span>
+            <span>Redesign the RORO bin extension step with clearer labels, examples, and confirmation text.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-1 inline-flex w-4 h-4 rounded border border-gray-300"></span>
+            <span>Introduce helper text or tooltips on key forms to support first time users during booking and complaint submission.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-1 inline-flex w-4 h-4 rounded border border-gray-300"></span>
+            <span>Run a second usability test round with a new set of participants to validate the updated flows and content.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- Recordings / links placeholder -->
     <section id="recordings">
@@ -385,6 +709,7 @@
   </script>
 </body>
 </html>
+
 
 
 
