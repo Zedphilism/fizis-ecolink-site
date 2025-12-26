@@ -3,19 +3,31 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Project 2 — Under Construction | FIZIS</title>
-  <meta name="description" content="Project 2 placeholder."/>
+  <title>Project 3 — EcoLink Conceptual and Physical Design | FIZIS</title>
+  <meta name="description" content="Conceptual and physical design documentation for the EcoLink mobile application, including wireframes and prototypes."/>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config={theme:{extend:{colors:{mint:"#10B981",charcoal:"#111827",slate:"#6B7280"},boxShadow:{soft:"0 10px 30px rgba(0,0,0,.08)"}}},darkMode:'class'};
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { mint:"#10B981", charcoal:"#111827", slate:"#6B7280" },
+          boxShadow: { soft:"0 10px 30px rgba(0,0,0,.08)" }
+        }
+      },
+      darkMode:'class'
+    };
   </script>
 </head>
+
 <body class="bg-white text-charcoal dark:bg-charcoal dark:text-white transition">
+
+  <!-- Header -->
   <header class="sticky top-0 z-40 backdrop-blur bg-white/70 dark:bg-charcoal/60 border-b border-black/5 dark:border-white/10">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="../../index.html" class="flex items-center gap-2 font-semibold tracking-tight text-lg">
         <span class="inline-block w-2.5 h-2.5 rounded-full bg-mint"></span> FIZIS
       </a>
+
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a class="hover:text-mint" href="../../index.html#proposal">Proposal</a>
         <a class="hover:text-mint" href="../../blog/index.html">Blog</a>
@@ -24,52 +36,368 @@
         <a class="hover:text-mint" href="../../index.html#team">Team</a>
         <a class="hover:text-mint" href="../../index.html#contact">Contact</a>
       </nav>
-      <button id="themeToggle" class="text-sm px-3 py-1.5 rounded-lg border border-black/10 dark:border-white/20 hover:border-mint">Toggle theme</button>
+
+      <button id="themeToggle" class="text-sm px-3 py-1.5 rounded-lg border border-black/10 dark:border-white/20 hover:border-mint">
+        Toggle theme
+      </button>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 py-16 text-center">
-    <div class="mx-auto w-full max-w-md rounded-2xl p-8 border border-black/10 dark:border-white/10">
-      <!-- Inline SVG so no extra assets needed -->
-      <svg viewBox="0 0 200 100" class="mx-auto w-40 h-20">
-        <g fill="none" stroke="currentColor" stroke-width="2" opacity=".8">
-          <rect x="10" y="60" width="180" height="20" rx="3"></rect>
-          <path d="M20 60 L40 30 L160 30 L180 60"></path>
-          <circle cx="50" cy="80" r="6"></circle>
-          <circle cx="150" cy="80" r="6"></circle>
-          <path d="M100 30 v-10 M100 20 h-5 M100 20 h5" stroke-linecap="round"></path>
-        </g>
-      </svg>
-      <h1 class="mt-4 text-2xl font-bold">Under Construction</h1>
-      <p class="mt-2 text-slate">We’re preparing the brief and assets. Check the blog for progress.</p>
-      <div class="mt-4">
-        <a href="../../blog/index.html" class="text-mint hover:underline">Read updates →</a>
-      </div>
-      <div class="mt-6">
-        <a href="../index.html" class="px-5 py-2 rounded-xl border border-black/10 dark:border-white/20 hover:border-mint text-sm">Back to Projects</a>
+  <!-- Hero -->
+  <section class="border-b border-black/5 dark:border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-10">
+      <div class="grid md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-8">
+          <p class="inline-flex items-center gap-2 text-xs font-medium px-3 py-1 rounded-full bg-mint/10 text-mint border border-mint/20">
+            SECV2113 Human Computer Interaction
+          </p>
+
+          <h1 class="mt-4 text-3xl md:text-4xl font-semibold tracking-tight">
+            Project 3: Conceptual and Physical Design
+          </h1>
+
+          <p class="mt-3 text-slate dark:text-white/75 leading-relaxed">
+            This page documents the design progression of the EcoLink mobile application, moving from early conceptual planning into
+            wireframes and high fidelity prototypes. The focus is on usable structure, clear navigation, and efficient task flow.
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#conceptual" class="px-4 py-2 rounded-xl bg-mint text-white shadow-soft hover:opacity-95">
+              View Conceptual Design
+            </a>
+            <a href="#physical" class="px-4 py-2 rounded-xl border border-black/10 dark:border-white/20 hover:border-mint">
+              View Physical Design
+            </a>
+            <a href="#resources" class="px-4 py-2 rounded-xl border border-black/10 dark:border-white/20 hover:border-mint">
+              Materials
+            </a>
+          </div>
+        </div>
+
+        <div class="md:col-span-4">
+          <div class="rounded-2xl p-5 border border-black/10 dark:border-white/10 bg-white dark:bg-white/5 shadow-soft">
+            <h2 class="font-semibold">Prototype Links</h2>
+            <p class="mt-2 text-sm text-slate dark:text-white/75">
+              Open these in mobile viewport for the best experience.
+            </p>
+
+            <div class="mt-4 grid gap-3">
+              <a class="block px-4 py-3 rounded-xl border border-black/10 dark:border-white/20 hover:border-mint"
+                 href="https://glue-count-74907581.figma.site/" target="_blank" rel="noreferrer">
+                First Prototype (Iteration 1)
+                <div class="text-xs text-slate dark:text-white/60 mt-1">Early high fidelity version</div>
+              </a>
+
+              <a class="block px-4 py-3 rounded-xl bg-mint text-white shadow-soft hover:opacity-95"
+                 href="https://size-surge-92164257.figma.site/" target="_blank" rel="noreferrer">
+                Final Prototype (Iteration 2)
+                <div class="text-xs text-white/80 mt-1">Refined and submission ready</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-4 rounded-2xl p-5 border border-black/10 dark:border-white/10 bg-white dark:bg-white/5">
+            <h3 class="font-semibold">On this page</h3>
+            <div class="mt-3 grid gap-2 text-sm">
+              <a class="hover:text-mint" href="#intro">1.0 Introduction</a>
+              <a class="hover:text-mint" href="#overview">2.0 Design Overview</a>
+              <a class="hover:text-mint" href="#conceptual">3.0 Conceptual Design</a>
+              <a class="hover:text-mint" href="#physical">4.0 Physical Design</a>
+              <a class="hover:text-mint" href="#screens">5.0 Key Screens</a>
+              <a class="hover:text-mint" href="#justification">6.0 Design Justification</a>
+              <a class="hover:text-mint" href="#conclusion">7.0 Conclusion</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
+  </section>
+
+  <!-- Content -->
+  <main class="max-w-6xl mx-auto px-4 py-10 space-y-12">
+
+    <!-- 1.0 -->
+    <section id="intro" class="scroll-mt-24">
+      <h2 class="text-2xl font-semibold">1.0 Introduction</h2>
+      <div class="mt-4 rounded-2xl p-6 border border-black/10 dark:border-white/10 bg-white dark:bg-white/5">
+        <p class="text-slate dark:text-white/75 leading-relaxed">
+          This submission focuses on translating user needs and task requirements into tangible interface designs for the EcoLink
+          mobile application. The work is presented in two parts: conceptual design and physical design. The conceptual stage defines
+          system structure and task flow. The physical stage converts those decisions into concrete screens and interactions.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2.0 -->
+    <section id="overview" class="scroll-mt-24">
+      <h2 class="text-2xl font-semibold">2.0 Design Overview and Iteration Strategy</h2>
+
+      <div class="mt-4 grid md:grid-cols-2 gap-4">
+        <div class="rounded-2xl p-6 border border-black/10 dark:border-white/10 bg-white dark:bg-white/5">
+          <h3 class="font-semibold">2.1 Design Evolution</h3>
+          <ul class="mt-3 space-y-2 text-sm text-slate dark:text-white/75">
+            <li><span class="font-semibold text-mint">Stage 1:</span> Initial idea and feature direction</li>
+            <li><span class="font-semibold text-mint">Stage 2:</span> Initial wireframe (low fidelity)</li>
+            <li><span class="font-semibold text-mint">Stage 3:</span> Refined wireframe (improved flow and logic)</li>
+            <li><span class="font-semibold text-mint">Stage 4:</span> High fidelity prototypes (Iteration 1 and final)</li>
+          </ul>
+        </div>
+
+        <!-- FIXED LINKS: repo root /files/ -->
+        <div id="resources" class="rounded-2xl p-6 border border-black/10 dark:border-white/10 bg-white dark:bg-white/5">
+          <h3 class="font-semibold">2.2 Materials</h3>
+          <p class="mt-2 text-sm text-slate dark:text-white/75">
+            These files are stored in the <span class="font-semibold">/files</span> folder in the repository.
+          </p>
+
+          <div class="mt-4 grid gap-3">
+            <a class="px-4 py-3 rounded-xl border border-black/10 dark:border-white/20 hover:border-mint"
+               href="../../files/Ecolink.pdf" target="_blank" rel="noreferrer">
+              Initial Idea (Ecolink.pdf)
+            </a>
+
+            <a class="px-4 py-3 rounded-xl border border-black/10 dark:border-white/20 hover:border-mint"
+               href="../../files/Wireframe%20Ecolink.pdf" target="_blank" rel="noreferrer">
+              Wireframe (Wireframe Ecolink.pdf)
+            </a>
+
+            <a class="px-4 py-3 rounded-xl border border-black/10 dark:border-white/20 hover:border-mint"
+               href="../../files/PR04%20-%20Project%203.pdf" target="_blank" rel="noreferrer">
+              Project 3 Report (PR04 - Project 3.pdf)
+            </a>
+          </div>
+
+          <p class="mt-3 text-xs text-slate dark:text-white/60">
+            If any link fails, it means the page is not located at <span class="font-semibold">projects/project3/index.html</span>.
+            In that case, tell me your exact file path and I’ll adjust the relative links.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3.0 -->
+    <section id="conceptual" class="scroll-mt-24">
+      <h2 class="text-2xl font-semibold">3.0 Conceptual Design</h2>
+
+      <div class="mt-4 rounded-2xl p-6 border border-black/10 dark:border-white/10 bg-white dark:bg-white/5">
+        <h3 class="font-semibold">3.1 System Concept and Core Functions</h3>
+        <p class="mt-3 text-sm text-slate dark:text-white/75 leading-relaxed">
+          EcoLink is a mobile application that supports waste management and community services by combining information discovery,
+          civic reporting, and service booking. The core modules include authentication, dashboard updates, locating recycling or disposal
+          locations, service booking such as RORO bin booking, gig worker hiring and job posting, complaint reporting, and profile management.
+        </p>
+
+        <div class="mt-5 grid md:grid-cols-3 gap-3">
+          <div class="rounded-xl p-4 border border-black/10 dark:border-white/10">
+            <div class="font-semibold text-mint text-sm">Authentication</div>
+            <div class="text-xs text-slate dark:text-white/60 mt-1">Login, register, account access</div>
+          </div>
+          <div class="rounded-xl p-4 border border-black/10 dark:border-white/10">
+            <div class="font-semibold text-mint text-sm">Find</div>
+            <div class="text-xs text-slate dark:text-white/60 mt-1">Recycling centres, disposal sites</div>
+          </div>
+          <div class="rounded-xl p-4 border border-black/10 dark:border-white/10">
+            <div class="font-semibold text-mint text-sm">Services</div>
+            <div class="text-xs text-slate dark:text-white/60 mt-1">RORO booking, gig work hire and listing</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 grid md:grid-cols-2 gap-4">
+        <div class="rounded-2xl p-6 border border-black/10 dark:border-white/10 bg-white dark:bg-white/5">
+          <h3 class="font-semibold">3.2 Initial Wireframe (Low Fidelity)</h3>
+          <p class="mt-3 text-sm text-slate dark:text-white/75 leading-relaxed">
+            The initial wireframe focused on capturing the fundamental screens and features needed for EcoLink without prioritizing
+            refined flow. It was used to confirm screen coverage and information placement before deeper logic refinement.
+          </p>
+          <ul class="mt-3 space-y-2 text-sm text-slate dark:text-white/75 list-disc list-inside">
+            <li>Login and register</li>
+            <li>Dashboard announcements and updates</li>
+            <li>Find location feature</li>
+            <li>Service page with RORO and gig functions</li>
+            <li>Report issue and profile</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl p-6 border border-black/10 dark:border-white/10 bg-white dark:bg-white/5">
+          <h3 class="font-semibold">3.3 Refined Wireframe</h3>
+          <p class="mt-3 text-sm text-slate dark:text-white/75 leading-relaxed">
+            The refined wireframe improved navigation flow and task structure, especially for RORO booking and gig related activities.
+            Functions were grouped more logically and steps were clarified to reduce friction during task completion.
+          </p>
+          <ul class="mt-3 space-y-2 text-sm text-slate dark:text-white/75 list-disc list-inside">
+            <li>Clearer sequence for RORO booking steps</li>
+            <li>Better separation of Find, Service, and Report</li>
+            <li>More consistent structure across screens</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4.0 -->
+    <section id="physical" class="scroll-mt-24">
+      <h2 class="text-2xl font-semibold">4.0 Physical Design</h2>
+
+      <div class="mt-4 rounded-2xl p-6 border border-black/10 dark:border-white/10 bg-white dark:bg-white/5">
+        <h3 class="font-semibold">4.1 From Wireframe to Prototype</h3>
+        <p class="mt-3 text-sm text-slate dark:text-white/75 leading-relaxed">
+          The physical design stage translates the conceptual structure into concrete screen layouts. This includes component placement,
+          visual hierarchy, spacing, and interaction elements suitable for mobile. The goal is consistent and clear navigation while reducing
+          user effort during key tasks.
+        </p>
+      </div>
+
+      <div class="mt-4 grid md:grid-cols-2 gap-4">
+        <div class="rounded-2xl p-6 border border-black/10 dark:border-white/10 bg-white dark:bg-white/5">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="font-semibold">4.2 First Prototype (Iteration 1)</h3>
+            <a class="text-sm hover:text-mint" href="https://glue-count-74907581.figma.site/" target="_blank" rel="noreferrer">Open</a>
+          </div>
+          <p class="mt-3 text-sm text-slate dark:text-white/75 leading-relaxed">
+            This version focuses on validating layout and navigation. It was used to identify early usability issues and refine interaction flow.
+          </p>
+          <ul class="mt-3 space-y-2 text-sm text-slate dark:text-white/75 list-disc list-inside">
+            <li>Initial component consistency</li>
+            <li>Early spacing and hierarchy decisions</li>
+            <li>Basic task flow validation</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl p-6 border border-black/10 dark:border-white/10 bg-white dark:bg-white/5">
+          <div class="flex items-center justify-between gap-3">
+            <h3 class="font-semibold">4.3 Final Prototype (Iteration 2)</h3>
+            <a class="text-sm hover:text-mint" href="https://size-surge-92164257.figma.site/" target="_blank" rel="noreferrer">Open</a>
+          </div>
+          <p class="mt-3 text-sm text-slate dark:text-white/75 leading-relaxed">
+            The final prototype refines clarity, improves visual consistency, and strengthens navigation across the application.
+            This is the most complete version of the intended user experience for EcoLink.
+          </p>
+          <ul class="mt-3 space-y-2 text-sm text-slate dark:text-white/75 list-disc list-inside">
+            <li>Improved readability and information hierarchy</li>
+            <li>More consistent UI patterns across screens</li>
+            <li>Smoother flow for booking and reporting tasks</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5.0 -->
+    <section id="screens" class="scroll-mt-24">
+      <h2 class="text-2xl font-semibold">5.0 Key Screen Breakdown</h2>
+
+      <div class="mt-4 grid md:grid-cols-2 gap-4">
+        <div class="rounded-2xl p-6 border border-black/10 dark:border-white/10 bg-white dark:bg-white/5">
+          <h3 class="font-semibold text-mint">Dashboard</h3>
+          <p class="mt-2 text-sm text-slate dark:text-white/75">
+            The main entry point for announcements, updates, and quick access to core functions.
+          </p>
+          <ul class="mt-3 text-sm text-slate dark:text-white/75 list-disc list-inside space-y-2">
+            <li>Highlights what is new</li>
+            <li>Supports quick access to key tasks</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl p-6 border border-black/10 dark:border-white/10 bg-white dark:bg-white/5">
+          <h3 class="font-semibold text-mint">Find (Recycling and Disposal)</h3>
+          <p class="mt-2 text-sm text-slate dark:text-white/75">
+            Helps users locate recycling centres or disposal sites based on location and relevant inputs.
+          </p>
+          <ul class="mt-3 text-sm text-slate dark:text-white/75 list-disc list-inside space-y-2">
+            <li>Map based discovery</li>
+            <li>Clear location guidance and inputs</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl p-6 border border-black/10 dark:border-white/10 bg-white dark:bg-white/5">
+          <h3 class="font-semibold text-mint">Book RORO Bin</h3>
+          <p class="mt-2 text-sm text-slate dark:text-white/75">
+            Booking flow supports selection, scheduling, provider comparison, and payment confirmation.
+          </p>
+          <ul class="mt-3 text-sm text-slate dark:text-white/75 list-disc list-inside space-y-2">
+            <li>Step based progression</li>
+            <li>Cost transparency before payment</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl p-6 border border-black/10 dark:border-white/10 bg-white dark:bg-white/5">
+          <h3 class="font-semibold text-mint">Report Issue</h3>
+          <p class="mt-2 text-sm text-slate dark:text-white/75">
+            Enables users to submit issue details, location, and attachments for evidence.
+          </p>
+          <ul class="mt-3 text-sm text-slate dark:text-white/75 list-disc list-inside space-y-2">
+            <li>Structured reporting to reduce ambiguity</li>
+            <li>Attachment support for proof</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6.0 -->
+    <section id="justification" class="scroll-mt-24">
+      <h2 class="text-2xl font-semibold">6.0 Design Justification</h2>
+      <div class="mt-4 rounded-2xl p-6 border border-black/10 dark:border-white/10 bg-white dark:bg-white/5">
+        <p class="text-sm text-slate dark:text-white/75 leading-relaxed">
+          The interface design emphasizes consistency, clear grouping, and minimal user effort. Functions are organized by intent,
+          such as discovery (Find), action (Services), and reporting (Report). Visual hierarchy and spacing guide attention and improve
+          readability on mobile devices. Interaction patterns follow standard mobile conventions to reduce learning time.
+        </p>
+      </div>
+    </section>
+
+    <!-- 7.0 -->
+    <section id="conclusion" class="scroll-mt-24">
+      <h2 class="text-2xl font-semibold">7.0 Conclusion</h2>
+      <div class="mt-4 rounded-2xl p-6 border border-black/10 dark:border-white/10 bg-white dark:bg-white/5">
+        <p class="text-sm text-slate dark:text-white/75 leading-relaxed">
+          This submission demonstrates the transition from conceptual planning to physical interface design through iterative refinement.
+          By producing an initial wireframe, refining task flow, and developing high fidelity prototypes, the EcoLink design is structured
+          to support clear and efficient user interaction. This provides a solid base for evaluation and usability testing in the next phase.
+        </p>
+
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a class="px-4 py-2 rounded-xl border border-black/10 dark:border-white/20 hover:border-mint"
+             href="https://glue-count-74907581.figma.site/" target="_blank" rel="noreferrer">
+            Open Iteration 1
+          </a>
+          <a class="px-4 py-2 rounded-xl bg-mint text-white shadow-soft hover:opacity-95"
+             href="https://size-surge-92164257.figma.site/" target="_blank" rel="noreferrer">
+            Open Final Prototype
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <!-- Footer -->
   <footer class="border-t border-black/5 dark:border-white/10">
-    <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate">
-      © <span id="year"></span> FIZIS
+    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-slate dark:text-white/60 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+      <p>EcoLink HCI Project 3. Conceptual and physical design documentation.</p>
+      <div class="flex gap-4">
+        <a class="hover:text-mint" href="#intro">Top</a>
+        <a class="hover:text-mint" href="../index.html">Projects</a>
+      </div>
     </div>
   </footer>
 
+  <!-- Theme toggle -->
   <script>
-    document.getElementById('year').textContent=new Date().getFullYear();
+    (function(){
+      const root = document.documentElement;
+      const saved = localStorage.getItem("theme");
+      if (saved === "dark") root.classList.add("dark");
+      if (saved === "light") root.classList.remove("dark");
 
-    // dark / light toggle
-    const btn = document.getElementById('themeToggle');
-    const root = document.documentElement;
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      root.classList.add('dark');
-    }
-    btn.addEventListener('click', () => {
-      root.classList.toggle('dark');
-      localStorage.theme = root.classList.contains('dark') ? 'dark' : 'light';
-    });
+      const btn = document.getElementById("themeToggle");
+      if (!btn) return;
+
+      btn.addEventListener("click", () => {
+        root.classList.toggle("dark");
+        localStorage.setItem("theme", root.classList.contains("dark") ? "dark" : "light");
+      });
+    })();
   </script>
+
 </body>
 </html>
