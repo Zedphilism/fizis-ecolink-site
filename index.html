@@ -6,17 +6,7 @@
   <title>FIZIS — Ecolink HCI Project Blog</title>
   <meta name="description" content="FIZIS team site for the Ecolink HCI project. Proposal, prototypes, usability testing, and weekly updates." />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { mint:"#10B981", charcoal:"#111827", slate:"#6B7280" },
-          boxShadow: { soft:"0 10px 30px rgba(0,0,0,.08)" }
-        }
-      },
-      darkMode:'class'
-    }
-  </script>
+  <script src="assets/tailwind.js"></script>
 </head>
 <body class="bg-white text-charcoal dark:bg-charcoal dark:text-white transition">
   <!-- Top bar -->
@@ -293,32 +283,6 @@
     </div>
   </footer>
 
-  <!-- Script -->
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const btn = document.getElementById('themeToggle');
-    const root = document.documentElement;
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      root.classList.add('dark');
-    }
-    btn.addEventListener('click', () => {
-      root.classList.toggle('dark');
-      localStorage.theme = root.classList.contains('dark') ? 'dark' : 'light';
-    });
-
-    // Fallback initials if any team image fails
-    document.querySelectorAll('#team img').forEach(img=>{
-      img.addEventListener('error',()=>{
-        const initials=(img.alt||'').split(' ').map(s=>s[0]).join('').slice(0,2).toUpperCase()||'--';
-        img.src='data:image/svg+xml;utf8,'+encodeURIComponent(
-          `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600">
-             <rect width="100%" height="100%" fill="#0b1220"/>
-             <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
-                   font-family="Inter, Arial" font-size="120" fill="#10B981">${initials}</text>
-           </svg>`
-        );
-      });
-    });
-  </script>
+  <script src="assets/theme.js"></script>
 </body>
 </html>
