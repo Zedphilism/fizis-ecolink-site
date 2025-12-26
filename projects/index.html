@@ -17,27 +17,11 @@
       darkMode: 'class'
     };
   </script>
+  <script src="../partials/site-partials.js" defer></script>
 </head>
-<body class="bg-white text-charcoal dark:bg-charcoal dark:text-white transition">
+<body class="bg-white text-charcoal dark:bg-charcoal dark:text-white transition" data-base-path="../">
   <!-- Header -->
-  <header class="sticky top-0 z-40 backdrop-blur bg-white/70 dark:bg-charcoal/60 border-b border-black/5 dark:border-white/10">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="../index.html" class="flex items-center gap-2 font-semibold tracking-tight text-lg">
-        <span class="inline-block w-2.5 h-2.5 rounded-full bg-mint"></span> FIZIS
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a class="hover:text-mint" href="../index.html#proposal">Proposal</a>
-        <a class="hover:text-mint" href="../blog/index.html">Blog</a>
-        <a class="hover:text-mint" href="./index.html">Projects</a>
-        <a class="hover:text-mint" href="../index.html#gallery">Gallery</a>
-        <a class="hover:text-mint" href="../index.html#team">Team</a>
-        <a class="hover:text-mint" href="../index.html#contact">Contact</a>
-      </nav>
-      <button id="themeToggle" class="text-sm px-3 py-1.5 rounded-lg border border-black/10 dark:border-white/20 hover:border-mint">
-        Toggle theme
-      </button>
-    </div>
-  </header>
+  <div id="site-header"></div>
 
   <main class="max-w-6xl mx-auto px-4 py-10">
     <header class="mb-8">
@@ -122,27 +106,6 @@
     </section>
   </main>
 
-  <footer class="border-t border-black/5 dark:border-white/10">
-    <div class="max-w-6xl mx-auto px-4 py-8 text-sm text-slate">
-      © <span id="year"></span> FIZIS
-    </div>
-  </footer>
-
-  <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Theme toggle
-    const btn = document.getElementById('themeToggle');
-    const root = document.documentElement;
-    if (localStorage.theme === 'dark' ||
-       (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      root.classList.add('dark');
-    }
-    btn.addEventListener('click', () => {
-      root.classList.toggle('dark');
-      localStorage.theme = root.classList.contains('dark') ? 'dark' : 'light';
-    });
-  </script>
+  <div id="site-footer"></div>
 </body>
 </html>

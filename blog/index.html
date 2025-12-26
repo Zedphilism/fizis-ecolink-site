@@ -6,21 +6,10 @@
   <title>Blog | FIZIS × Ecolink</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config={theme:{extend:{colors:{mint:"#10B981",charcoal:"#111827",slate:"#6B7280"},boxShadow:{soft:"0 10px 30px rgba(0,0,0,.08)"}}},darkMode:"class"};</script>
+  <script src="../partials/site-partials.js" defer></script>
 </head>
-<body class="bg-white text-charcoal dark:bg-charcoal dark:text-white transition">
-  <header class="sticky top-0 z-40 backdrop-blur bg-white/70 dark:bg-charcoal/60 border-b border-black/5 dark:border-white/10">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="../index.html" class="flex items-center gap-2 font-semibold tracking-tight text-lg">
-        <span class="inline-block w-2.5 h-2.5 rounded-full bg-mint"></span> FIZIS
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a class="hover:text-mint" href="../index.html#proposal">Proposal</a>
-        <a class="hover:text-mint" href="#">Blog</a>
-        <a class="hover:text-mint" href="../index.html#project">Project</a>
-      </nav>
-      <button id="themeToggle" class="text-sm px-3 py-1.5 rounded-lg border border-black/10 dark:border-white/20 hover:border-mint">Toggle theme</button>
-    </div>
-  </header>
+<body class="bg-white text-charcoal dark:bg-charcoal dark:text-white transition" data-base-path="../">
+  <div id="site-header"></div>
 
   <main class="max-w-6xl mx-auto px-4 py-12">
     <h1 class="text-3xl font-bold mb-6">Blog</h1>
@@ -35,18 +24,6 @@
     </ul>
   </main>
 
-  <footer class="border-t border-black/5 dark:border-white/10">
-    <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-slate flex items-center justify-between">
-      <div>© <span id="year"></span> FIZIS — Ecolink HCI Team</div>
-      <a href="../index.html#contact" class="hover:text-mint">Contact</a>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent=new Date().getFullYear();
-    const btn=document.getElementById('themeToggle'),root=document.documentElement;
-    if(localStorage.theme==='dark'||(!('theme'in localStorage)&&window.matchMedia('(prefers-color-scheme: dark)').matches)){root.classList.add('dark');}
-    btn.addEventListener('click',()=>{root.classList.toggle('dark');localStorage.theme=root.classList.contains('dark')?'dark':'light';});
-  </script>
+  <div id="site-footer"></div>
 </body>
 </html>
