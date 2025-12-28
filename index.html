@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FIZIS — Ecolink HCI Project Blog</title>
-  <meta name="description" content="FIZIS team site for the Ecolink HCI project. Proposal, prototypes, usability testing, and weekly updates." />
+  <title>FIZIS — Ecolink HCI Project Site</title>
+  <meta name="description" content="FIZIS team site for the Ecolink HCI project. Proposal, prototypes, usability testing, and final demo." />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -17,8 +18,16 @@
       darkMode:'class'
     }
   </script>
+
   <script src="partials/site-partials.js" defer></script>
+
+  <style>
+    /* Lightbox */
+    .lb-backdrop{ background: rgba(0,0,0,.65); }
+    .lb-panel{ max-width: 1100px; }
+  </style>
 </head>
+
 <body class="bg-white text-charcoal dark:bg-charcoal dark:text-white transition">
   <!-- Top bar -->
   <div id="site-header"></div>
@@ -31,19 +40,31 @@
           FIZIS × Ecolink. Community waste and micro jobs made simple.
         </h1>
         <p class="mt-4 text-slate">
-          We are in the <strong>Usability Testing &amp; Insights</strong> phase. Prototypes are being tested with users, and we’re collecting feedback to refine the design before the final report.
+          We are in the <strong>Final Demo &amp; Report</strong> phase. The final solution is ready, and our demo video is now available for viewing.
         </p>
+
         <div class="mt-6 flex gap-3 flex-wrap">
-          <a href="projects/project4.html" class="px-5 py-3 rounded-xl bg-mint text-white shadow-soft hover:opacity-90">
-            View usability testing (Project 4)
+          <a
+            href="https://youtu.be/ODOs6GU0F2Y?si=Jg5D2YRhYE8HzKEP"
+            target="_blank"
+            rel="noopener"
+            class="px-5 py-3 rounded-xl bg-mint text-white shadow-soft hover:opacity-90"
+          >
+            Watch final demo
           </a>
-          <a href="blog/index.html" class="px-5 py-3 rounded-xl border border-black/10 dark:border-white/20 hover:border-mint">
-            Read progress updates
+
+          <a href="projects/index.html" class="px-5 py-3 rounded-xl border border-black/10 dark:border-white/20 hover:border-mint">
+            Open projects
+          </a>
+
+          <a href="#proposal" class="px-5 py-3 rounded-xl border border-black/10 dark:border-white/20 hover:border-mint">
+            View proposal
           </a>
         </div>
+
         <div class="mt-6 text-xs uppercase tracking-wider text-slate">
           Current phase:
-          <span class="ml-2 px-2 py-1 rounded bg-mint/10 text-mint">Usability testing &amp; insights</span>
+          <span class="ml-2 px-2 py-1 rounded bg-mint/10 text-mint">Final demo &amp; report</span>
         </div>
       </div>
 
@@ -52,25 +73,25 @@
         <div class="rounded-2xl bg-white dark:bg-[#0f1620] p-6 shadow-soft">
           <div class="text-sm text-slate mb-3">Plan</div>
           <ol class="space-y-3 text-sm">
-            <li class="flex items-center gap-3">
-              <span class="w-2 h-2 rounded-full bg-mint"></span>
-              Proposal and scope definition — Completed
+            <li class="flex items-center gap-3 opacity-90">
+              <span class="w-2 h-2 rounded-full bg-mint/80"></span>
+              Proposal and scope definition (Completed)
             </li>
             <li class="flex items-center gap-3 opacity-90">
               <span class="w-2 h-2 rounded-full bg-mint/80"></span>
-              User research, interviews, and task analysis — Completed
+              User research, interviews, and task analysis (Completed)
             </li>
-            <li class="flex items-center gap-3 opacity-80">
-              <span class="w-2 h-2 rounded-full bg-mint/70"></span>
-              Prototype v1 — wireframes and flows — Completed
+            <li class="flex items-center gap-3 opacity-90">
+              <span class="w-2 h-2 rounded-full bg-mint/80"></span>
+              Prototype v1, wireframes and flows (Completed)
+            </li>
+            <li class="flex items-center gap-3 opacity-90">
+              <span class="w-2 h-2 rounded-full bg-mint/80"></span>
+              Usability testing and iteration (Completed)
             </li>
             <li class="flex items-center gap-3 opacity-100">
               <span class="w-2 h-2 rounded-full bg-mint"></span>
-              Usability testing and iteration — <span class="ml-1 text-mint font-semibold">Now</span>
-            </li>
-            <li class="flex items-center gap-3 opacity-70">
-              <span class="w-2 h-2 rounded-full bg-mint/40"></span>
-              Final demo and report — Upcoming
+              Final demo and report <span class="ml-1 text-mint font-semibold">Now</span>
             </li>
           </ol>
         </div>
@@ -78,25 +99,102 @@
     </div>
   </section>
 
+  <!-- Project status cards (Option D) -->
+  <section id="project-status" class="max-w-6xl mx-auto px-4 py-12">
+    <div class="flex items-end justify-between mb-6 flex-wrap gap-3">
+      <div>
+        <h2 class="text-2xl font-semibold">Project status</h2>
+        <p class="text-slate mt-1">A quick snapshot of Project 1 to 4 progress, with the current milestone set to Final Demo.</p>
+      </div>
+      <a href="projects/index.html" class="text-mint hover:underline">View all projects →</a>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 hover:border-mint transition">
+        <div class="text-xs uppercase tracking-wide text-slate">Project 1</div>
+        <h3 class="mt-2 font-semibold text-lg">Proposal kit</h3>
+        <p class="mt-2 text-sm text-slate">Problem, scope, and submission materials.</p>
+        <div class="mt-4 inline-flex items-center gap-2 text-xs px-2 py-1 rounded bg-mint/10 text-mint">Completed</div>
+        <a href="projects/project1.html" class="mt-4 block text-mint text-sm">Open Project 1 →</a>
+      </article>
+
+      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 hover:border-mint transition">
+        <div class="text-xs uppercase tracking-wide text-slate">Project 2</div>
+        <h3 class="mt-2 font-semibold text-lg">Research and task analysis</h3>
+        <p class="mt-2 text-sm text-slate">Personas, HTA, and insights shaping design.</p>
+        <div class="mt-4 inline-flex items-center gap-2 text-xs px-2 py-1 rounded bg-mint/10 text-mint">Completed</div>
+        <a href="projects/project2.html" class="mt-4 block text-mint text-sm">Open Project 2 →</a>
+      </article>
+
+      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 hover:border-mint transition">
+        <div class="text-xs uppercase tracking-wide text-slate">Project 3</div>
+        <h3 class="mt-2 font-semibold text-lg">Prototype</h3>
+        <p class="mt-2 text-sm text-slate">Flows and screens for key user journeys.</p>
+        <div class="mt-4 inline-flex items-center gap-2 text-xs px-2 py-1 rounded bg-mint/10 text-mint">Completed</div>
+        <a href="projects/project3.html" class="mt-4 block text-mint text-sm">Open Project 3 →</a>
+      </article>
+
+      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 hover:border-mint transition">
+        <div class="text-xs uppercase tracking-wide text-slate">Project 4</div>
+        <h3 class="mt-2 font-semibold text-lg">Final demo and report</h3>
+        <p class="mt-2 text-sm text-slate">Final output and demonstration video.</p>
+        <div class="mt-4 inline-flex items-center gap-2 text-xs px-2 py-1 rounded bg-mint/10 text-mint">Current</div>
+
+        <div class="mt-4 flex flex-wrap gap-3">
+          <a
+            href="https://youtu.be/ODOs6GU0F2Y?si=Jg5D2YRhYE8HzKEP"
+            target="_blank"
+            rel="noopener"
+            class="text-mint text-sm hover:underline"
+          >
+            Watch demo →
+          </a>
+          <a href="projects/project4.html" class="text-mint text-sm hover:underline">
+            Open Project 4 →
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <!-- Proposal section -->
   <section id="proposal" class="max-w-6xl mx-auto px-4 py-12">
     <h2 class="text-2xl font-semibold mb-6">Proposal kit</h2>
 
-    <!-- Live PDF viewer -->
+    <!-- Live PDF viewer (Option E) -->
     <div class="rounded-2xl border border-black/10 dark:border-white/10 overflow-hidden">
-      <div class="flex items-center justify-between px-4 py-3 bg-black/5 dark:bg-white/10">
+      <div class="flex items-center justify-between px-4 py-3 bg-black/5 dark:bg-white/10 flex-wrap gap-2">
         <div class="text-sm">
           <strong>Proposal PDF</strong> <span class="text-slate">(files/proposal.pdf)</span>
         </div>
-        <div class="flex gap-2">
-          <a href="files/proposal.pdf" download class="text-sm px-3 py-1.5 rounded-lg border border-black/10 dark:border-white/20 hover:border-mint">Download</a>
-          <button onclick="window.print()" class="text-sm px-3 py-1.5 rounded-lg border border-black/10 dark:border-white/20 hover:border-mint">Print</button>
+        <div class="flex gap-2 flex-wrap">
+          <a href="files/proposal.pdf" target="_blank" rel="noopener"
+             class="text-sm px-3 py-1.5 rounded-lg border border-black/10 dark:border-white/20 hover:border-mint">
+            Open in new tab
+          </a>
+          <a href="files/proposal.pdf" download
+             class="text-sm px-3 py-1.5 rounded-lg border border-black/10 dark:border-white/20 hover:border-mint">
+            Download
+          </a>
+          <button id="pdfFullscreenBtn"
+                  class="text-sm px-3 py-1.5 rounded-lg border border-black/10 dark:border-white/20 hover:border-mint">
+            Full screen
+          </button>
+          <button onclick="window.print()"
+                  class="text-sm px-3 py-1.5 rounded-lg border border-black/10 dark:border-white/20 hover:border-mint">
+            Print
+          </button>
         </div>
       </div>
-      <div class="aspect-[16/10] bg-black/5 dark:bg-white/10">
-        <iframe src="files/proposal.pdf#view=FitH" class="w-full h-full" title="FIZIS Proposal PDF"></iframe>
+
+      <div id="pdfFrameWrap" class="aspect-[16/10] bg-black/5 dark:bg-white/10">
+        <iframe id="proposalPdfFrame" src="files/proposal.pdf#view=FitH" class="w-full h-full" title="FIZIS Proposal PDF"></iframe>
       </div>
     </div>
+
+    <p class="mt-3 text-sm text-slate">
+      If the PDF does not render in your browser, use the "Open in new tab" button above.
+    </p>
 
     <!-- Submission checklist -->
     <div class="mt-6 rounded-2xl p-6 border border-black/10 dark:border-white/10">
@@ -112,47 +210,13 @@
     </div>
   </section>
 
-  <!-- Blog preview -->
-  <section id="blog" class="max-w-6xl mx-auto px-4 py-12">
-    <div class="flex items-end justify-between mb-6">
-      <h2 class="text-2xl font-semibold">Latest updates</h2>
-      <a href="blog/index.html" class="text-mint hover:underline">View all →</a>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-6">
-      <!-- Week 1 (live) -->
-      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 hover:border-mint transition">
-        <div class="text-xs uppercase tracking-wide text-slate">Proposal • Week 1</div>
-        <h3 class="mt-2 font-semibold text-lg">Brainstorming ideas and choosing Ecolink</h3>
-        <p class="mt-2 text-sm text-slate">How we explored options and converged on a community waste and gig jobs platform.</p>
-        <a href="blog/week1.html" class="mt-4 inline-block text-mint text-sm">Read post →</a>
-      </article>
-
-      <!-- Coming soon -->
-      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 opacity-60">
-        <div class="text-xs uppercase tracking-wide text-slate">Research • Week 2</div>
-        <h3 class="mt-2 font-semibold text-lg">Interviews and task analysis</h3>
-        <p class="mt-2 text-sm text-slate">Coming soon.</p>
-        <span class="mt-4 inline-block text-xs px-2 py-1 rounded bg-mint/10 text-mint">Coming soon</span>
-      </article>
-
-      <!-- Coming soon -->
-      <article class="rounded-2xl border border-black/10 dark:border-white/10 p-6 opacity-60">
-        <div class="text-xs uppercase tracking-wide text-slate">Design & Testing • Week 3–4</div>
-        <h3 class="mt-2 font-semibold text-lg">Prototype and usability testing</h3>
-        <p class="mt-2 text-sm text-slate">Coming soon.</p>
-        <span class="mt-4 inline-block text-xs px-2 py-1 rounded bg-mint/10 text-mint">Coming soon</span>
-      </article>
-    </div>
-  </section>
-
   <!-- Project snapshot -->
   <section id="projects-link" class="max-w-6xl mx-auto px-4 py-12">
     <div class="rounded-2xl p-6 border border-black/10 dark:border-white/10 flex items-center justify-between gap-4 flex-wrap">
       <div>
         <h2 class="text-2xl font-semibold">Projects</h2>
         <p class="text-slate mt-1">
-          Explore Project 1–4, from proposal and user research to prototypes and usability testing.
+          Explore Project 1 to 4, from proposal and user research to prototypes and the final demo.
         </p>
       </div>
       <a href="projects/index.html" class="px-5 py-3 rounded-xl bg-mint text-white shadow-soft hover:opacity-90">
@@ -161,55 +225,49 @@
     </div>
   </section>
 
-  <!-- Gallery -->
+  <!-- Gallery (Option B) -->
   <section id="gallery" class="max-w-6xl mx-auto px-4 py-12">
     <h2 class="text-2xl font-semibold mb-4">Gallery</h2>
     <p class="text-slate mb-6">
-      Preview of Ecolink’s interface and concept visuals — showcasing our main screens and feature icons.
+      Preview of Ecolink’s interface and concept visuals, showcasing our main screens and feature icons.
     </p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-      <!-- Locate screen -->
-      <figure class="rounded-2xl overflow-hidden border border-black/10 dark:border-white/10">
+      <figure class="rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 group cursor-zoom-in">
         <img src="gallery/ecolink-locate.png" alt="Ecolink Locate feature screen" class="w-full h-auto object-cover" />
         <figcaption class="p-3 text-sm text-slate">Locate nearby bins, recycling centres, and e-waste points.</figcaption>
       </figure>
 
-      <!-- Home dashboard -->
-      <figure class="rounded-2xl overflow-hidden border border-black/10 dark:border-white/10">
+      <figure class="rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 group cursor-zoom-in">
         <img src="gallery/ecolink-home.png" alt="Ecolink home dashboard" class="w-full h-auto object-cover" />
         <figcaption class="p-3 text-sm text-slate">Main dashboard showing user actions and quick navigation.</figcaption>
       </figure>
 
-      <!-- Icon set -->
-      <figure class="rounded-2xl overflow-hidden border border-black/10 dark:border-white/10">
+      <figure class="rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 group cursor-zoom-in">
         <img src="gallery/ecolink-icons.png" alt="Ecolink feature icons" class="w-full h-auto object-cover" />
         <figcaption class="p-3 text-sm text-slate">Feature icons for booking bins, paying fees, finding recycling points, and gig jobs.</figcaption>
       </figure>
 
-      <!-- Logo -->
-      <figure class="rounded-2xl overflow-hidden border border-black/10 dark:border-white/10">
+      <figure class="rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 group cursor-zoom-in">
         <img src="gallery/ecolink-logo.png" alt="Ecolink logo" class="w-full h-auto object-cover" />
-        <figcaption class="p-3 text-sm text-slate">Ecolink official logo — people, recycle symbol, and leaf motif.</figcaption>
+        <figcaption class="p-3 text-sm text-slate">Ecolink official logo, people, recycle symbol, and leaf motif.</figcaption>
       </figure>
 
-      <!-- Combined screens -->
-      <figure class="rounded-2xl overflow-hidden border border-black/10 dark:border-white/10">
+      <figure class="rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 group cursor-zoom-in">
         <img src="gallery/ecolink-screens.png" alt="Ecolink combined screens" class="w-full h-auto object-cover" />
         <figcaption class="p-3 text-sm text-slate">App screen mockups showing cohesive design for all features.</figcaption>
       </figure>
     </div>
   </section>
 
-  <!-- Team (5 members, .jpeg) -->
+  <!-- Team (Option A: better columns) -->
   <section id="team" class="max-w-6xl mx-auto px-4 py-12">
     <h2 class="text-2xl font-semibold mb-2">Team</h2>
     <p class="text-slate mb-6">
-      We are <strong>FIZIS</strong>. Five humans building Ecolink with a user-first HCI process that moves from research to ideation to prototypes to testing.
+      We are <strong>FIZIS</strong>. Five humans building Ecolink with a user-first HCI process that moves from research to ideation to prototypes to testing, and now the final demo.
     </p>
 
-    <ul class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-sm">
-      <!-- Iman -->
+    <ul class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-sm">
       <li class="p-5 rounded-2xl border border-black/10 dark:border-white/10 hover:border-mint transition">
         <div class="w-full h-40 overflow-hidden rounded-xl">
           <img src="images/iman.jpeg" alt="Iman" class="w-full h-full object-cover" loading="lazy" />
@@ -219,7 +277,7 @@
           <div class="text-slate">Research lead</div>
         </div>
       </li>
-      <!-- Zaidi -->
+
       <li class="p-5 rounded-2xl border border-black/10 dark:border-white/10 hover:border-mint transition">
         <div class="w-full h-40 overflow-hidden rounded-xl">
           <img src="images/zaidi.jpeg" alt="Zaidi" class="w-full h-full object-cover" loading="lazy" />
@@ -229,7 +287,7 @@
           <div class="text-slate">IA and progress logs</div>
         </div>
       </li>
-      <!-- Fuad -->
+
       <li class="p-5 rounded-2xl border border-black/10 dark:border-white/10 hover:border-mint transition">
         <div class="w-full h-40 overflow-hidden rounded-xl">
           <img src="images/fuad.jpeg" alt="Fuad" class="w-full h-full object-cover" loading="lazy" />
@@ -239,7 +297,7 @@
           <div class="text-slate">UI design</div>
         </div>
       </li>
-      <!-- Izzat -->
+
       <li class="p-5 rounded-2xl border border-black/10 dark:border-white/10 hover:border-mint transition">
         <div class="w-full h-40 overflow-hidden rounded-xl">
           <img src="images/izzat.jpeg" alt="Izzat" class="w-full h-full object-cover" loading="lazy" />
@@ -249,7 +307,7 @@
           <div class="text-slate">Frontend</div>
         </div>
       </li>
-      <!-- Shahidah -->
+
       <li class="p-5 rounded-2xl border border-black/10 dark:border-white/10 hover:border-mint transition">
         <div class="w-full h-40 overflow-hidden rounded-xl">
           <img src="images/shahidah.jpeg" alt="Shahidah" class="w-full h-full object-cover" loading="lazy" />
@@ -262,12 +320,61 @@
     </ul>
   </section>
 
+  <!-- Lightbox modal -->
+  <div id="lightbox" class="hidden fixed inset-0 z-50">
+    <div class="absolute inset-0 lb-backdrop"></div>
+
+    <div class="relative w-full h-full flex items-center justify-center p-4">
+      <div class="lb-panel w-full rounded-2xl bg-white dark:bg-[#0f1620] shadow-soft overflow-hidden border border-black/10 dark:border-white/10">
+        <div class="flex items-center justify-between px-4 py-3 bg-black/5 dark:bg-white/10">
+          <div id="lbCaption" class="text-sm text-slate truncate pr-3">Preview</div>
+          <div class="flex items-center gap-2">
+            <a id="lbOpen" href="#" target="_blank" rel="noopener"
+               class="text-sm px-3 py-1.5 rounded-lg border border-black/10 dark:border-white/20 hover:border-mint">
+              Open
+            </a>
+            <button id="lbClose"
+                    class="text-sm px-3 py-1.5 rounded-lg border border-black/10 dark:border-white/20 hover:border-mint">
+              Close
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-black/5 dark:bg-white/10">
+          <img id="lbImg" src="" alt="" class="w-full h-auto max-h-[75vh] object-contain" />
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <div id="site-footer"></div>
 
-  <!-- Script -->
   <script>
-    // Fallback initials if any team image fails
+    // Remove Blog from navigation (header is injected by partials)
+    (function(){
+      const header = document.getElementById("site-header");
+
+      function pruneBlogLinks(){
+        if (!header) return;
+        header.querySelectorAll('a').forEach(a=>{
+          const href = (a.getAttribute("href") || "").trim().toLowerCase();
+          const text = (a.textContent || "").trim().toLowerCase();
+          if (href.startsWith("blog/") || href.includes("/blog") || text === "blog" || text.includes("updates")) {
+            const li = a.closest("li");
+            if (li) li.remove();
+            else a.remove();
+          }
+        });
+      }
+
+      const mo = new MutationObserver(()=>pruneBlogLinks());
+      if (header) mo.observe(header, { childList:true, subtree:true });
+
+      window.addEventListener("load", ()=>setTimeout(pruneBlogLinks, 50));
+    })();
+
+    // Team image fallback initials if any team image fails
     document.querySelectorAll('#team img').forEach(img=>{
       img.addEventListener('error',()=>{
         const initials=(img.alt||'').split(' ').map(s=>s[0]).join('').slice(0,2).toUpperCase()||'--';
@@ -280,6 +387,74 @@
         );
       });
     });
+
+    // Gallery Lightbox (Option B)
+    (function(){
+      const lb = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lbImg");
+      const lbCap = document.getElementById("lbCaption");
+      const lbClose = document.getElementById("lbClose");
+      const lbOpen = document.getElementById("lbOpen");
+
+      function openLb(src, alt, caption){
+        lbImg.src = src;
+        lbImg.alt = alt || "Preview";
+        lbCap.textContent = caption || alt || "Preview";
+        lbOpen.href = src;
+        lb.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+      }
+
+      function closeLb(){
+        lb.classList.add("hidden");
+        lbImg.src = "";
+        document.body.classList.remove("overflow-hidden");
+      }
+
+      document.querySelectorAll("#gallery figure").forEach(fig=>{
+        const img = fig.querySelector("img");
+        const cap = fig.querySelector("figcaption");
+        if (!img) return;
+
+        fig.addEventListener("click", ()=>{
+          openLb(img.src, img.alt, cap ? cap.textContent.trim() : "");
+        });
+      });
+
+      lbClose.addEventListener("click", closeLb);
+      lb.addEventListener("click", (e)=>{
+        if (e.target === lb || e.target.classList.contains("lb-backdrop")) closeLb();
+      });
+
+      window.addEventListener("keydown", (e)=>{
+        if (e.key === "Escape" && !lb.classList.contains("hidden")) closeLb();
+      });
+    })();
+
+    // PDF Full screen (Option E)
+    (function(){
+      const btn = document.getElementById("pdfFullscreenBtn");
+      const wrap = document.getElementById("pdfFrameWrap");
+      if (!btn || !wrap) return;
+
+      btn.addEventListener("click", async ()=>{
+        try{
+          if (document.fullscreenElement) {
+            await document.exitFullscreen();
+            btn.textContent = "Full screen";
+          } else {
+            await wrap.requestFullscreen();
+            btn.textContent = "Exit full screen";
+          }
+        } catch (err) {
+          alert("Fullscreen is not supported in this browser.");
+        }
+      });
+
+      document.addEventListener("fullscreenchange", ()=>{
+        if (!document.fullscreenElement) btn.textContent = "Full screen";
+      });
+    })();
   </script>
 </body>
 </html>
